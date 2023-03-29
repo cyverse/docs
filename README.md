@@ -1,11 +1,7 @@
 A special thanks to [Mojib Wali](https://github.com/mb-wali) of [CyVerse-Austria](https://www.tugraz.at/sites/cyverse/home), Graz University of Technology, Austria, for creating these Materail MkDocs documents for the global CyVerse developer and maintainer community!
 
-==========================
- CyVerse Core Software Documentation
-==========================
-
-.. image:: https://github.com/cyverse/docs/actions/workflows/gh-actions.yml/badge.svg
-        :target: https://github.com/cyverse/docs/actions/workflows/gh-actions.yml
+CyVerse Core Software Documentation
+===================================
 
 These documents are for the deployment and maintenence of  [CyVerse](https://cyverse.org)
 

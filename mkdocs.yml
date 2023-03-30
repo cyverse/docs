@@ -29,46 +29,51 @@ theme:
   font:
     text: 'Open Sans'
     code: 'Roboto Mono'
-  logo: 'images/cyverse_ball_2022.png'
+  logo: 'assets/de/cyverse_ball_2022.png'
   favicon: 'images/favicon.ico'
 
 
 nav:
-  - Home: 'index.md'
-  # - Development:
-  #   - overview: 'development/index.md'
-  - Services:
-    - Kubernetes: 'services/kubernetes/index.md'
-    - KeyCloak: 'services/keycloak/realm.md'
-    - Namespaces: 'services/kubernetes/ns.md'
-  - Deployments:
-    - Kubernetes (K8s): 'deployments/kubernetes-deploy.md'
-    - User Portal: 'deployments/userportal.md'
-    - OpenEBS: 'deployments/openebs.md'
-    - KeyCloak: 'deployments/keycloak.md'
-    - Mail: 'deployments/exim4.md'
-    - Redis HA: 'deployments/redis-ha.md'
-    - K8s Resources: 'deployments/k8s-resources.md'
-    - ElasticSearch: 'deployments/elasticsearch.md'
-    - RabbitMQ: 'deployments/RabbitMQ.md' # move this since its not k8s
-    - Unleash: 'deployments/unleash.md'
-    - Grouper: 'deployments/grouper.md'
-    - iRODS CSI Driver: 'deployments/irods-csi-driver.md'
-    - Local Exim: 'deployments/local-exim.md'
-    - Discovery Environment: 'deployments/DiscoveryEnvironment.md'
-    - VICE: 'deployments/vice.md'
-    - Jaeger: 'deployments/jaeger.md'
-
-  - Databases:
-    - Databases: 'database/main.md'
-    - DE Database: 'database/de-db.md'
-    - Metadata Database: 'database/metadata-db.md'
-    - KeyCloak Database: 'database/keycloak-db.md'
-    - Notifications Database: 'database/notifications-db.md'
-    - Unleash Database: 'database/unleash-db.md'
-    - Grouper Database: 'database/grouper-db.md'
-    - QMS Database: 'database/qms-db.md'
-    - Portal Database: 'database/portal-db.md'
+  - About: 'index.md'
+  - DevOps:
+    - System Overview: 'services/system_overview.md'
+    - Subscriptions: 'services/subscriptions.md'
+    - Services:
+      - Core Services: 'services/services.md'
+      - KeyCloak: 'services/keycloak.md'
+      - Cloud: "services/cloud.md"
+    - Deployments:
+      - Kubernetes (K8s): 'deployments/kubernetes-deploy.md'
+      - User Portal: 'deployments/userportal.md'
+      - OpenEBS: 'deployments/openebs.md'
+      - KeyCloak: 'deployments/keycloak.md'
+      - Mail: 'deployments/exim4.md'
+      - Redis HA: 'deployments/redis-ha.md'
+      - K8s Resources: 'deployments/k8s-resources.md'
+      - K8s Name Spaces: 'deployments/k8s-namespace.md'
+      - ElasticSearch: 'deployments/elasticsearch.md'
+      - RabbitMQ: 'deployments/RabbitMQ.md' # move this since its not k8s
+      - Unleash: 'deployments/unleash.md'
+      - Grouper: 'deployments/grouper.md'
+      - iRODS CSI Driver: 'deployments/irods-csi-driver.md'
+      - Local Exim: 'deployments/local-exim.md'
+      - Discovery Environment: 'deployments/DiscoveryEnvironment.md'
+      - VICE: 'deployments/vice.md'
+      - Jaeger: 'deployments/jaeger.md'
+    - Databases:
+      - Database Overview: 'database/main.md'
+      - DE: 'database/de-db.md'
+      - Metadata: 'database/metadata-db.md'
+      - KeyCloak: 'database/keycloak-db.md'
+      - Notifications: 'database/notifications-db.md'
+      - Unleash: 'database/unleash-db.md'
+      - Grouper: 'database/grouper-db.md'
+      - QMS: 'database/qms-db.md'
+      - Portal: 'database/portal-db.md'
+  - User Guides:
+    - Discovery Environment: 'services/de.md'
+    - Data Store: 'services/ds.md'    
+    - Frequently Asked Questions: 'services/faq.md'
 
 # Customization
 extra:

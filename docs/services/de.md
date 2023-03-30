@@ -1,0 +1,1 @@
+[Discovery Environment User Guide](https://learning.cyverse.org/de/){target=_blank}

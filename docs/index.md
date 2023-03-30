@@ -1,37 +1,73 @@
 ![](assets/cyverse_logo_2022.svg)
 
-# What is CyVerse?
+## What is CyVerse?
 
-[CyVerse](https://cyverse.org) is a powerful computational infrastructure and the people who support its operations. CyVerse was built to handle huge datasets and complex analyses for life sciences research, thus enabling users to make data-driven discoveries.
+[CyVerse](https://cyverse.org) is a powerful computational infrastructure and the people who support its operations. 
 
-CyVerse cyberinfrastructure includes:
+## Contents
 
-[de]: assets/de/deIcon.svg
-[data]: assets/de/dataIcon.svg
-[atmo]: assets/de/cacao-04.png
-[ball]: assets/de/cyverse_ball_2022.png
+These documents are for managing a self-hosted deployment of CyVerse. They are intended for professional DevOps and IT specialists with experience in Infrastructure as Code
 
-[![][data]{width=25}](https://cyverse.org/data-store){target=_blank} [Data Storage](https://cyverse.org/data-store){target=_blank} - free allocation space for all users, and fee-based storage services, [contact us](https://user.cyverse.org/requests/2){target=_blank} to help you scale your project.
+## Development & Operations (DevOps)
 
-[![][de]{width=25}](https://user.cyverse.org/services/2){target=_blank} [Data Science Workbench](https://user.cyverse.org/services/2){target=_blank}  - An interactive, web-based, analytical platform called the "[Discovery Environment](https://de.cyverse.org){target=_blank}"
+The DevOps section includes information about managing CyVerse custom Services, Deployments, and Databases
 
-[![][atmo]{width=25}](https://user.cyverse.org/services/1){target=_blank} [Cloud](https://user.cyverse.org/services/1){target=_blank} - hosted OpenStack virtual machines for computation, analysis, and storage.
+### Services
 
-[![][ball]{width=25}](https://cyverse.org/ecp){target=_blank} [External Collaborative Partnerships](https://cyverse.org/ecp){target=_blank} - Work with our experienced data scientists and software engineers to scale your algorithms and data onto cloud and high performance compute. [Contact Us](https://user.cyverse.org/requests/3) if you are interested in starting an ECP.
+* [Core Services](services/services.md) - Core services for managing CyVerse
 
-[![][ball]{width=25}](https://cyverse.org/teach){target=_blank} [Education and Training](https://cyverse.org/teach){target=_blank} - learn how to use containers, workflows, and public research cyberinfrastructure from our professional trainers.
+* [KeyCloak](services/keycloak.md) - Identity and access management 
 
-[![][ball]{width=25}](https://user.cyverse.org/requests/8){target=_blank} [Cloud Resources](https://user.cyverse.org/requests/8){target=_blank} for running your class or workshop in the cloud.
+### Deployments
 
+:simple-kubernetes: [Discovery Environment (DE)](deployments/DiscoveryEnvironment.md) - deploy primary data science workbench site
 
-#### Development
+:simple-kubernetes: [Kubernetes (K8s)](deployments/kubernetes-deploy.md) - deploy the main K8s cluster for running DE applications
 
-coming soon
+:simple-kubernetes: [K8s Resources](deployments/k8s-resources.md) - deploy the various resources in DE managed by K8s
 
-[> Getting Started](development/index.md)
+:simple-kubernetes: [K8s NameSpaces](deployments/k8s-namespace.md) - list of namespaces used in DE
 
-####  Services
+:simple-kubernetes: [User Portal](deployments/userportal.md) - deploy the User Portal website via K8s
 
-coming soon
+:simple-kubernetes: [OpenEBS](deployments/openebs.md) - deploy K8s stateful workloads that require container attached storage
 
-[> Services Guide](deployment/index.md)
+:simple-kubernetes: [KeyCloak](deployments/keycloak.md) - deploy K8s KeyCloak configuration
+
+:simple-kubernetes: [Exim4 Mail](deployments/exim4.md) - deploy `exim4` (MTA) running as a smarthost via K8s
+
+:simple-kubernetes: [Redis HA](deployments/redis-ha.md) - installing the Redis Server and Redis Haproxy
+
+:simple-kubernetes: [ElasticSearch](deployments/elasticsearch.md) - deploy stateful set ES cluster
+
+:simple-kubernetes: [RabbitMQ](deployments/RabbitMQ.md) - deploy RabbitMQ services
+
+:simple-kubernetes: [Unleash](deployments/unleash.md) - deploy unleash database
+
+:simple-kubernetes: [Grouper](deployments/grouper.md) - 
+
+:simple-kubernetes: [iRODS CSI Driver](deployments/irods-csi-driver.md) - Container Storage Interface (CSI Driver) for iRODS to K8s pod containers
+
+:simple-kubernetes: [Local Exim](deployments/local-exim.md) - verification of email
+
+:simple-kubernetes: [VICE](deployments/vice.md) - Interactive jobs in DE
+
+:simple-kubernetes: [Jaeger](deployments/jaeger.md) -  open source end-to-end distributed tracing
+
+### Databases
+
+* [DE](database/de-db.md)
+
+* [Metadata](database/metadata-db.md)
+
+* [KeyCloak](database/keycloak-db.md)
+
+* [Notifications](database/notifications-db.md)
+
+* [Unleash](database/unleash-db.md)
+
+* [Grouper](database/grouper-db.md)
+
+* [QMS](database/qms-db.md)
+
+* [Portal](database/portal-db.md)

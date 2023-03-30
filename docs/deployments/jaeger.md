@@ -2,6 +2,9 @@
 
 Jaeger: open source, end-to-end distributed tracing
 
+!!! success "Prerequisites"
+
+
 ## Deploy
 
 The deployment manifests are in [k8s-resources](k8s-resources.md).

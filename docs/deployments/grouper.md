@@ -1,8 +1,8 @@
 # Grouper
 
-## Preq
+!!! success "Prerequisites"
 
-* Make sure `grouper` database is setup, see also [grouper-db](../database/grouper-db.md)
+    * Make sure `grouper` database is setup, see also [grouper-db](../database/grouper-db.md)
 
 ## Deploy
 Grouper consist of two deployments, `grouper-loader` & `grouper-ws`.

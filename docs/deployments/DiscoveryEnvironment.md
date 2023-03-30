@@ -1,16 +1,17 @@
-# Discovery Environment UI
+# Discovery Environment
 
-Deploying DiscoveryEnvironment UI which is nginx proxying all the services to the DiscoveryEnvironment of cyverse.
+!!! success "Prerequisites"
 
-## Preq
+    * Make sure you have the `harbor-registry-credentials` secrets in your NAMESPACE, see also [k8s-resources](k8s-resources.md)
 
-* Make sure you have the `harbor-registry-credentials` secrets in your NAMESPACE, see also [k8s-resources](k8s-resources.md).
-* Make sure you have `de-nginx-tls` secret created, also see [k8s-resources](k8s-resources.md).
-* Make sure your Haproxy has the CA cert, Add `/docker-tugraz-data/ca/ca.pem` to `HAPROXY_DOMAIN`:/etc/ssl/certs/ca-bundle.crt`
+    * Make sure you have `de-nginx-tls` secret created, also see [k8s-resources](k8s-resources.md)
 
-## Deploying
+    * Make sure your Haproxy has the CA cert, Add `/docker-tugraz-data/ca/ca.pem` to `HAPROXY_DOMAIN`:/etc/ssl/certs/ca-bundle.crt`
 
-For deploying Discovery environment we are using the manifest files from the [k8s-resources](k8s-resources.md).
+
+**remember** `nginx` is proxying all the services to the DE in CyVerse.
+
+* Use the manifest files from the [k8s-resources](k8s-resources.md)
 
 ### Change hardcoded
 

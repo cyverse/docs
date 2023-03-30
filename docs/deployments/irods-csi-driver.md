@@ -2,7 +2,9 @@
 
 iRODS Container Storage Interface (CSI) Driver implements the CSI Specification to provide container orchestration engines (like Kubernetes) iRODS access.
 
-## Preq
+!!! success "Prerequisites"
+
+
 
 Before we install `irods-csi-driver`, we need to create a `values.yaml` file.
 

@@ -1,5 +1,8 @@
 # vice apps
 
+!!! success "Prerequisites"
+
+
 ## Create namespace
 ```bash
 kubectl create ns vice-apps

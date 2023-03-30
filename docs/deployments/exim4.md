@@ -1,7 +1,10 @@
 # Mail
 
-[exim4-helm](https://github.com/mb-wali/exim4-helm)
-A Helm chart to provide a exim4 deployment, exim4 (MTA) running as a smarthost.
+!!! success "Prerequisites"
+
+    [exim4-helm](https://github.com/mb-wali/exim4-helm)
+
+    A Helm chart to provide a exim4 deployment, exim4 (MTA) running as a smarthost.
 
 ## Deploy
 

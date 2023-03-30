@@ -1,5 +1,8 @@
 # ingress-nginx
 
+!!! success "Prerequisites"
+
+
 **ingress-nginx** is used to give vice-apps ingresses, using nodeport and what not.
 
 

@@ -3,7 +3,6 @@ A special thanks to [Mojib Wali](https://github.com/mb-wali) of [CyVerse-Austria
 CyVerse Core Software Documentation
 ===================================
 
-
 These documents are for the deployment and maintenence of  [CyVerse](https://cyverse.org)
 
 ## MkDocs deploy GitHub Action

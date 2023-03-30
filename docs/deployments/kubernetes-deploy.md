@@ -1,5 +1,18 @@
 # Kubernetes Cluster 
 
+!!! success "Prerequisites"
+
+    * Make sure you have at least **6** VMs configured with Centos7
+
+        * 1 Master node
+        
+        * 4 worker nodes
+        
+        * 1 worker node dedicated only for **vice-apps**
+
+    *  Make sure you have Ansible installed, and you can reach your VMs via `ssh`
+
+
 # TODO rewrite the docs once [ansible-k8s-centos7](https://github.com/cyverse-austria/ansible-k8s-centos7) is ready.
 
 We are using **Ansible** to set up a kubernetes cluster.
@@ -10,15 +23,6 @@ Current kubernetes cluster is configured using ansible playbooks from [deploymen
 
 If your are intrested to setup your own kubernetes cluster on Centos 7, please follow the steps bellow.
 
-## Preq
-
-### Make sure you have at least **6** virtual machines configured with Centos7
-
-* 1 Master node
-* 4 worker nodes
-* 1 worker node dedicated only for **vice-apps**
-
-### Make sure you have Ansible installed, and you can reach your virtual machines via ssh
 
 ## Steps
 

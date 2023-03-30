@@ -39,9 +39,11 @@ nav:
     - System Overview: 'services/system_overview.md'
     - Subscriptions: 'services/subscriptions.md'
     - Services:
-      - Core Services: 'services/services.md'
-      - KeyCloak: 'services/keycloak.md'
-      - Cloud: "services/cloud.md"
+      - Authentication: 'services/keycloak.md'
+      - Cloud Services: "services/cloud.md"
+      - Data Publishing: 'services/dc.md'
+      - Data Storage: 'services/ds.md'
+      - Discovery Environment: 'services/de.md'
     - Deployments:
       - Kubernetes (K8s): 'deployments/kubernetes-deploy.md'
       - User Portal: 'deployments/userportal.md'
@@ -71,9 +73,9 @@ nav:
       - QMS: 'database/qms-db.md'
       - Portal: 'database/portal-db.md'
   - User Guides:
-    - Discovery Environment: 'services/de.md'
-    - Data Store: 'services/ds.md'    
-    - Frequently Asked Questions: 'services/faq.md'
+    - Discovery Environment: 'guides/de.md'
+    - Data Store: 'guides/ds.md'    
+    - Frequently Asked Questions: 'guides/faq.md'
 
 # Customization
 extra:

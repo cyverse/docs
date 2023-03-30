@@ -1,6 +1,9 @@
 # Namespaces
 
 List of namespaces used for CyVerse deployment in kubernetes.
+
+!!! success "Prerequisites"
+
 **Note**: this documentation is relavant only for single/current environment.
 
 ![Namespaces](../assets/namespaces.png)

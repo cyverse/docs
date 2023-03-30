@@ -2,9 +2,10 @@
 
 In this Document we will cover installing the **Redis Server** and **Redis Haproxy**, due to the `k8s-resources` configurations both would be installed and configured inside the **prod** namespace.
 
-## Preq
+!!! success "Prerequisites"
 
-Make sure to create a **values.yaml** and replace add your credentials:
+    * Make sure to create a **values.yaml** and replace add your credentials
+
 
 **values.yaml**
 Overrides the PersistentVolume, adds secrets and uses **openebs** as storage class.

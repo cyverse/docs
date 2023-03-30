@@ -2,6 +2,9 @@
 
 This repository includes all the manifests and resources for kubernetes deployment.
 
+!!! success "Prerequisites"
+
+
 ## Clone
 
 ```bash

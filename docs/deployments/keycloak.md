@@ -1,6 +1,6 @@
 # Keycloak
 
-## Preq
+!!! success "Prerequisites"
 
 ### configure database 
 

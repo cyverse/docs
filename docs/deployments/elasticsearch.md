@@ -2,25 +2,29 @@
 
 Deploying the `statefulsets` Elasticsearch cluster on kubernetes.
 
-## Deploying
 
-### Preq
+!!! success "Prerequisites"
 
-* clone the repo see also [k8s-resources](k8s-resources.md)
-* `cd /k8s-resources`
-* In case you have limited resources change these:
-`cd /k8s-resources/resources/addons/elasticsearch/elasticsearch.yml`
+    * clone the repo 
+    
+    * see also [k8s-resources](k8s-resources.md)
 
-    ```yaml
-      replicas: 2
-        resources:
-          requests:
-            memory: "4Gi"
-          limits:
-            memory: "4Gi"
-          - name: ES_JAVA_OPTS
-            value: "-Xms2g -Xmx2g"
-    ```
+    * `cd /k8s-resources`
+
+    * In case you have limited resources change these:
+
+    `cd /k8s-resources/resources/addons/elasticsearch/elasticsearch.yml`
+
+        ```yaml
+          replicas: 2
+            resources:
+              requests:
+                memory: "4Gi"
+              limits:
+                memory: "4Gi"
+              - name: ES_JAVA_OPTS
+                value: "-Xms2g -Xmx2g"
+        ```
 
 ### Deploy
 

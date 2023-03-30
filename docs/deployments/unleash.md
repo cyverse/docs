@@ -1,8 +1,8 @@
 # Unleash
 
-## Preq
+!!! success "Prerequisites"
 
-* Make sure `unleash` database is setup, see also [unleash-db](../database/unleash-db.md)
+    * Make sure `unleash` database is setup, see also [unleash-db](../database/unleash-db.md)
 
 ## Deploy
 

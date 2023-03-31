@@ -10,7 +10,7 @@ CyVerse manages public-facing APIs which is leveraged in "[Powered-by-CyVerse](h
 
 All APIs use [:simple-openapiinitiative: OpenAPI](https://www.openapis.org/)
 
-:material-terrain: Terrain API](https://de.cyverse.org/terrain/docs/index.html){target=_blank} - main API for Discovery Environment Swagger interface 
+[:material-terrain: Terrain API](https://de.cyverse.org/terrain/docs/index.html){target=_blank} - main API for Discovery Environment Swagger interface 
 
 * [:simple-jupyter: Terrain API Jupyter Notebooks](https://github.com/cyverse/terrain-notebook)
 
@@ -68,7 +68,7 @@ Federation to the [OpenScienceGrid](https://opensciencegrid.org){target=_blank} 
 
     * [TACC Allocation request](https://portal.tacc.utexas.edu/allocations-overview){target=_blank}
     
-### :octicons-database-24: Data Storage
+## :octicons-database-24: Data Storage
 
 CyVerse manages over 6 PB data via [iRODS (integrated Rule Oriented Data System)](https://irods.org){target=_blank} within two unique zones:
 
@@ -80,7 +80,7 @@ The data store is mirrored between University of Arizona and Texas Advanced Comp
 
 Resource Servers coordinate resources and contain physical storage devices. An iCAT server stores metadata in the form of “triples” to its relational database. 
 
-### :material-web: Web Portals
+## :material-web: Web Portals
 
 [![][ball]{width=25}](https://user.cyverse.org/){target=_blank} [:material-web: User Portal](https://user.cyverse.org){target=_blank} - a User Portal for creating and managing accounts, requesting and granting access to platforms, and a user management space for individuals and groups and workshops. 
 
@@ -94,7 +94,7 @@ Resource Servers coordinate resources and contain physical storage devices. An i
 
 [![][data]{width=25}](https://datacommons.cyverse.org){target=_blank} [:material-web: DataCommons](https://datacommons.cyverse.org/){target=_blank} - website hosting of published datasets in the CyVerse data store. The DataCommons presents any metadata which have been added by the owners to directories (folders) or files.
 
-### :fontawesome-solid-staff-snake: Monitoring Services
+## :fontawesome-solid-staff-snake: Monitoring Services
 
 [:material-web: Health Status](https://status.cyverse.org/){target=_blank} - system status monitor
 

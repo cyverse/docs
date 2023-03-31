@@ -13,10 +13,14 @@ Any endpoints listed under the [default](https://de.cyverse.org/terrain/docs/ind
 Swagger category have not been documented in Swagger yet.
 The documentation for those endpoints may still be found below.
 
-* [Endpoints](./api/endpoints/index.md)
+* [Endpoints](./api/api.md)
+
+    * [Endpoint Index](./api/endpoint-index.md)
+
 * [Errors](./api/errors.md)
+
 * [Schema](./api/schema.md)
-* [Endpoint Index](./api/endpoint-index.md)
+
 
 ## Authentication
 

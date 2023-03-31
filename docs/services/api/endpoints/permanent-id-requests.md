@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [Permanent ID Requests](#permanent-id-requests)
-    * [Workflow Overview](#workflow-overview)
-
 # Permanent ID Requests
 
 These endpoints create and manage user requests for persistent identifiers

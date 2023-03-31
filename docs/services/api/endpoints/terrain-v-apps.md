@@ -1,17 +1,10 @@
-# Table of Contents
-
-* [Overview](#overview)
-    * [Calling Secured Terrain Endpoints](#calling-secured-terrain-endpoints)
-    * [Calling "Secured" Apps Endpoints](#calling-secured-apps-endpoints)
-    * [A Simple Example](#a-simple-example)
-
 # Overview
 
 The "secured" endpoints in apps behave a little bit differently from the secured endpoints in Terrain. Specifically, the secured endpoints in Terrain actually require user authentication whereas those in apps merely require information about the user making the request.
 
 ## Calling Secured Terrain Endpoints
 
-All secured endpoints in Terrain require an HTTP header containing a JSON Web Token (JWT). The specific header to use depends on the format of the JWT, but in most cases it will be `X-Iplant-De-Jwt`. Please see the [root API documentation page](../index.html) for details.
+All secured endpoints in Terrain require an HTTP header containing a JSON Web Token (JWT). The specific header to use depends on the format of the JWT, but in most cases it will be `X-Iplant-De-Jwt`. Please see the [root API documentation page](../../api_overview.md) for details.
 
 ## Calling "Secured" Apps Endpoints
 

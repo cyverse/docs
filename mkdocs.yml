@@ -40,17 +40,36 @@ nav:
     - Subscriptions: 'services/subscriptions.md'
     - API (Terrain): 
       - Overview: 'services/api_overview.md'
-      - Endpoints: 'services/api/endpoints/endpoints.md'
+      - Endpoints:
+        - Overview: 'services/api/endpoints/endpoints.md'
+        - App Metadata: 'services/api/endpoints/app-metadata.md'  
+        - Tools: 'services/api/endpoints/tools.md'
+        - App Execution: 'services/api/endpoints/app-execution.md'
+        - Callbacks: 'services/api/endpoints/callbacks.md'
+        - Collaborator List Management: 'services/api/endpoints/collaborator-lists.md'
+        - Comments: 'services/api/endpoints/comments.md'
+        - Data Search: 'services/api/endpoints/filesystem/search.md'
+        - Favorites: 'services/api/endpoints/favorites.md'
+        - Notification: 'services/api/endpoints/notifications.md'
+        - Ontology Hierarchies: 'services/api/endpoints/app-ontologies.md'
+        - Permanent ID Requests: 'services/api/endpoints/permanent-id-requests.md'
+        - Quick Launches: 'services/api/endpoints/quick-launches.md'
+        - Reference Genomes: 'services/api/endpoints/reference-genomes.md'
+        - Sharing: 'services/api/endpoints/sharing.md'
+        - Tags: 'services/api/endpoints/tags.md'
+        - Miscellaneous: 'services/api/endpoints/misc.md'
+      - Endpoints Index: 'services/api/endpoint-index.md'
       - Errors: 'services/api/errors.md'
       - Schema: 'services/api/schema.md'
-      - Endpoint Index: 'services/api/endpoint-index.md'
     - Services:
       - Overview: 'services/services_overview.md'
       - Authentication: 'services/keycloak.md'
+      - BisQue: [services/bisque.md]
       - Cloud Services: "services/cloud.md"
       - Data Publishing: 'services/dc.md'
       - Data Storage: 'services/ds.md'
       - Discovery Environment: 'services/de.md'
+      - DNA Subway: 'services/dnasubway.md'
     - Deployments:
       - Overview: 'deployments/deployment_overview.md'
       - Kubernetes (K8s): 'deployments/kubernetes-deploy.md'

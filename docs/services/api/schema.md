@@ -1,20 +1,10 @@
 Here are the definitions of the data records used to communicate through the endpoints.
 
-# Table of Contents
-
-* [Permission](#permission)
-* [AVU Record](#avu-record)
-* [Filesystem Entry Record](#filesystem-entry-record)
-    * [File Record](#file-record)
-    * [Folder Record](#folder-record)
-* [Permission Record](#permission-record)
-* [User Details Record](#user-details-record)
-
-# Permission
+## Permission
 
 \* The `read` access level means the user can download a file or folder, read it, and read its metadata. The `modify` access level gives the user `read` access level plus the ability to create, modify and delete file or folder metadata. For a file, this access level also gives the user the ability to modify the file. For a folder, this access level gives the ability to upload files and folders into the folder. The `own` access level gives the user complete control over the file or folder.
 
-# AVU Record
+## AVU Record
 
 Here are the fields that describe and attribute-value-unit (AVU) triple.
 
@@ -34,7 +24,7 @@ Here are the fields that describe and attribute-value-unit (AVU) triple.
 }
 ```
 
-# Filesystem Entry Record
+## Filesystem Entry Record
 
 Here are the fields that describe a filesystem entry.
 
@@ -53,12 +43,12 @@ Here are the fields that describe a filesystem entry.
 ```json
 {
     "id"              : "deadbeef-dead-beef-dead-beefdeadbeef",
-    "path"            : "/iplant/home/tedgin/an-entry",
+    "path"            : "/iplant/home/user_name/an-entry",
     "permission"      : "own",
     "userPermissions" : [
         {
             "permission" : "own",
-            "user"       : "tedgin#iplant"
+            "user"       : "user_name#iplant"
         },
         {
             "permission" : "own",
@@ -87,19 +77,19 @@ A file extends a [filesystem entry](#filesystem-entry-record). Here are the addi
 ```json
 {
     "id"              : ""deadbeef-dead-beef-dead-beefdeadbeef"",
-    "path"            : "/iplant/home/tedgin/an.file",
+    "path"            : "/iplant/home/user_name/an.file",
     "permission"      : "own",
     "userPermissions" : [
         {
             "permission" : "own",
-            "user"       : "tedgin#iplant"
+            "user"       : "user_name#iplant"
         },
         {
             "permission" : "own",
             "user"       : "rodsadmin#iplant"
         }
     ],
-    "creator"         : "tedgin#iplant",
+    "creator"         : "user_name#iplant",
     "dateCreated"     : 1410399966001,
     "dateModified"    : 1410399966001,
     "fileSize"        : 14016,
@@ -134,12 +124,12 @@ A folder extends a [filesystem entry](#filesystem-entry-record). Here are the ad
 ```json
 {
     "id"              : ""deadbeef-dead-beef-dead-beefdeadbeef"",
-    "path"            : "/iplant/home/tedgin/a-folder",
+    "path"            : "/iplant/home/user_name/a-folder",
     "permission"      : "own",
     "userPermissions" : [
         {
             "permission" : "own",
-            "user"       : "tedgin#iplant"
+            "user"       : "user_name#iplant"
         },
         {
             "permission" : "own",
@@ -165,7 +155,7 @@ A folder extends a [filesystem entry](#filesystem-entry-record). Here are the ad
 }
 ```
 
-# Permission Record
+## Permission Record
 
 Here are the fields that describe a permission.
 
@@ -180,11 +170,11 @@ Here are the fields that describe a permission.
 ```json
 {
     "permission" : "own",
-    "user"       : "tedgin#iplant"
+    "user"       : "user_name#iplant"
 }
 ```
 
-# User Details Record
+## User Details Record
 
 Here are the fields that describe a user's details.
 
@@ -201,11 +191,11 @@ Here are the fields that describe a user's details.
 
 ```json
 {
-    "username"    : "tedgin",
+    "username"    : "username",
     "zone"        : "iplant",
     "email"       : "you.wish@keep-guessing.xxx",
-    "firstName"   : "tony",
-    "lastName"    : "tedgin",
+    "firstName"   : "first_name",
+    "lastName"    : "last_name",
     "workspaceId" : 4
 }
 ```

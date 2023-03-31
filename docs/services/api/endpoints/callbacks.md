@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [Callback Endpoints](#callback-endpoints)
-    * [Obtaining OAuth Authorization Codes](#obtaining-oauth-authorization-codes)
-
 # Callback Endpoints
 
 These endpoints listed in this document accept callbacks from other services indicating that some event has occurred.

@@ -1,26 +1,26 @@
 # API (Terrain)
 
-Terrain provides the primary point of communication between the Discovery Environment (DE) UI and backend services. It's charged with two primary tasks: to handle authentication and authorization for endpoints that require it, and to orchestrate calls to other lower-level services.
+Terrain provides the primary point of communication between the Discovery Environment (DE) UI and backend services. 
 
-## Additional Documentation
+It's charged with two primary tasks: 
 
-The primary and most current source for Terrain API endpoint documentation
-are the Swagger docs hosted by the service itself:
-[https://de.cyverse.org/terrain/docs](https://de.cyverse.org/terrain/docs)
+(1) to handle authentication and authorization for endpoints that require it, 
 
-We are still in the process of migrating the original endpoint documentation found on this site to the Swagger docs hosted by the service.
-Any endpoints listed under the [default](https://de.cyverse.org/terrain/docs/index.html#!/default)
-Swagger category have not been documented in Swagger yet.
+(2) to orchestrate calls to other lower-level services.
+
+The primary and most current source for Terrain API endpoint documentation are the Swagger docs hosted by the service itself:
+[https://de.cyverse.org/terrain/docs](https://de.cyverse.org/terrain/docs){target=_blank}
+
+
 The documentation for those endpoints may still be found below.
 
-* [Endpoints](./api/api.md)
+* [Endpoints](./api/endpoints/endpoints.md)
 
-    * [Endpoint Index](./api/endpoint-index.md)
+* [Endpoints Index](./api/endpoint-index.md)
 
 * [Errors](./api/errors.md)
 
 * [Schema](./api/schema.md)
-
 
 ## Authentication
 

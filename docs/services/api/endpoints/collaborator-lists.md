@@ -1,14 +1,22 @@
-# Table of Contents
+**Jump to**
 
 * [Collaborator List Management Endpoints](#collaborator-list-management-endpoints)
-    * [Listing Collaborator Lists](#listing-collaborator-lists)
-    * [Adding a Collaborator List](#adding-a-collaborator-list)
-    * [Getting Information About a Collaborator List](#getting-information-about-a-collaborator-list)
-    * [Updating a Collaborator List](#updating-a-collaborator-list)
-    * [Deleting a Collaborator List](#deleting-a-collaborator-list)
-    * [Listing Collaborator List Members](#listing-collaborator-list-members)
-    * [Adding Collaborator List Members](#adding-collaborator-list-members)
-    * [Removing Collaborator List Members](#removing-collaborator-list-members)
+
+* [Listing Collaborator Lists](#listing-collaborator-lists)
+
+* [Adding a Collaborator List](#adding-a-collaborator-list)
+
+* [Getting Information About a Collaborator List](#getting-information-about-a-collaborator-list)
+
+* [Updating a Collaborator List](#updating-a-collaborator-list)
+
+* [Deleting a Collaborator List](#deleting-a-collaborator-list)
+
+* [Listing Collaborator List Members](#listing-collaborator-list-members)
+
+* [Adding Collaborator List Members](#adding-collaborator-list-members)
+
+* [Removing Collaborator List Members](#removing-collaborator-list-members)
 
 # Collaborator List Management Endpoints
 

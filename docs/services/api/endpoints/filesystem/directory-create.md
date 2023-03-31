@@ -23,7 +23,7 @@ __Request Body__:
 
 __Response Body__:
 
-This endpoint uses a similar response as the [/secured/filesystem/stat](stat.html#file-and-directory-status-information) endpoint. For example:
+This endpoint uses a similar response as the [/secured/filesystem/stat](stat.md#file-and-directory-status-information) endpoint. For example:
 
 ```json
 {

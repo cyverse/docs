@@ -8,20 +8,34 @@ On the other hand, all examples use fully qualified URLs.
 
 Request and response bodies are in JSON format unless otherwise noted.
 
-* [App Metadata Endpoints](app-metadata.md)
-    * [Tool Endpoints](tools.md)
-* [App Execution Endpoints](app-execution.md)
-* [Callback Endpoints](callbacks.md)
-* [Categorizing Apps with Ontology Hierarchies](app-ontologies.md)
-* [Collaborator List Management Endpoints](collaborators.md)
-* [Comments Endpoints](comments.md)
-* [Data Search Endpoints](filesystem/search.md)
-* [Favorites Endpoints](favorites.md)
-* [Notification Endpoints](notifications.md)
-* [Permanent ID Requests](permanent-id-requests.md)
-* [Quick Launches](quick-launches.md)
-* [Reference Genome Endpoints](reference-genomes.md)
-* [Sharing Endpoints](sharing.md)
-* [Tags Endpoints](tags.md)
+* [App Metadata](app-metadata.md)
+    
+    * [Tools](tools.md)
 
-* [Miscellaneous Endpoints](misc.md)
+* [App Execution](app-execution.md)
+
+* [Callback](callbacks.md)
+
+* [Categorizing Apps with Ontology Hierarchies](app-ontologies.md)
+
+* [Collaborator List Management](collaborators.md)
+
+* [Comments](comments.md)
+
+* [Data Search](filesystem/search.md)
+
+* [Favorites](favorites.md)
+
+* [Notification](notifications.md)
+
+* [Permanent ID Requests](permanent-id-requests.md)
+
+* [Quick Launches](quick-launches.md)
+
+* [Reference Genomes](reference-genomes.md)
+
+* [Sharing](sharing.md)
+
+* [Tags](tags.md)
+
+* [Miscellaneous](misc.md)

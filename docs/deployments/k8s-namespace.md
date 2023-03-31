@@ -10,11 +10,11 @@ List of namespaces used for CyVerse deployment in kubernetes.
 
 ## prod
 
-This namespace is dedicated to the [core services](index.md#list-of-core-service) & some of non-core services such as :
+This namespace is dedicated to the [core services](deployment_overview.md) & some of non-core services such as :
 
-* redis-ha
+* [redis-ha](redis-ha.md)
 * redis-haproxy
-* elasticsearch
+* [elasticsearch](elasticsearch.md)
 
 Except the **irods-csi-driver** which runs in a specific namespace.
 

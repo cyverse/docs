@@ -1,15 +1,24 @@
-# Table of Contents
+**Jump to:**
 
 * [Application Execution Endpoints](#application-execution-endpoints)
-    * [Obtaining Parameter Values for a Previously Executed Job](#obtaining-parameter-values-for-a-previously-executed-job)
-    * [Obtaining Information to Rerun a Job](#obtaining-information-to-rerun-a-job)
-    * [Submitting a Job for Execution](#submitting-a-job-for-execution)
-    * [Listing Jobs](#listing-jobs)
-    * [Deleting a Job](#deleting-a-job)
-    * [Deleting Multiple Jobs](#deleting-multiple-jobs)
-    * [Updating Analysis Information](#updating-analysis-information)
-    * [Listing Analysis Steps](#listing-analysis-steps)
-    * [Stopping a Running Analysis](#stopping-a-running-analysis)
+
+* [Obtaining Parameter Values for a Previously Executed Job](#obtaining-parameter-values-for-a-previously-executed-job)
+
+* [Obtaining Information to Rerun a Job](#obtaining-information-to-rerun-a-job)
+
+* [Submitting a Job for Execution](#submitting-a-job-for-execution)
+
+* [Listing Jobs](#listing-jobs)
+
+* [Deleting a Job](#deleting-a-job)
+
+* [Deleting Multiple Jobs](#deleting-multiple-jobs)
+
+* [Updating Analysis Information](#updating-analysis-information)
+
+* [Listing Analysis Steps](#listing-analysis-steps)
+
+* [Stopping a Running Analysis](#stopping-a-running-analysis)
 
 # Application Execution Endpoints
 
@@ -17,54 +26,54 @@ Note that secured endpoints in Terrain and apps are a little different from each
 
 ## Obtaining Parameter Values for a Previously Executed Job
 
-Secured Endpoint: GET /analyses/{analysis-id}/parameters
+Secured Endpoint: `GET /analyses/{analysis-id}/parameters`
 
 This endpoint forwards all requests to apps. Please see the apps service documentation for details.
 
 ## Obtaining Information to Rerun a Job
 
-*Secured Endpoint:* GET /analyses/{analysis-id}/relaunch-info
+*Secured Endpoint:* `GET /analyses/{analysis-id}/relaunch-info`
 
 This endpoint forwards all requests to apps. Please see the apps service documentation for details.
 
 ## Submitting a Job for Execution
 
-Secured Endpoint: POST /analyses
+Secured Endpoint: `POST /analyses`
 
 This endpoint forwards all requests to apps. Please see the apps service documentation for details.
 
 ## Listing Jobs
 
-*Secured Endpoint:* GET /analyses
+*Secured Endpoint:* `GET /analyses`
 
 This service forwards all requests to apps. Please see the apps service documentation for more details.
 
 ## Deleting a Job
 
-*Secured Endpoint:* DELETE /analyses/{analysis-id}
+*Secured Endpoint:* `DELETE /analyses/{analysis-id}`
 
 This service forwards all requests to apps. Please see the apps service documentation for more details.
 
 ## Deleting Multiple Jobs
 
-*Secured Endpoint:* POST /analyses/shredder
+*Secured Endpoint:* `POST /analyses/shredder`
 
 This service forwards all requests to apps. Please see the apps service documentation for more details.
 
 ## Updating Analysis Information
 
-*Secured Endpoint:* PATCH /analyses/{analysis-id}
+*Secured Endpoint:* `PATCH /analyses/{analysis-id}`
 
 This endpoint forwards all requests to apps. Please see the apps service documentation for details.
 
 ## Listing Analysis Steps
 
-*Secured Endpoint:* GET /analyses/{analysis-id}/steps
+*Secured Endpoint:* `GET /analyses/{analysis-id}/steps`
 
 This endpoint forwards all requests to apps. Please see the apps service documentation for details.
 
 ## Stopping a Running Analysis
 
-*Secured Endpoint:* POST /analyses/{analysis-id}/stop
+*Secured Endpoint:* `POST /analyses/{analysis-id}/stop`
 
 This endpoint forwards all requests to apps. Please see the apps service documentation for details.

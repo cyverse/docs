@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [Sharing Endpoints](#sharing-endpoints)
-    * [Sharing User Data](#sharing-user-data)
-    * [Unsharing User Data](#unsharing-user-data)
-
 # Sharing Endpoints
 
 ## Sharing User Data

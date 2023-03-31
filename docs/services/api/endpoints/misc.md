@@ -1,25 +1,40 @@
-# Table of Contents
+**Jump to:**
 
 * [Miscellaneous Terrain Endpoints](#miscellaneous-terrain-endpoints)
-    * [Verifying that Terrain is Running](#verifying-that-terrain-is-running)
-    * [Initializing a User's Workspace and Preferences](#initializing-a-users-workspace-and-preferences)
-    * [Recording when a User Logs Out](#recording-when-a-user-logs-out)
-    * [Saving User Session Data](#saving-user-session-data)
-    * [Retrieving User Session Data](#retrieving-user-session-data)
-    * [Removing User Session Data](#removing-user-session-data)
-    * [Saving User Preferences](#saving-user-preferences)
-    * [Retrieving User Preferences](#retrieving-user-preferences)
-    * [Removing User Preferences](#removing-user-preferences)
-    * [Obtaining Identifiers](#obtaining-identifiers)
-    * [Requesting Support](#requesting-support)
-    * [Saved Searches](#saved-searches)
-        * [Getting saved searches](#getting-saved-searches)
-        * [Setting saved searches](#setting-saved-searches)
-        * [Deleting saved searches](#deleting-saved-searches)
+
+* [Verifying that Terrain is Running](#verifying-that-terrain-is-running)
+
+* [Initializing a User's Workspace and Preferences](#initializing-a-users-workspace-and-preferences)
+
+* [Recording when a User Logs Out](#recording-when-a-user-logs-out)
+
+* [Saving User Session Data](#saving-user-session-data)
+
+* [Retrieving User Session Data](#retrieving-user-session-data)
+
+* [Removing User Session Data](#removing-user-session-data)
+
+* [Saving User Preferences](#saving-user-preferences)
+
+* [Retrieving User Preferences](#retrieving-user-preferences)
+
+* [Removing User Preferences](#removing-user-preferences)
+
+* [Obtaining Identifiers](#obtaining-identifiers)
+
+* [Requesting Support](#requesting-support)
+
+* [Saved Searches](#saved-searches)
+  
+  * [Getting saved searches](#getting-saved-searches)
+  
+  * [Setting saved searches](#setting-saved-searches)
+  
+  * [Deleting saved searches](#deleting-saved-searches)
 
 # Miscellaneous Terrain Endpoints
 
-Note that secured endpoints in Terrain and apps are a little different from each other. Please see [Terrain Vs. Apps](terrain-v-apps.html) for more information.
+Note that secured endpoints in Terrain and apps are a little different from each other. Please see [Terrain Vs. Apps](terrain-v-apps.md) for more information.
 
 ## Verifying that Terrain is Running
 

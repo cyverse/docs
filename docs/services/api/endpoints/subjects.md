@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [Subject Endpoints](#subject-endpoints)
-    * [Search for Subjects](#search-for-subjects)
-
 # Subject Endpoints
 
 ## Search for Subjects

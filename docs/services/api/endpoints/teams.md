@@ -1,20 +1,34 @@
-# Table of Contents
+**Jump to:**
 
 * [Team Management Endpoints](#team-management-endpoints)
-    * [Listing Teams](#listing-teams)
-    * [Creating a New Team](#creating-a-new-team)
-    * [Getting Team Information](#getting-team-information)
-    * [Updating a Team](#updating-a-team)
-    * [Deleting a Team](#deleting-a-team)
-    * [Listing Team Members](#listing-team-members)
-    * [Adding Team Members](#adding-team-members)
-    * [Removing Team Members](#removing-team-members)
-    * [Joining a Team](#joining-a-team)
-    * [Requesting to Join a Team](#requesting-to-join-a-team)
-    * [Denying a Request to Join a Team](#denying-a-request-to-join-a-team)
-    * [Leaving a Team](#leaving-a-team)
-    * [Listing Team Privileges](#listing-team-privileges)
-    * [Updating Team Privileges](#updating-team-privileges)
+
+* [Listing Teams](#listing-teams)
+
+* [Creating a New Team](#creating-a-new-team)
+
+* [Getting Team Information](#getting-team-information)
+
+* [Updating a Team](#updating-a-team)
+
+* [Deleting a Team](#deleting-a-team)
+
+* [Listing Team Members](#listing-team-members)
+
+* [Adding Team Members](#adding-team-members)
+
+* [Removing Team Members](#removing-team-members)
+
+* [Joining a Team](#joining-a-team)
+
+* [Requesting to Join a Team](#requesting-to-join-a-team)
+
+* [Denying a Request to Join a Team](#denying-a-request-to-join-a-team)
+
+* [Leaving a Team](#leaving-a-team)
+
+* [Listing Team Privileges](#listing-team-privileges)
+
+* [Updating Team Privileges](#updating-team-privileges)
 
 
 # Team Management Endpoints

@@ -1,15 +1,20 @@
-# Table of Contents
+**Jump to:**
 
-* [Reference Genome endpoints](#reference-genome-endpoints)
-    * [Exporting Reference Genomes](#exporting-reference-genomes)
-    * [Get a Reference Genome by ID](#get-a-reference-genome-by-id)
-    * [Adding Reference Genomes](#adding-reference-genomes)
-    * [Deleting Reference Genomes](#deleting-reference-genomes)
-    * [Updating Reference Genomes](#updating-reference-genomes)
+* [Reference Genome endpoints](#reference-genome-endpoints)    
+    
+* [Exporting Reference Genomes](#exporting-reference-genomes)
+    
+* [Get a Reference Genome by ID](#get-a-reference-genome-by-id)
+    
+* [Adding Reference Genomes](#adding-reference-genomes)
+    
+* [Deleting Reference Genomes](#deleting-reference-genomes)
+    
+* [Updating Reference Genomes](#updating-reference-genomes)
 
 # Reference Genome endpoints
 
-Note that secured endpoints in Terrain and apps are a little different from each other. Please see [Terrain Vs. Apps](terrain-v-apps.html) for more information.
+Note that secured endpoints in Terrain and apps are a little different from each other. Please see [Terrain Vs. Apps](terrain-v-apps.md) for more information.
 
 ## Exporting Reference Genomes
 

@@ -1,12 +1,22 @@
 ![](assets/cyverse_logo_2022.svg)
 
-## Contents
+This [DevOps Documentation](services/system_overview.md) site is *primarily* intended for professional DevOps and IT specialists with experience in Infrastructure as Code (IaC), Kubernetes (K8s), OpenStack Cloud, and Networking who are interested in deploying their own CyVerse infrastructure or to leverage components of the primary CyVerse deployment managed by University of Arizona, Texas Advanced Computing Center (TACC), and Cold Spring Harbor Labs (CSHL). 
 
-These documents are for managing a fully self-hosted deployment of CyVerse. 
+The [User Guide documentation](guides/devops.md) is intended for domain scientists and data scientists interested in using the platform. 
 
-These pages are intended for primarily for professional DevOps and IT specialists with experience in Infrastructure as Code (IaC).
+[DevOps Overview](#development--operations-devops)
 
-Our [User Guides]() are designed for data scientists, students, and researchers who want to use CyVerse for research.
+[System Overview](services/system_overview.md) - description of physical resources used to manage and operate CyVerse
+
+[API (Terrain) Overview](services/api_overview.md) - documentation for API endpoints 
+
+[Services Overview](#services) - list of services within CyVerse
+
+[Deployments Overview](#simple-kubernetes-deployments) - instructions for deploying APIs, databases, and services
+
+[Databases Overview](#octicons-database-24-databases) - list of databases used within CyVerse
+
+[User Guide Overview](#user-guides)
 
 ??? Question "What is CyVerse?"
 
@@ -19,7 +29,7 @@ Our [User Guides]() are designed for data scientists, students, and researchers 
     [![NSF-0735191](https://img.shields.io/badge/NSF-0735191-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0735191) [![NSF-1265383](https://img.shields.io/badge/NSF-1265383-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1265383) [![NSF-1743442](https://img.shields.io/badge/NSF-1743442-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1743442)
 
 
-!!! Info ":fontawesome-brands-creative-commons-by: LICENSE"
+!!! Info ":fontawesome-brands-creative-commons-by: SOFTWARE LICENSE"
 
     Copyright (c) 2010-2023, The Arizona Board of Regents on behalf of The University of Arizona
 
@@ -35,10 +45,15 @@ Our [User Guides]() are designed for data scientists, students, and researchers 
 
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
 ## Development & Operations (DevOps)
 
 Details about managing Services, Deployments, and Databases as IaC:
+
+### API (Terrain)
+
+[Terrain (API)](services/api_overview.md) is the backbone service which manages the Discovery Environment data science workbench. 
+
+Details about handling API calls in Terrain are presented in the API section.
 
 ### Services
 
@@ -116,3 +131,11 @@ All of CyVerse primary services and database deployments are containers, control
 [:octicons-database-24: QMS](database/qms-db.md) - database for QMS service
 
 [:octicons-database-24: Portal](database/portal-db.md) - User Portal database
+
+## User Guides
+
+* [DevOps](guides/devops.md) - instructions for setting up a remote DevOps environment to manage a CyVerse deployment
+
+* [Discovery Environment](guides/de.md) - designed for data scientists, students, and researchers who want to use CyVerse for research.
+
+* [Data Store](guides/ds.md) - instructions for using the iRODS Data Store.

@@ -9,6 +9,7 @@ This endpoint is a passthrough to the data-info endpoint above. Please see the d
 
 Directory Creation
 ------------------
+
 __URL Path__: /secured/filesystem/directory/create
 
 __HTTP Method__: POST

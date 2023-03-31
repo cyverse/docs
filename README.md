@@ -13,8 +13,7 @@ Do not commit changes directly to the `main` branch unless necessary. Please com
 
 Commits to `main` will trigget the Action which re-builds and deploys the website to https://docs.cyverse.org -- which is publicly available. 
 
-
-## Render with Material Theme
+## Rendered with the Material Theme
 
 To change to [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) theme, change [Action](./github/workflows/main.yml) to `@master` and set `theme: material` in the [mkdocs.yml](./mkdocs.yml):
 
@@ -23,7 +22,7 @@ theme:
   name: material
 ```
 
-## Build and test locally
+## Build
 
 ```
 git clone https://github.com/cyverse/docs
@@ -31,3 +30,9 @@ cd docs
 pip install -r requirements.txt
 python -m mkdocs serve
 ```
+
+After compiling the new pages the service will open on `http://localhost:8000` 
+
+Open in browser and view
+
+Recommended: two monitors for easier display while working on docs. 

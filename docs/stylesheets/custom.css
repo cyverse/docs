@@ -58,7 +58,7 @@ body {
 }
 
 .md-footer-nav {
-    background-color: #0971ab;
+    background-color: #000000;
     color: var(--md-footer-fg-color--light);
 }
 .md-footer-nav__direction {
@@ -72,7 +72,7 @@ body {
 }
 
 .md-footer-meta {
-    background-color: #015d9b;
+    background-color: #000000;
 }
 
 .spacing

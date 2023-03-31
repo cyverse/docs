@@ -31,7 +31,7 @@ pip install -r requirements.txt
 python -m mkdocs serve
 ```
 
-After compiling the new pages the service will open on `http://localhost:8000` 
+After compiling the new pages the service will open on `http://localhost:8000/docs` 
 
 Open in browser and view
 

@@ -16,19 +16,17 @@ All APIs use [:simple-openapiinitiative: OpenAPI](https://www.openapis.org/)
 
 * [:simple-swagger: https://de.cyverse.org/terrain/swagger.json](https://de.cyverse.org/terrain/swagger.json)
 
-[:simple-openapiinitiative: :simple-gitlab: CACAO API](https://gitlab.com/cyverse/cacao/-/blob/master/docs/openapi/openapi.yaml){target=_blank} - Infrastructure as Code API for cloud automation with OpenAPI
+[CACAO API](https://gitlab.com/cyverse/cacao/-/blob/master/docs/openapi/openapi.yaml){target=_blank} - Infrastructure as Code API for cloud automation with OpenAPI
 
-[:simple-openapiinitiative: :simple-gitlab: Data Watch API](https://gitlab.com/cyverse/datawatch/-/blob/master/docs/openapi/datawatch-openapi.yaml){target=_blank} - event based triggers for workflows with OpenAPI
+[Data Watch API](https://gitlab.com/cyverse/datawatch/-/blob/master/docs/openapi/datawatch-openapi.yaml){target=_blank} - event based triggers for workflows with OpenAPI
 
 ## :octicons-cloud-24: Cloud Services
 
-[![][cacao]{width=25}](https://cyverse.org/cacao){target=_blank} [:chocolate_bar: Continous Automation / Continuous Analysis & Orchestration (CACAO)](https://cyverse.org/cacao){target=_blank} - Infrastructure as Code for multi-cloud deployments
+[![][cacao]{width=25}](https://cyverse.org/cacao){target=_blank} [Continous Automation / Continuous Analysis & Orchestration (CACAO)](https://cyverse.org/cacao){target=_blank} - Infrastructure as Code for multi-cloud deployments
 
-* [:simple-terraform: :simple-gitlab: CACAO Terraform Templates](https://gitlab.com/cyverse/cacao-tf-os-ops/){target=_blank}
+* [:simple-terraform: CACAO Terraform Templates](https://gitlab.com/cyverse/cacao-tf-os-ops/){target=_blank}
 
-[![][cacao]{width=25}](https://gitlab.com/cyverse/datawatch){target=_blank} [:octicons-stopwatch-24: DataWatch](https://gitlab.com/cyverse/datawatch){target=_blank} - a notification system for reporting data events
-
-* [:simple-gitlab: DataWatch](https://gitlab.com/cyverse/datawatch){target=_blank}
+* [:octicons-stopwatch-24: DataWatch](https://gitlab.com/cyverse/datawatch){target=_blank} - a notification system for reporting data events
 
 ## :material-server: Compute Resources
 
@@ -40,7 +38,15 @@ The DE runs on-premises hardware located at University of Arizona in the UITS co
 
 * [National Research Platform](https://nationalresearchplatform.org/){target=_blank} federated K8s resources are in development for the DE.
 
-:material-server: High Throughput Computing Environments:
+### :simple-openstack: OpenStack Cloud 
+
+* CyVerse maintains its own OpenStack Cloud (formerly "Atmosphere") for internal use and development of CACAO.
+
+* Jetstream2 is primarily operated at Indiana University, but test clusters are shared across other universities in the US
+
+![js2](../assets/js2.png)
+
+### :material-server: High Throughput Computing Environments:
 
 ![htcondor](../assets/HTCondor_red_blk.svg){width=250}
 
@@ -50,23 +56,15 @@ DE uses [HTCondor](https://htcondor.org/){target=_blank} for `executable` jobs o
 
 Federation to the [OpenScienceGrid](https://opensciencegrid.org){target=_blank} can be accomplished in the DE
 
-### :simple-openstack: OpenStack Cloud 
+### :material-server: High Performance Computing Environments
 
-* CyVerse maintains its own OpenStack Cloud (formerly "Atmosphere") for internal use and development of CACAO.
+[University of Arizona](https://it.arizona.edu/){target=_blank} resources are colocated with the CyVerse data store and compute clusters
 
-* Jetstream2 is primarily operated at Indiana University, but test clusters are shared across other universities in the US
+CyVerse is partnered with [Texas Advanced Computing Center (TACC)](https://www.tacc.utexas.edu/){target=_blank} where its data store is replicated nightly. US based researchers can request access to HPC via:
 
-![js2](../assets/js2.png)
+* [ACCESS-CI](https://access-ci.org/){target=_blank}
 
-:material-server: High Performance Computing Environments
-
-* [University of Arizona](https://it.arizona.edu/){target=_blank} resources are colocated with the CyVerse data store and compute clusters
-
-* CyVerse is partnered with [Texas Advanced Computing Center (TACC)](https://www.tacc.utexas.edu/){target=_blank} where its data store is replicated nightly
-
-    * [ACCESS-CI allocation request](https://access-ci.org/){target=_blank}
-
-    * [TACC Allocation request](https://portal.tacc.utexas.edu/allocations-overview){target=_blank}
+* [TACC Allocation request](https://portal.tacc.utexas.edu/allocations-overview){target=_blank}
     
 ## :octicons-database-24: Data Storage
 
@@ -82,17 +80,17 @@ Resource Servers coordinate resources and contain physical storage devices. An i
 
 ## :material-web: Web Portals
 
-[![][ball]{width=25}](https://user.cyverse.org/){target=_blank} [:material-web: User Portal](https://user.cyverse.org){target=_blank} - a User Portal for creating and managing accounts, requesting and granting access to platforms, and a user management space for individuals and groups and workshops. 
+[![][ball]{width=25}](https://user.cyverse.org/){target=_blank} [User Portal](https://user.cyverse.org){target=_blank} - a User Portal for creating and managing accounts, requesting and granting access to platforms, and a user management space for individuals and groups and workshops. 
 
-[![][de]{width=25}](https://de.cyverse.org){target=_blank} [:material-web: Discovery Environment](https://de.cyverse.org){target=_blank}  - Custom interactive web based data science workbench
+[![][de]{width=25}](https://de.cyverse.org){target=_blank} [Discovery Environment](https://de.cyverse.org){target=_blank}  - Custom interactive web based data science workbench
 
-[:material-shield-key: :material-web: KeyCloak](https://kc.cyverse.org){target=_blank} - federated OAUTH to CyVerse resources, including Google, GitHub, ORCID,& CILogon
+[:material-shield-key: KeyCloak](https://kc.cyverse.org){target=_blank} - federated OAUTH to CyVerse resources, including Google, GitHub, ORCID,& CILogon
 
-[![][data]{width=25}](https://data.cyverse.org){target=_blank} [:material-web: WebDav](https://data.cyverse.org/){target=_blank} - `https://` endpoint for the iRODS data store
+[![][data]{width=25}](https://data.cyverse.org){target=_blank} [WebDav](https://data.cyverse.org/){target=_blank} - `https://` endpoint for the iRODS data store
 
-[![][data]{width=25}](){target=_blank} [:material-web: SFTP](/){target=_blank} - built using SFTPGo
+[![][data]{width=25}](){target=_blank} [SFTP](/){target=_blank} - built using SFTPGo
 
-[![][data]{width=25}](https://datacommons.cyverse.org){target=_blank} [:material-web: DataCommons](https://datacommons.cyverse.org/){target=_blank} - website hosting of published datasets in the CyVerse data store. The DataCommons presents any metadata which have been added by the owners to directories (folders) or files.
+[![][data]{width=25}](https://datacommons.cyverse.org){target=_blank} [DataCommons](https://datacommons.cyverse.org/){target=_blank} - website hosting of published datasets in the CyVerse data store. The DataCommons presents any metadata which have been added by the owners to directories (folders) or files.
 
 ## :fontawesome-solid-staff-snake: Monitoring Services
 

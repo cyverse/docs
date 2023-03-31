@@ -12,26 +12,52 @@ edit_uri: edit/main/docs
 # Copyright
 copyright: 'Copyright &copy; 2016-2023 CyVerse'
 
-# logos
-medunilogo: 'images/logo-meduni-graz.png'
-unigrazlogo: 'images/universitaet_graz_logo_signet.png'
-tugrazlogo: 'images/TUG.png'
+# JavaScript for Intercom Widget
+extra_javascript:
+  - javascripts/intercom.js
 
+# logos
+#medunilogo: 'images/logo-meduni-graz.png'
+#unigrazlogo: 'images/universitaet_graz_logo_signet.png'
+#tugrazlogo: 'images/TUG.png'
 imgwidth: 70px;
 theme:
   highlightjs: true
-  features:
-    - navigation.tabs
   name: material
-  # custom_dir: 'overrides'
-  palette:
-    primary: 'white'
   font:
     text: 'Open Sans'
     code: 'Roboto Mono'
   logo: 'assets/de/cyverse_ball_2022.png'
   favicon: 'images/favicon.ico'
+# setting features for the navigation tab
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
+    - toc.follow
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  # custom_dir: 'overrides'
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: white)"
+      primary: 'white'
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
 
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to system preference
+
+# Navigation Pane
 
 nav:
   - About: 'index.md'

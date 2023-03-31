@@ -1,4 +1,4 @@
-# API (Terrain)
+# :material-terrain: Terrain
 
 Terrain provides the primary point of communication between the Discovery Environment (DE) UI and backend services. 
 

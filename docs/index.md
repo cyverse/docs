@@ -2,6 +2,8 @@
 
 This [DevOps Documentation](services/system_overview.md) site is *primarily* intended for professional DevOps and IT specialists with experience in Infrastructure as Code (IaC), Kubernetes (K8s), OpenStack Cloud, and Networking who are interested in deploying their own CyVerse infrastructure or to leverage components of the primary CyVerse deployment managed by University of Arizona, Texas Advanced Computing Center (TACC), and Cold Spring Harbor Labs (CSHL). 
 
+## :fontawesome-solid-folder-tree: Contents
+
 The [User Guide documentation](guides/devops.md) is intended for domain scientists and data scientists interested in using the platform. 
 
 [DevOps Overview](#development--operations-devops)
@@ -45,17 +47,17 @@ The [User Guide documentation](guides/devops.md) is intended for domain scientis
 
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-## Development & Operations (DevOps)
+### :fontawesome-solid-gears: Development & Operations (DevOps)
 
 Details about managing Services, Deployments, and Databases as IaC:
 
-### API (Terrain)
+### API (:material-terrain: Terrain)
 
 [Terrain (API)](services/api_overview.md) is the backbone service which manages the Discovery Environment data science workbench. 
 
 Details about handling API calls in Terrain are presented in the API section.
 
-### Services
+### :material-hand-extended: Services
 
 User facing services include:
 
@@ -132,10 +134,10 @@ All of CyVerse primary services and database deployments are containers, control
 
 [:octicons-database-24: Portal](database/portal-db.md) - User Portal database
 
-## User Guides
+### :material-map-search-outline: User Guides
 
-* [DevOps](guides/devops.md) - instructions for setting up a remote DevOps environment to manage a CyVerse deployment
+[:fontawesome-solid-gears: DevOps](guides/devops.md) - instructions for setting up a remote DevOps environment to manage a CyVerse deployment
 
-* [Discovery Environment](guides/de.md) - designed for data scientists, students, and researchers who want to use CyVerse for research.
+[Discovery Environment](guides/de.md) - designed for data scientists, students, and researchers who want to use CyVerse for research.
 
-* [Data Store](guides/ds.md) - instructions for using the iRODS Data Store.
+[Data Store](guides/ds.md) - instructions for using the iRODS Data Store.

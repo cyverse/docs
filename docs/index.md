@@ -27,6 +27,8 @@ Details about managing Services, Deployments, and Databases as IaC:
 
 User facing services include:
 
+* [API (Terrain)](services/api_overview.md) - Terrain API is the main API powering the Discovery Environment workbench
+
 * [Authentication](services/keycloak.md) - managed user authentication using OAUTH and KeyCloak
 
 * [BisQue](services/bisque.md) - large scale image analyses

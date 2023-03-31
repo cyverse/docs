@@ -19,7 +19,6 @@ Our [User Guides]() are designed for data scientists, students, and researchers 
     [![NSF-0735191](https://img.shields.io/badge/NSF-0735191-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0735191) [![NSF-1265383](https://img.shields.io/badge/NSF-1265383-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1265383) [![NSF-1743442](https://img.shields.io/badge/NSF-1743442-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1743442)
 
 
-
 ## Development & Operations (DevOps)
 
 Details about managing Services, Deployments, and Databases as IaC:
@@ -87,7 +86,7 @@ All of CyVerse primary services and database deployments are containers, control
 
 [:octicons-database-24: Metadata](database/metadata-db.md) - the CyVerse Metadata Service
 
-[:octicons-database-24: KeyCloak](database/keycloak-db.md) - database used by Keycloak
+[:octicons-database-24: Keycloak](database/keycloak-db.md) - database used by Keycloak
 
 [:octicons-database-24: Notifications](database/notifications-db.md) - database used for notifications
 

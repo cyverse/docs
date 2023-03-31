@@ -38,6 +38,12 @@ nav:
   - DevOps:
     - System Overview: 'services/system_overview.md'
     - Subscriptions: 'services/subscriptions.md'
+    - API (Terrain): 
+      - Overview: 'services/api.md'
+      - Endpoints: 'services/api/endpoints/endpoints.md'
+      - Errors: 'services/api/errors.md'
+      - Schema: 'services/api/schema.md'
+      - Endpoint Index: 'services/api/endpoint-index.md'
     - Services:
       - Authentication: 'services/keycloak.md'
       - Cloud Services: "services/cloud.md"

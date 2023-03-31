@@ -1,8 +1,8 @@
 [BisQue (Bio-Image Semantic Query User Environment)]() was originally developed by [UC Santa Barbara Center for Bio-Image Informatics](https://bioimage.ucsb.edu/)
 
-Later, it became the basis for [ViQi AI](https://viqiai.com/)
+Later, it became [ViQi AI](https://viqiai.com/)
 
-CyVerse maintains a [BisQue Service](https://bisque.cyverse.org/client_service/) 
+CyVerse maintains a fork of the UCSB [BisQue](https://bisque.cyverse.org/client_service/) 
 
 ## Deployment of BisQue 
 

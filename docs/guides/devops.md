@@ -12,7 +12,8 @@ If you intend to use our ansible scripts, we highly suggest that you read the  [
 
 # Design
 
-We have strived to follow Ansible's [best practices](http://docs.ansible.com/ansible/playbooks_best_practices.html). 
+We have strived to follow Ansible's [best practices](http://docs.ansible.com/ansible/playbooks_best_practices.html).
+ 
 However, we have slightly diverged on the topics of  [directory layout](http://docs.ansible.com/ansible/playbooks_best_practices.html#directory-layout) and [role-separated top level playbooks](http://docs.ansible.com/ansible/playbooks_best_practices.html#top-level-playbooks-are-separated-by-role).
 
 ## Directory Layout

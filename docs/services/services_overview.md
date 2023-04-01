@@ -1,8 +1,13 @@
-# Services Overview
+# Products & Services Overview
 
 CyVerse provides multiple end-user services.
 
-Primarily these are served over `https://` websites which link to CyVerse Terrain API, Data Store, or Authentication platforms
+<figure markdown>
+  ![layercake](../assets/layerCake.svg){width=800}
+  <figcaption>The top of the CyVerse layer cake includes its Products & Services</figcaption>
+</figure>
+
+Primarily the Products and Services layers are served directly over `https://` websites which then link to the CyVerse Terrain API, K8s clusters, Data Store, and Authentication layers.
 
 [API (Terrain)](api_overview.md)
 

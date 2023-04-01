@@ -62,6 +62,7 @@ theme:
 nav:
   - About: 'index.md'
   - DevOps:
+    - Getting Started: 'services/getting_started.md'
     - System Overview: 'services/system_overview.md'
     - Subscriptions: 'services/subscriptions.md'
     - API (Terrain): 
@@ -87,7 +88,7 @@ nav:
       - Endpoints Index: 'services/api/endpoint-index.md'
       - Errors: 'services/api/errors.md'
       - Schema: 'services/api/schema.md'
-    - Services:
+    - Products & Services:
       - Overview: 'services/services_overview.md'
       - Authentication: 'services/keycloak.md'
       - BisQue: [services/bisque.md]
@@ -125,10 +126,11 @@ nav:
       - Grouper: 'database/grouper-db.md'
       - QMS: 'database/qms-db.md'
       - Portal: 'database/portal-db.md'
-  - User Guides:
+  - Admin Guides:
     - DevOps: 'guides/devops.md'
     - Discovery Environment: 'guides/de.md'
-    - Data Store: 'guides/ds.md'    
+    - Data Store: 'guides/ds.md'
+    - User Portal: 'guides/user_portal.md'    
     - Frequently Asked Questions: 'guides/faq.md'
 
 # Customization

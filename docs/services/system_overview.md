@@ -4,6 +4,8 @@
 [cacao]: ../assets/de/cacao-04.png
 [ball]: ../assets/de/cyverse_ball_2022.png
 
+![ecosystem](../assets/ecosystem.svg)
+
 ## :material-api: Application Programming Interfaces (APIs)
 
 CyVerse manages public-facing APIs which is leveraged in "[Powered-by-CyVerse](https://cyverse.org/powered-by-cyverse)" projects. 
@@ -32,11 +34,11 @@ All APIs use [:simple-openapiinitiative: OpenAPI](https://www.openapis.org/)
 
 The DE runs on-premises hardware located at University of Arizona in the UITS colocation space at the high performance computing center. 
 
-### :simple-kubernetes: Kubernetes Clusters
+### :simple-kubernetes: Federated Kubernetes Clusters
 
-* The DE runs on locally managed K8s clusters.
+* CyVerse runs mainly on a locally managed K8s cluster, but it can be federated to other K8s clusters.
 
-* [National Research Platform](https://nationalresearchplatform.org/){target=_blank} federated K8s resources are in development for the DE.
+* The [National Research Platform](https://nationalresearchplatform.org/){target=_blank} offers federated K8s resources. These resources are currently in development.
 
 ### :simple-openstack: OpenStack Cloud 
 
@@ -77,6 +79,8 @@ CyVerse manages over 6 PB data via [iRODS (integrated Rule Oriented Data System)
 The data store is mirrored between University of Arizona and Texas Advanced Computing Center (TACC) nightly.
 
 Resource Servers coordinate resources and contain physical storage devices. An iCAT server stores metadata in the form of “triples” to its relational database. 
+
+![datastore](../assets/datastore.svg){width=500}
 
 ## :material-web: Web Portals
 

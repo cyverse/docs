@@ -4,23 +4,37 @@
 [cacao]: ../assets/de/cacao-04.png
 [ball]: ../assets/de/cyverse_ball_2022.png
 
-![ecosystem](../assets/ecosystem.svg)
+CyVerse provides the Infrastructure as Code (IaC) necessary to manage a full stack cyberinfrastructure. The US public CyVerse primarily runs on hardware located at The University of Arizona, with a full data store mirror at the Texas Advanced Computing Center (TACC), and federated storage and compute resources located across the US. 
+
+The full CyVerse stack can be deployed either on-premises consumer hardware or on cloud resources. 
+
+Data storage is managed by an iRODS [![data]{width=25} Data Store](ds.md). 
+
+Computing can be done in either the [![de]{width=25} Discovery Environment (DE)](de.md) data science workbench or with the [![cacao]{width=25} CACAO IaC](cloud.md) which leverages both public research computing and commercial cloud. 
+
+Event-based triggers are accomplished through the DataWatch API.
+
+<figure markdown>
+  ![ecosystem](../assets/ecosystem.svg){width=800}
+  <figcaption>CyVerse's Infrastructure as Code (IaC) provides computing, storage, and event-based components researchers rely upon for data intensive science.
+</figcaption>
+</figure>
 
 ## :material-api: Application Programming Interfaces (APIs)
 
-CyVerse manages public-facing APIs which is leveraged in "[Powered-by-CyVerse](https://cyverse.org/powered-by-cyverse)" projects. 
+All CyVerse APIs are [:simple-openapiinitiative: OpenAPI](https://www.openapis.org/) compliant.
 
-All APIs use [:simple-openapiinitiative: OpenAPI](https://www.openapis.org/)
+[:material-terrain: Terrain API](https://de.cyverse.org/terrain/docs/index.html){target=_blank} is the main API for Discovery Environment and uses a [:simple-swagger: Swagger](https://swagger.io/) interface. 
 
-[:material-terrain: Terrain API](https://de.cyverse.org/terrain/docs/index.html){target=_blank} - main API for Discovery Environment Swagger interface 
-
-* [:simple-jupyter: Terrain API Jupyter Notebooks](https://github.com/cyverse/terrain-notebook)
+* [:simple-jupyter: Terrain API Jupyter Notebooks](https://github.com/cyverse/terrain-notebook) - provide an introduction to Terrain and show how to start and stop analyses.
 
 * [:simple-swagger: https://de.cyverse.org/terrain/swagger.json](https://de.cyverse.org/terrain/swagger.json)
 
-[CACAO API](https://gitlab.com/cyverse/cacao/-/blob/master/docs/openapi/openapi.yaml){target=_blank} - Infrastructure as Code API for cloud automation with OpenAPI
+[![cacao]{width=25} CACAO API](https://gitlab.com/cyverse/cacao/-/blob/master/docs/openapi/openapi.yaml){target=_blank} - Infrastructure as Code API for cloud automation with OpenAPI
 
 [Data Watch API](https://gitlab.com/cyverse/datawatch/-/blob/master/docs/openapi/datawatch-openapi.yaml){target=_blank} - event based triggers for workflows with OpenAPI
+
+CyVerse public-facing APIs are frequently leveraged by "[Powered-by-CyVerse](https://cyverse.org/powered-by-cyverse)" projects which utilize specific parts of the platform. 
 
 ## :octicons-cloud-24: Cloud Services
 
@@ -32,7 +46,50 @@ All APIs use [:simple-openapiinitiative: OpenAPI](https://www.openapis.org/)
 
 ## :material-server: Compute Resources
 
-The DE runs on-premises hardware located at University of Arizona in the UITS colocation space at the high performance computing center. 
+The DE runs on-premises hardware located at University of Arizona (UArizona) in the UITS colocation space at the high performance computing center. The data store is mirrored nightly at TACC. 
+
+CyVerse staff maintain over XXX servers at UArizona, and XX servers at TACC.
+
+Hardware is added, replaced, or upgraded every few months. Table values below may not be up-to-date.
+
+**Primary Hardware Specifications**
+
+Compute Nodes (XXX nodes)
+
+| System Configuration | Aggregate information | Per Node (Compute Node) |
+|----------------------|-----------------------|-------------------------|
+| Machine types | Dell, SuperMicro, XXX |	 |
+| Operating Systems | Centos, Rocky |	Centos, Rocky |
+| Processor cores |	XX,XXX |	average XX |
+| CPUs | 128, 64, 40, 32, 16 | 1, 2 |
+| RAM | XXX TiB |	256, 128, 64, 32 GiB |
+| Network |	100 Gbps to Internet2 | 10 Gpbs to switch |
+| Storage |	X PB | X TB |
+
+GPU Nodes (XXX nodes)
+
+| System Configuration | Aggregate information | Per Node (Compute Node) |
+|----------------------|-----------------------|-------------------------|
+| Machine types | Dell, SuperMicro, XXX |	 |
+| Operating Systems | Centos, Rocky |	Centos, Rocky |
+| Processor cores |	 |	256 |
+| CPUs | | 2 |
+| RAM | |	1 TB, 512 GB |
+| GPUs | NVIDIA (A100 80GB), (Tesla T4 16GB) | 4 |
+| Network |	100 Gbps to Internet2 | 10 Gpbs to switch |
+| Storage |	XXX TB | 28 TB SSD, 21 TB NVMe|
+
+Storage Resource Nodes (XX nodes)
+
+| System Configuration | Aggregate information | Per Node (Compute Node) |
+|----------------------|-----------------------|-------------------------|
+| Machine types | Dell, SuperMicro, XXX | |
+| Operating Systems | Centos, Rocky |	Centos, Rocky |
+| Processor cores |	XX,XXX |	average XX |
+| CPUs | 128, 64, 40, 32, 16 | 1, 2 |
+| RAM | XXX TiB |	256, 128, 64, 32 GiB |
+| Network |	100 Gbps to Internet2 | 10 Gpbs to switch |
+| Storage |	X PB | X TB |
 
 ### :simple-kubernetes: Federated Kubernetes Clusters
 
@@ -82,7 +139,7 @@ Resource Servers coordinate resources and contain physical storage devices. An i
 
 ![datastore](../assets/datastore.svg){width=500}
 
-## :material-web: Web Portals
+## :material-web: Interfaces
 
 [![][ball]{width=25}](https://user.cyverse.org/){target=_blank} [User Portal](https://user.cyverse.org){target=_blank} - a User Portal for creating and managing accounts, requesting and granting access to platforms, and a user management space for individuals and groups and workshops. 
 
@@ -91,8 +148,6 @@ Resource Servers coordinate resources and contain physical storage devices. An i
 [:material-shield-key: KeyCloak](https://kc.cyverse.org){target=_blank} - federated OAUTH to CyVerse resources, including Google, GitHub, ORCID,& CILogon
 
 [![][data]{width=25}](https://data.cyverse.org){target=_blank} [WebDav](https://data.cyverse.org/){target=_blank} - `https://` endpoint for the iRODS data store
-
-[![][data]{width=25}](){target=_blank} [SFTP](/){target=_blank} - built using SFTPGo
 
 [![][data]{width=25}](https://datacommons.cyverse.org){target=_blank} [DataCommons](https://datacommons.cyverse.org/){target=_blank} - website hosting of published datasets in the CyVerse data store. The DataCommons presents any metadata which have been added by the owners to directories (folders) or files.
 

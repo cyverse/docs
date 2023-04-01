@@ -12,6 +12,7 @@ psql -U postgres
 ```
 
 ### Create required Database and User
+
 See also [portal2/setup-database](https://gitlab.com/cyverse/portal2#setup-database)
 
 

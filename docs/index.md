@@ -2,13 +2,13 @@
 
 Welcome to our Core Software Documentation pages!
 
-The [DevOps documentation](services/system_overview.md) is intended for professional DevOps and IT specialists with experience in Infrastructure as Code (IaC), Kubernetes (K8s), OpenStack Cloud, and Networking. 
+The [DevOps documentation](services/system_overview.md) provides the details about deploying the CyVerse cyberinfrastructure. It is intended for professional DevOps and IT specialists with experience in Infrastructure as Code (IaC), Kubernetes (K8s), OpenStack Cloud, and Networking. 
 
-The [Admin Guides](guides/devops.md) are intended for platform administrators. 
+The [Admin Guides](guides/devops.md) are intended for CyVerse staff and administrators who will be managing user accounts and deploying containerized software applications on the infrastructure. 
 
 <figure markdown>
   ![layercake](assets/layerCake.svg){width=800}
-  <figcaption>The CyVerse layer cake is divided into Hardware Resources, Services, and Products</figcaption>
+  <figcaption>The CyVerse infrastructure layer cake is stacked upon bare-metal Hardware, then Services, and finally Products</figcaption>
 </figure>
 
 ??? Question "What is CyVerse?"
@@ -17,7 +17,9 @@ The [Admin Guides](guides/devops.md) are intended for platform administrators.
 
     CyVerse is a powerful computational infrastructure and the people who support its operations. It is fully open source, and dedicated to furthering open science.
     
-    CyVerse has been fully funded by the United States national Science Foundation (NSF) from 2008 until the present
+    CyVerse has been funded by the [United States National Science Foundation (NSF)](https://www.nsf.gov/){target=_blank} from 2008 until the present
+
+    [![nsf](assets/NSF.svg){width=100}](https://www.nsf.gov/){target=_blank} 
 
     [![NSF-0735191](https://img.shields.io/badge/NSF-0735191-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0735191) [![NSF-1265383](https://img.shields.io/badge/NSF-1265383-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1265383) [![NSF-1743442](https://img.shields.io/badge/NSF-1743442-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1743442)
 

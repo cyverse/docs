@@ -14,17 +14,7 @@
 
 ## Installation
 
-The DevOps section requires the following software:
-
-[:simple-ansible: Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html){target=_blank}
-
-[:simple-docker: Docker](https://docs.docker.com/engine/install/){target=_blank}
-
-[:simple-kubernetes: Kubernetes (K8s)](https://kubernetes.io/docs/tasks/tools/){target=_blank} - `kubectl` for managing K8s clusters
-
-[:simple-terraform: Terraform](https://developer.hashicorp.com/terraform/downloads){target=_blank}
-
-[:simple-visualstudiocode: VS Code Kubernetes Extension](https://code.visualstudio.com/docs/azure/kubernetes){target=_blank} - optional (recommended) 
+The [DevOps Guide section](../guides/devops.md) provies a list of required software for managing a CyVerse deployment
 
 ## Authentication
 
@@ -36,9 +26,9 @@ Experience Living in a [Science DMZ](https://en.wikipedia.org/wiki/Science_DMZ_N
 
 ## APIs
 
-[:material-terrain: Terrain API](services/api_overview.md) is the backbone service which manages the Discovery Environment data science workbench. 
+[:material-terrain: Terrain API](api_overview.md) is the backbone service which manages the Discovery Environment data science workbench. 
 
-Details about Terrain are presented in the [API endpoints section](services/api/endpoints/endpoints.md)
+Details about Terrain are presented in the [API endpoints section](api/endpoints/endpoints.md)
 
 ## :material-hand-extended: Products & Services
 

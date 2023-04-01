@@ -1,16 +1,26 @@
-# Overview
-
 [Ansible](http://www.ansible.com/) is an open source, agentless automation tool. The DE development team uses Ansible to provision/update our servers and deploy the DE. However, for this repository, we only expose the Ansible scripts that we use for deploying the DE. 
 
 If you intend to use our ansible scripts, we highly suggest that you read the  [Ansible documentation](http://docs.ansible.com/ansible/index.html).
 
-# Setup
+## Installations
+
+[:simple-ansible: Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html){target=_blank}
+
+[:simple-docker: Docker](https://docs.docker.com/engine/install/){target=_blank}
+
+[:simple-kubernetes: Kubernetes (K8s)](https://kubernetes.io/docs/tasks/tools/){target=_blank} - `kubectl` for managing K8s clusters
+
+[:simple-terraform: Terraform](https://developer.hashicorp.com/terraform/downloads){target=_blank}
+
+[:simple-visualstudiocode: VS Code Kubernetes Extension](https://code.visualstudio.com/docs/azure/kubernetes){target=_blank} - optional (recommended) 
+
+## Setup
 
 * [Ansible Setup](setup/ansible.md)
 
 * [Docker-based Ansible Setup](setup/docker.md)
 
-# Design
+## Design
 
 We have strived to follow Ansible's [best practices](http://docs.ansible.com/ansible/playbooks_best_practices.html).
  

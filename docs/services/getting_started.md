@@ -43,7 +43,7 @@ Experience Living in a [Science DMZ](https://en.wikipedia.org/wiki/Science_DMZ_N
 
 Details about handling API calls in Terrain are presented in the API section.
 
-## :material-hand-extended: Services & Products
+## :material-hand-extended: Products & Services
 
 [API (Terrain)](api_overview.md) - Terrain API is the main API powering the Discovery Environment workbench
 

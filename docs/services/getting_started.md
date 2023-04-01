@@ -2,7 +2,7 @@
 
     * Access to the internet and a web-enabled browser
 
-    * Access to bare metal hardware, :simple-openstack: OpenStack cloud, or commercial provider (:simple-amazonaws: AWS, :simple-googlecloud: Google Cloud, :simple-azuredevops: Microsoft Azure) to deploy the Infrastructure as Code (IaC)
+    * Access to bare metal hardware, :simple-openstack: OpenStack cloud, or commercial provider (:simple-amazonaws: AWS, :simple-googlecloud: Google Cloud, :simple-azuredevops: Microsoft Azure)
 
     * :simple-github: GitHub or :simple-gitlab: GitLab with private repositories for managing sensitive credentials and configurations
 

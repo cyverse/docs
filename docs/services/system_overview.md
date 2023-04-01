@@ -4,9 +4,11 @@
 [cacao]: ../assets/de/cacao-04.png
 [ball]: ../assets/de/cyverse_ball_2022.png
 
-CyVerse provides the Infrastructure as Code (IaC) necessary to manage a full stack cyberinfrastructure. The US public CyVerse primarily runs on hardware located at The University of Arizona, with a full data store mirror at the Texas Advanced Computing Center (TACC), and federated storage and compute resources located across the US. 
+CyVerse is both a Software as a Service (SaaS) and the Infrastructure as Code (IaC) necessary to manage a full stack cyberinfrastructure. 
 
-The full CyVerse stack can be deployed either on-premises consumer hardware or on cloud resources. 
+The US public CyVerse primarily runs on hardware located at The University of Arizona, with a full data store mirror at the Texas Advanced Computing Center (TACC), and federated storage and compute resources located across the US. 
+
+The full CyVerse SaaS stack can be deployed either on-premises consumer hardware or on cloud resources. 
 
 Data storage is managed by an iRODS [![data]{width=25} Data Store](ds.md). 
 

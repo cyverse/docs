@@ -140,6 +140,8 @@ Data storage is organized into resources. The main resource is named `CyVerseRes
 
 [![][data]{width=25}](https://data.cyverse.org){target=_blank} [WebDAV](https://data.cyverse.org/){target=_blank} - A service that provides secure HTTP/WebDAV access to the Data Store. It provides anonymous access to public data and authenticated access to private and shared data.
 
+![][data]{width=25} SFTP - A service that provides secure FTP access to the Data Store. The service can be accessed through sftp://data.cyverse.org.
+
 [![][data]{width=25}](https://datacommons.cyverse.org){target=_blank} [Data Commons](https://datacommons.cyverse.org/){target=_blank} - This service provides secure HTTP access to published datasets that are hosted in the CyVerse Data Store. The Data Commons presents any metadata which have been added by the owners to their datasets.
 
 ## :fontawesome-solid-staff-snake: Monitoring Services

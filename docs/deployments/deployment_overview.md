@@ -34,10 +34,12 @@ All of CyVerse primary services and database deployments are containers, control
 
 [:simple-kubernetes: Grouper](../deployments/grouper.md) - Internet2 Grouper Service
 
-[:simple-kubernetes: iRODS CSI Driver](../deployments/irods-csi-driver.md) - K8s Container Storage Interface (CSI Driver) for iRODS 
+[:simple-kubernetes: iRODS CSI Driver](../deployments/irods-csi-driver.md) - K8s Container Storage Interface (CSI Driver) for iRODS
 
 [:simple-kubernetes: Local Exim](../deployments/local-exim.md) - verification of email using Exim
 
 [:simple-kubernetes: VICE](../deployments/vice.md) - Manage K8s interactive jobs in DE
 
 [:simple-kubernetes: Jaeger](../deployments/jaeger.md) - open-source end-to-end distributed tracing
+
+[:simple-github: :simple-ansible: Data Store](https://github.com/cyverse/ds-playbooks) - deploy the CyVerse data Store

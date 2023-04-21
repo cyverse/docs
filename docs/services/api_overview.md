@@ -11,7 +11,10 @@ It's charged with two primary tasks:
 The primary and most current source for Terrain API endpoint documentation are the Swagger docs hosted by the service itself:
 [https://de.cyverse.org/terrain/docs](https://de.cyverse.org/terrain/docs){target=_blank}
 
-
+Not all endpoints have been documented in those Swagger docs yet,
+and those endpoints will be listed under the
+[default](https://de.cyverse.org/terrain/docs/index.html#!/default)
+Swagger category.
 The documentation for those endpoints may still be found below.
 
 * [Endpoints](./api/endpoints/endpoints.md)

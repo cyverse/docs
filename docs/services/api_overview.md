@@ -23,8 +23,6 @@ The documentation for those endpoints may still be found below.
 
 * [Errors](./api/errors.md)
 
-* [Schema](./api/schema.md)
-
 ## Authentication
 
 Authentication to the DE services is currently handled by passing signed JSON Web Tokens (JWTs) in the custom HTTP header, `X-Iplant-De-Jwt`, in each call to the service. The JWT payload used by the DE is structured as follows:

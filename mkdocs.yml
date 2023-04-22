@@ -87,7 +87,6 @@ nav:
         - Miscellaneous: 'services/api/endpoints/misc.md'
       - Endpoints Index: 'services/api/endpoint-index.md'
       - Errors: 'services/api/errors.md'
-      - Schema: 'services/api/schema.md'
     - Products & Services:
       - Overview: 'services/services_overview.md'
       - Authentication: 'services/keycloak.md'

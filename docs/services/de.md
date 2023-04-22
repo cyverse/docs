@@ -30,7 +30,7 @@ intense analyses.
 
 Nearly all applications use a database. The DE is backed by a  [PostgreSQL](http://www.postgresql.org/) database. 
 
-The schema can be found in the [databases]() section
+The schema can be found in the [de-database](https://github.com/cyverse-de/de-database) repository.
 
 ## RabbitMQ
 

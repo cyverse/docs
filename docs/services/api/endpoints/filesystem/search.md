@@ -8,7 +8,11 @@ This document describes the endpoints used to performing searches of user data.
 
 # Indexed Information
 
-For each file and folder stored in the iPlant data store, its ACL, system metadata, and user metadata are indexed as a JSON document. For files, [file records](../../schema.md#file-record) are indexed, and for folders, [folder records](../../schema.md#folder-record) are indexed.
+For each file and folder stored in the CyVerse Data Store, its ACL, system metadata, and user metadata are indexed as a JSON document. For files,
+[file records](https://de.cyverse.org/terrain/docs/index.html#!/filesystem/post_terrain_filesystem_stat)
+are indexed, and for folders,
+[folder records](https://de.cyverse.org/terrain/docs/index.html#!/filesystem/post_terrain_filesystem_stat)
+are indexed.
 
 In addition, CyVerse metadata (non-iRODS metadata) is indexed in a child document, and tags are indexed separately in their own way as well.
 
@@ -65,7 +69,7 @@ When the search succeeds the response document has these additional fields.
 | ------ | ------ | ----------- |
 | score  | number | an indication of how well this entity matches the query compared to other matches |
 | type   | string | the entity is this type of filesystem entry, either `"file"` or `"folder"` |
-| entity | object | the [file record](../../schema.md#file-record) or [folder record](../../schema.md#folder-record) matched |
+| entity | object | the [file record](https://de.cyverse.org/terrain/docs/index.html#!/filesystem/post_terrain_filesystem_stat) or [folder record](https://de.cyverse.org/terrain/docs/index.html#!/filesystem/post_terrain_filesystem_stat) matched |
 
 ### Example
 

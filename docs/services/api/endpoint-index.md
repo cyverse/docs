@@ -302,8 +302,6 @@
 
 [`POST /secured/fileio/urlupload`](endpoints/fileio.md#url-uploads) 
 
-[`POST /secured/filesystem/anon-files`](endpoints/filesystem/sharing.md#sharing-files-with-the-anonymous-user` 
-
 [`POST /secured/filesystem/delete`](endpoints/filesystem/delete.md#deleting-files-andor-directories) 
 
 [`POST /secured/filesystem/delete-contents`](endpoints/filesystem/delete.md#deleting-all-items-in-a-directory) 
@@ -446,8 +444,6 @@
 
 [`POST /secured/sessions`](endpoints/misc.md#saving-user-session-data) 
 
-[`POST /secured/share`](endpoints/sharing.md#sharing-user-data) 
-
 [`GET /secured/tags/suggestions`](endpoints/tags.md#suggest-a-tag) 
 
 [`POST /secured/tags/user`](endpoints/tags.md#creating-a-tag) 
@@ -455,8 +451,6 @@
 [`DELETE /secured/tags/user/{tag-id}`](endpoints/tags.md#delete-a-tag) 
 
 [`PATCH /secured/tags/user/{tag-id}`](endpoints/tags.md#update-a-tags-label-andor-description) 
-
-[`POST /secured/unshare`](endpoints/sharing.md#unsharing-user-data) 
 
 ## send-notification
 

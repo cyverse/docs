@@ -26,8 +26,6 @@ Request and response bodies are in JSON format unless otherwise noted.
 
 * [Quick Launches](quick-launches.md)
 
-* [Sharing](sharing.md)
-
 * [Tags](tags.md)
 
 * [Miscellaneous](misc.md)

@@ -79,7 +79,6 @@ nav:
         - Ontology Hierarchies: 'services/api/endpoints/app-ontologies.md'
         - Permanent ID Requests: 'services/api/endpoints/permanent-id-requests.md'
         - Quick Launches: 'services/api/endpoints/quick-launches.md'
-        - Sharing: 'services/api/endpoints/sharing.md'
         - Tags: 'services/api/endpoints/tags.md'
         - Miscellaneous: 'services/api/endpoints/misc.md'
       - Endpoints Index: 'services/api/endpoint-index.md'

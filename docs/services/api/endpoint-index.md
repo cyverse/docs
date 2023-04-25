@@ -298,10 +298,6 @@
 
 [`GET /secured/bootstrap`](endpoints/misc.md#initializing-a-users-workspace-and-preferences) 
 
-[`GET /secured/collaborators`](endpoints/collaborators.md#listing-collaborators) 
-
-[`POST /secured/collaborators`](endpoints/collaborators.md#adding-collaborators) 
-
 [`GET /secured/favorites/filesystem`](endpoints/favorites.md#listing-stat-info-for-favorite-data) 
 
 [`DELETE /secured/favorites/filesystem/{favorite}`](endpoints/favorites.md#removing-a-data-resource-from-being-a-favorite) 
@@ -452,8 +448,6 @@
 
 [`POST /secured/preferences`](endpoints/misc.md#saving-user-preferences) 
 
-[`POST /secured/remove-collaborators`](endpoints/collaborators.md#removing-collaborators) 
-
 [`DELETE /secured/saved-searches`](endpoints/misc.md#deleting-saved-searches) 
 
 [`GET /secured/saved-searches`](endpoints/misc.md#getting-saved-searches) 
@@ -477,10 +471,6 @@
 [`PATCH /secured/tags/user/{tag-id}`](endpoints/tags.md#update-a-tags-label-andor-description) 
 
 [`POST /secured/unshare`](endpoints/sharing.md#unsharing-user-data) 
-
-[`GET /secured/user-info`](endpoints/collaborators.md#obtaining-user-info` 
-
-[`GET /secured/user-search?search={search-string}`](endpoints/collaborators.md#searching-for-users) 
 
 ## send-notification
 

@@ -14,8 +14,6 @@ Request and response bodies are in JSON format unless otherwise noted.
 
 * [Categorizing Apps with Ontology Hierarchies](app-ontologies.md)
 
-* [Collaborator List Management](collaborators.md)
-
 * [Comments](comments.md)
 
 * [Data Search](filesystem/search.md)

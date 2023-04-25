@@ -8,8 +8,6 @@
 
 [`/collaborator-lists`](#collaborator-lists)
 
-[`/export-workflow`](#export-workflow)
-
 [`/favorites`](#favorites)
 
 [`/filesystem`](#filesystem)
@@ -26,8 +24,6 @@
 
 [`/teams`](#teams)
 
-[`/tool-requests`](#tool-requests)
-
 [`/uuid`](#uuid)
 
 ## get
@@ -36,35 +32,19 @@
 
 ## admin
 
-[`GET /admin/apps`](endpoints/app-metadata.md#searching-for-apps) 
-
-[`POST /admin/apps`](endpoints/app-metadata.md#categorizing-apps) 
-
 [`GET /admin/apps/categories`](endpoints/app-metadata.md#listing-app-categories) 
-
-[`POST /admin/apps/categories`](endpoints/app-metadata.md#adding-categories) 
 
 [`GET /admin/apps/categories/search`](endpoints/app-metadata.md#searching-for-categories-by-name) 
 
-[`POST /admin/apps/categories/shredder`](endpoints/app-metadata.md#deleting-categories) 
+[`POST /admin/apps/categories/{system-id}`](endpoints/app-metadata.md#adding-categories) 
 
-[`DELETE /admin/apps/categories/{category-id}`](endpoints/app-metadata.md#deleting-a-category-by-id) 
+[`DELETE /admin/apps/categories/{system-id}/{category-id}`](endpoints/app-metadata.md#deleting-a-category-by-id) 
 
-[`PATCH /admin/apps/categories/{category-id}`](endpoints/app-metadata.md#updating-an-app-category) 
-
-[`POST /admin/apps/shredder`](endpoints/app-metadata.md#permanently-deleting-an-app) 
-
-[`DELETE /admin/apps/{app-id}`](endpoints/app-metadata.md#logically-deleting-apps) 
-
-[`PATCH /admin/apps/{app-id}`](endpoints/app-metadata.md#updating-app-labels) 
+[`PATCH /admin/apps/categories/{system-id}/{category-id}`](endpoints/app-metadata.md#updating-an-app-category) 
 
 [`DELETE /admin/apps/{app-id}/comments/{comment-id}`](endpoints/comments.md#administratively-deleting-a-comment) 
 
 [`PATCH /admin/apps/{app-id}/comments/{comment-id}`](endpoints/comments.md#retractingreadmitting-a-comment) 
-
-[`PATCH /admin/apps/{app-id}/documentation`](endpoints/app-metadata.md#app-documentation) 
-
-[`POST /admin/apps/{app-id}/documentation`](endpoints/app-metadata.md#app-documentation) 
 
 [`GET /admin/apps/{app-id}/metadata`](endpoints/app-metadata.md#managing-app-avu-metadata) 
 
@@ -128,31 +108,11 @@
 
 [`GET /admin/status`](endpoints/admin.md#status-check` 
 
-[`GET /admin/tool-requests`](endpoints/app-metadata.md#listing-tool-installation-requests) 
-
-[`GET /admin/tool-requests/{tool-request-id}`](endpoints/app-metadata.md#listing-tool-installation-request-details) 
-
-[`POST /admin/tool-requests/{tool-request-id}/status`](endpoints/app-metadata.md#updating-a-tool-installation-request) 
-
 [`DELETE /admin/workspaces`](endpoints/app-metadata.md#deleting-workspaces) 
 
 [`GET /admin/workspaces`](endpoints/app-metadata.md#listing-workspaces) 
 
 ## apps
-
-[`POST /apps`](endpoints/app-metadata.md#creating-an-app-for-the-current-user` 
-
-[`POST /apps/:app-id/publish`](endpoints/app-metadata.md#submitting-an-app-for-public-use) 
-
-[`POST /apps/arg-preview`](endpoints/app-metadata.md#previewing-command-line-arguments) 
-
-[`GET /apps/categories`](endpoints/app-metadata.md#listing-app-categories) 
-
-[`GET /apps/categories/{group-id}`](endpoints/app-metadata.md#listing-apps-in-an-app-group) 
-
-[`GET /apps/elements`](endpoints/app-metadata.md#listing-app-elements) 
-
-[`GET /apps/elements/{element-type}`](endpoints/app-metadata.md#listing-app-elements) 
 
 [`GET /apps/hierarchies`](endpoints/app-ontologies.md#listing-ontology-hierarchies) 
 
@@ -162,32 +122,6 @@
 
 [`GET /apps/hierarchies/{root-iri}/unclassified`](endpoints/app-ontologies.md#listing-unclassified-apps-for-the-active-ontology) 
 
-[`GET /apps/ids`](endpoints/app-metadata.md#listing-app-identifiers) 
-
-[`POST /apps/permission-lister`](endpoints/app-metadata.md#listing-permissions-for-a-set-of-apps) 
-
-[`POST /apps/pipelines`](endpoints/app-metadata.md#creating-a-pipeline) 
-
-[`PUT /apps/pipelines/{app-id}`](endpoints/app-metadata.md#updating-a-pipeline) 
-
-[`POST /apps/pipelines/{app-id}/copy`](endpoints/app-metadata.md#making-a-copy-of-a-pipeline-available-for-editing) 
-
-[`GET /apps/pipelines/{app-id}/ui`](endpoints/app-metadata.md#making-a-pipeline-available-for-editing) 
-
-[`POST /apps/share`](endpoints/app-metadata.md#granting-access-to-a-set-of-apps) 
-
-[`POST /apps/shredder`](endpoints/app-metadata.md#logically-deleting-apps) 
-
-[`POST /apps/unshare`](endpoints/app-metadata.md#revoking-access-to-a-set-of-apps) 
-
-[`DELETE /apps/{app-id}`](endpoints/app-metadata.md#logically-deleting-apps) 
-
-[`GET /apps/{app-id}`](endpoints/app-metadata.md#getting-analyses-in-the-json-format-required-by-the-de) 
-
-[`PATCH /apps/{app-id}`](endpoints/app-metadata.md#updating-app-labels) 
-
-[`PUT /apps/{app-id}`](endpoints/app-metadata.md#updating-a-single-step-app) 
-
 [`GET /apps/{app-id}/comments`](endpoints/comments.md#listing-comments) 
 
 [`POST /apps/{app-id}/comments`](endpoints/comments.md#creating-a-comment) 
@@ -195,40 +129,6 @@
 [`PATCH /apps/{app-id}/comments/{comment-id}`](endpoints/comments.md#retractingreadmitting-a-comment) 
 
 [`PATCH /apps/{app-id}/comments/{comment-id}`](endpoints/comments.md#retractingreadmitting-a-comment) 
-
-[`POST /apps/{app-id}/copy`](endpoints/app-metadata.md#making-a-copy-of-an-app-available-for-editing) 
-
-[`GET /apps/{app-id}/details`](endpoints/app-metadata.md#getting-app-details) 
-
-[`GET /apps/{app-id}/documentation`](endpoints/app-metadata.md#app-documentation) 
-
-[`PATCH /apps/{app-id}/documentation`](endpoints/app-metadata.md#app-documentation) 
-
-[`POST /apps/{app-id}/documentation`](endpoints/app-metadata.md#app-documentation) 
-
-[`DELETE /apps/{app-id}/favorite`](endpoints/app-metadata.md#removing-an-app-favorite) 
-
-[`PUT /apps/{app-id}/favorite`](endpoints/app-metadata.md#adding-an-app-favorite) 
-
-[`GET /apps/{app-id}/is-publishable`](endpoints/app-metadata.md#determining-if-an-app-can-be-made-public) 
-
-[`GET /apps/{app-id}/metadata`](endpoints/app-metadata.md#managing-app-avu-metadata) 
-
-[`POST /apps/{app-id}/metadata`](endpoints/app-metadata.md#managing-app-avu-metadata) 
-
-[`PUT /apps/{app-id}/metadata`](endpoints/app-metadata.md#managing-app-avu-metadata) 
-
-[`DELETE /apps/{app-id}/rating`](endpoints/app-metadata.md#deleting-app-ratings) 
-
-[`POST /apps/{app-id}/rating`](endpoints/app-metadata.md#rating-apps) 
-
-[`GET /apps/{app-id}/tasks`](endpoints/app-metadata.md#listing-tasks-in-an-app) 
-
-[`GET /apps/{app-id}/tools`](endpoints/app-metadata.md#listing-tools-in-an-app) 
-
-[`GET /apps/{app-id}/ui`](endpoints/app-metadata.md#obtaining-an-app-representation-for-editing) 
-
-[`GET /apps?search={term}`](endpoints/app-metadata.md#searching-for-apps) 
 
 ## coge
 
@@ -255,10 +155,6 @@
 [`POST /collaborator-lists/{name}/members`](endpoints/collaborator-lists.md#adding-collaborator-list-members) 
 
 [`POST /collaborator-lists/{name}/members/deleter`](endpoints/collaborator-lists.md#removing-collaborator-list-members) 
-
-## export-workflow
-
-[`GET /export-workflow/{analysis-id}`](endpoints/app-metadata.md#exporting-an-analysis) 
 
 ## favorites
 
@@ -481,14 +377,6 @@
 [`GET /teams/{name}/privileges`](endpoints/teams.md#listing-team-privileges) 
 
 [`POST /teams/{name}/privileges`](endpoints/teams.md#updating-team-privileges) 
-
-## tool-requests
-
-[`GET /tool-requests`](endpoints/app-metadata.md#listing-tool-installation-requests) 
-
-[`POST /tool-requests`](endpoints/app-metadata.md#requesting-installation-of-a-tool` 
-
-[`GET /tool-requests/status-codes`](endpoints/app-metadata.md#listing-tool-request-status-codes) 
 
 ## uuid
 

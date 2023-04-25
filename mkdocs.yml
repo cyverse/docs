@@ -69,8 +69,7 @@ nav:
       - Overview: 'services/api_overview.md'
       - Endpoints:
         - Overview: 'services/api/endpoints/endpoints.md'
-        - App Metadata: 'services/api/endpoints/app-metadata.md'  
-        - Tools: 'services/api/endpoints/tools.md'
+        - App Metadata: 'services/api/endpoints/app-metadata.md'
         - App Execution: 'services/api/endpoints/app-execution.md'
         - Callbacks: 'services/api/endpoints/callbacks.md'
         - Collaborator List Management: 'services/api/endpoints/collaborator-lists.md'

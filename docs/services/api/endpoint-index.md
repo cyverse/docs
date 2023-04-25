@@ -30,8 +30,6 @@
 
 [`/teams`](#teams)
 
-[`/tools`](#tools)
-
 [`/tool-requests`](#tool-requests)
 
 [`/uuid`](#uuid)
@@ -145,20 +143,6 @@
 [`GET /admin/tool-requests/{tool-request-id}`](endpoints/app-metadata.md#listing-tool-installation-request-details) 
 
 [`POST /admin/tool-requests/{tool-request-id}/status`](endpoints/app-metadata.md#updating-a-tool-installation-request) 
-
-[`GET /admin/tools`](endpoints/tools.md#listing-and-searching-for-tools) 
-
-[`POST /admin/tools`](endpoints/tools.md#importing-tools) 
-
-[`DELETE /admin/tools/{tool-id}`](endpoints/tools.md#deleting-tools) 
-
-[`GET /admin/tools/{tool-id}`](endpoints/tools.md#get-a-tool-by-id) 
-
-[`PATCH /admin/tools/{tool-id}`](endpoints/tools.md#updating-tools) 
-
-[`GET /admin/tools/{tool-id}/apps`](endpoints/tools.md#listing-apps-by-tool-id) 
-
-[`POST /admin/tools/{tool-id}/publish`](endpoints/tools.md#making-a-tool-public) 
 
 [`DELETE /admin/workspaces`](endpoints/app-metadata.md#deleting-workspaces) 
 
@@ -569,26 +553,6 @@
 [`POST /tool-requests`](endpoints/app-metadata.md#requesting-installation-of-a-tool` 
 
 [`GET /tool-requests/status-codes`](endpoints/app-metadata.md#listing-tool-request-status-codes) 
-
-## tools
-
-[`GET /tools`](endpoints/tools.md#listing-and-searching-for-tools) 
-
-[`POST /tools`](endpoints/tools.md#add-a-private-tool` 
-
-[`POST /tools/permission-lister`](endpoints/tools.md#listing-permissions-for-a-set-of-tools) 
-
-[`POST /tools/sharing`](endpoints/tools.md#granting-access-to-a-set-of-tools) 
-
-[`POST /tools/unsharing`](endpoints/tools.md#revoking-access-to-a-set-of-tools) 
-
-[`DELETE /tools/{tool-id}`](endpoints/tools.md#deleting-tools) 
-
-[`GET /tools/{tool-id}`](endpoints/tools.md#get-a-tool-by-id) 
-
-[`PATCH /tools/{tool-id}`](endpoints/tools.md#updating-tools) 
-
-[`GET /tools/{tool-id}/apps`](endpoints/tools.md#listing-apps-by-tool-id) 
 
 ## uuid
 

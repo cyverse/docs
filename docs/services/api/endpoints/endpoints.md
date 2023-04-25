@@ -9,8 +9,6 @@ On the other hand, all examples use fully qualified URLs.
 Request and response bodies are in JSON format unless otherwise noted.
 
 * [App Metadata](app-metadata.md)
-    
-    * [Tools](tools.md)
 
 * [App Execution](app-execution.md)
 

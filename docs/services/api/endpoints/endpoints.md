@@ -10,8 +10,6 @@ Request and response bodies are in JSON format unless otherwise noted.
 
 * [App Metadata](app-metadata.md)
 
-* [App Execution](app-execution.md)
-
 * [Callback](callbacks.md)
 
 * [Categorizing Apps with Ontology Hierarchies](app-ontologies.md)

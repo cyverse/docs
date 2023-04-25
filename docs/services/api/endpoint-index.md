@@ -2,8 +2,6 @@
 
 [`/admin`](#admin)
 
-[`/analyses`](#analyses)
-
 [`/apps`](#apps)
 
 [`/coge`](#coge)
@@ -147,26 +145,6 @@
 [`DELETE /admin/workspaces`](endpoints/app-metadata.md#deleting-workspaces) 
 
 [`GET /admin/workspaces`](endpoints/app-metadata.md#listing-workspaces) 
-
-## analyses
-
-[`GET /analyses`](endpoints/app-execution.md#listing-jobs) 
-
-[`POST /analyses`](endpoints/app-execution.md#submitting-a-job-for-execution) 
-
-[`POST /analyses/shredder`](endpoints/app-execution.md#deleting-multiple-jobs) 
-
-[`DELETE /analyses/{analysis-id}`](endpoints/app-execution.md#deleting-a-job) 
-
-[`PATCH /analyses/{analysis-id}`](endpoints/app-execution.md#updating-analysis-information) 
-
-[`GET /analyses/{analysis-id}/parameters`](endpoints/app-execution.md#obtaining-parameter-values-for-a-previously-executed-job) 
-
-[`GET /analyses/{analysis-id}/relaunch-info`](endpoints/app-execution.md#obtaining-information-to-rerun-a-job) 
-
-[`GET /analyses/{analysis-id}/steps`](endpoints/app-execution.md#listing-analysis-steps) 
-
-[`POST /analyses/{analysis-id}/stop`](endpoints/app-execution.md#stopping-a-running-analysis) 
 
 ## apps
 

@@ -322,10 +322,6 @@
 
 [`PATCH /secured/filesystem/entry/{entry-id}/comments/{comment-id}`](endpoints/comments.md#retractingreadmitting-a-comment) 
 
-[`GET /secured/filesystem/entry/{entry-id}/tags`](endpoints/tags.md#listing-attached-tags) 
-
-[`PATCH /secured/filesystem/entry/{entry-id}/tags`](endpoints/tags.md#attaching-or-detaching-multiple-tags-to-a-file-or-folder` 
-
 [`POST /secured/filesystem/exists`](endpoints/filesystem/existence.md#filedirectory-existence) 
 
 [`GET /secured/filesystem/file/manifest`](endpoints/filesystem/manifest.md#file-manifest) 
@@ -443,14 +439,6 @@
 [`GET /secured/sessions`](endpoints/misc.md#retrieving-user-session-data) 
 
 [`POST /secured/sessions`](endpoints/misc.md#saving-user-session-data) 
-
-[`GET /secured/tags/suggestions`](endpoints/tags.md#suggest-a-tag) 
-
-[`POST /secured/tags/user`](endpoints/tags.md#creating-a-tag) 
-
-[`DELETE /secured/tags/user/{tag-id}`](endpoints/tags.md#delete-a-tag) 
-
-[`PATCH /secured/tags/user/{tag-id}`](endpoints/tags.md#update-a-tags-label-andor-description) 
 
 ## send-notification
 

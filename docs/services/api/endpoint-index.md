@@ -16,8 +16,6 @@
 
 [`/permanent-id-requests`](#permanent-id-requests)
 
-[`/reference-genomes`](#reference-genomes)
-
 [`/secured`](#secured)
 
 [`/send-notification`](#send-notification)
@@ -127,12 +125,6 @@
 [`POST /admin/permanent-id-requests/{request-id}/ezid`](endpoints/permanent-id-requests.md#create-a-permanent-id) 
 
 [`POST /admin/permanent-id-requests/{request-id}/status`](endpoints/permanent-id-requests.md#update-the-status-of-a-permanent-id-request) 
-
-[`POST /admin/reference-genomes`](endpoints/reference-genomes.md#adding-reference-genomes) 
-
-[`DELETE /admin/reference-genomes/{reference-genome-id}`](endpoints/reference-genomes.md#deleting-reference-genomes) 
-
-[`PATCH /admin/reference-genomes/{reference-genome-id}`](endpoints/reference-genomes.md#updating-reference-genomes) 
 
 [`GET /admin/status`](endpoints/admin.md#status-check` 
 
@@ -287,12 +279,6 @@
 [`GET /permanent-id-requests/types`](endpoints/permanent-id-requests.md#list-permanent-id-request-types) 
 
 [`GET /permanent-id-requests/{request-id}`](endpoints/permanent-id-requests.md#list-permanent-id-request-details) 
-
-## reference-genomes
-
-[`GET /reference-genomes`](endpoints/reference-genomes.md#exporting-reference-genomes) 
-
-[`GET /reference-genomes/{reference-genome-id}`](endpoints/reference-genomes.md#get-a-reference-genome-by-id) 
 
 ## secured
 

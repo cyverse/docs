@@ -16,8 +16,6 @@
 
 [`/send-notification`](#send-notification)
 
-[`/subjects`](#subjects)
-
 [`/teams`](#teams)
 
 [`/uuid`](#uuid)
@@ -291,10 +289,6 @@
 ## send-notification
 
 [`POST /send-notification.`](endpoints/notifications.md#sending-an-arbitrary-notification) 
-
-## subjects
-
-[`GET /subjects`](endpoints/subjects.md#search-for-subjects) 
 
 ## teams
 

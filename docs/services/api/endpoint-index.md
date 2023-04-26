@@ -50,8 +50,6 @@
 
 [`PUT /admin/apps/{app-id}/metadata`](endpoints/app-metadata.md#managing-app-avu-metadata) 
 
-[`GET /admin/config`](endpoints/admin.md#listing-the-config-for-terrain) 
-
 [`DELETE /admin/filesystem/entry/{entry-id}/comments/{comment-id}`](endpoints/comments.md#administratively-deleting-a-comment) 
 
 [`PATCH /admin/filesystem/entry/{entry-id}/comments/{comment-id}`](endpoints/comments.md#retractingreadmitting-a-comment) 
@@ -103,8 +101,6 @@
 [`POST /admin/permanent-id-requests/{request-id}/ezid`](endpoints/permanent-id-requests.md#create-a-permanent-id) 
 
 [`POST /admin/permanent-id-requests/{request-id}/status`](endpoints/permanent-id-requests.md#update-the-status-of-a-permanent-id-request) 
-
-[`GET /admin/status`](endpoints/admin.md#status-check` 
 
 [`DELETE /admin/workspaces`](endpoints/app-metadata.md#deleting-workspaces) 
 

@@ -6,8 +6,6 @@
 
 [`/coge`](#coge)
 
-[`/collaborator-lists`](#collaborator-lists)
-
 [`/favorites`](#favorites)
 
 [`/filesystem`](#filesystem)
@@ -123,24 +121,6 @@
 [`POST /coge/genomes/load`](endpoints/filesystem/coge.md#viewing-a-genome-file-in-coge) 
 
 [`POST /coge/genomes/{genome-id}/export-fasta`](endpoints/filesystem/coge.md#exporting-coge-genome-data-to-irods) 
-
-## collaborator-lists
-
-[`GET /collaborator-lists`](endpoints/collaborator-lists.md#listing-collaborator-lists) 
-
-[`POST /collaborator-lists`](endpoints/collaborator-lists.md#adding-a-collaborator-list) 
-
-[`DELETE /collaborator-lists/{name}`](endpoints/collaborator-lists.md#deleting-a-collaborator-list) 
-
-[`GET /collaborator-lists/{name}`](endpoints/collaborator-lists.md#getting-information-about-a-collaborator-list) 
-
-[`PATCH /collaborator-lists/{name}`](endpoints/collaborator-lists.md#updating-a-collaborator-list) 
-
-[`GET /collaborator-lists/{name}/members`](endpoints/collaborator-lists.md#listing-collaborator-list-members) 
-
-[`POST /collaborator-lists/{name}/members`](endpoints/collaborator-lists.md#adding-collaborator-list-members) 
-
-[`POST /collaborator-lists/{name}/members/deleter`](endpoints/collaborator-lists.md#removing-collaborator-list-members) 
 
 ## favorites
 

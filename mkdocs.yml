@@ -71,7 +71,6 @@ nav:
         - Overview: 'services/api/endpoints/endpoints.md'
         - App Metadata: 'services/api/endpoints/app-metadata.md'
         - Callbacks: 'services/api/endpoints/callbacks.md'
-        - Collaborator List Management: 'services/api/endpoints/collaborator-lists.md'
         - Comments: 'services/api/endpoints/comments.md'
         - Data Search: 'services/api/endpoints/filesystem/search.md'
         - Favorites: 'services/api/endpoints/favorites.md'

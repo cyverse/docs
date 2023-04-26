@@ -114,14 +114,6 @@
 
 ## apps
 
-[`GET /apps/hierarchies`](endpoints/app-ontologies.md#listing-ontology-hierarchies) 
-
-[`GET /apps/hierarchies/{root-iri}`](endpoints/app-ontologies.md#listing-filtered-ontology-hierarchies) 
-
-[`GET /apps/hierarchies/{root-iri}/apps`](endpoints/app-ontologies.md#listing-apps-in-hierarchies-for-the-active-ontology) 
-
-[`GET /apps/hierarchies/{root-iri}/unclassified`](endpoints/app-ontologies.md#listing-unclassified-apps-for-the-active-ontology) 
-
 [`GET /apps/{app-id}/comments`](endpoints/comments.md#listing-comments) 
 
 [`POST /apps/{app-id}/comments`](endpoints/comments.md#creating-a-comment) 

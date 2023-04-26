@@ -7,13 +7,9 @@
     * [Set Active Ontology Version](#set-active-ontology-version)
     * [Save an Ontology Hierarchy](#save-an-ontology-hierarchy)
     * [Deleting an Ontology Hierarchy](#deleting-an-ontology-hierarchy)
-    * [Listing Ontology Hierarchies](#listing-ontology-hierarchies)
-    * [Listing Filtered Ontology Hierarchies](#listing-filtered-ontology-hierarchies)
     * [Listing Hierarchies for any Ontology](#listing-hierarchies-for-any-ontology)
     * [Listing Filtered Hierarchies for any Ontology](#listing-filtered-hierarchies-for-any-ontology)
-    * [Listing Apps in Hierarchies for the Active Ontology](#listing-apps-in-hierarchies-for-the-active-ontology)
     * [Listing Apps in Hierarchies for any Ontology](#listing-apps-in-hierarchies-for-any-ontology)
-    * [Listing Unclassified Apps for the Active Ontology](#listing-unclassified-apps-for-the-active-ontology)
     * [Listing Unclassified Apps for any Ontology](#listing-unclassified-apps-for-any-ontology)
 
 # Categorizing Apps with Ontology Hierarchies
@@ -43,15 +39,15 @@
    `active` version used by the DE when listing hierarchies or ontology classes for regular users.
     * [Set Active Ontology Version](#set-active-ontology-version)
     * This active version is used by the apps service in the following endpoints:
-        * [Listing Ontology Hierarchies](#listing-ontology-hierarchies)
-        * [Listing Filtered Ontology Hierarchies](#listing-filtered-ontology-hierarchies)
-        * [Listing Unclassified Apps for the Active Ontology](#listing-unclassified-apps-for-the-active-ontology)
+        * [Listing Ontology Hierarchies](https://de.cyverse.org/terrain/docs/index.html#!/app45hierarchies/get_terrain_apps_hierarchies)
+        * [Listing Filtered Ontology Hierarchies](https://de.cyverse.org/terrain/docs/index.html#!/app45hierarchies/get_terrain_apps_hierarchies_root_iri)
+        * [Listing Unclassified Apps for the Active Ontology](https://de.cyverse.org/terrain/docs/index.html#!/app45hierarchies/get_terrain_apps_hierarchies_root_iri_unclassified)
 5. Admins or users with app "write" permissions may categorize those apps under ontology classes
    by attaching the class IRIs as metadata.
     * [Managing App AVU Metadata](app-metadata.md#managing-app-avu-metadata)
 6. Apps with an ontology class attached as metadata, or any class under the hierarchy of that root class,
    may be listed with the following endpoint:
-    * [Listing Apps in Hierarchies for the Active Ontology](#listing-apps-in-hierarchies-for-the-active-ontology)
+    * [Listing Apps in Hierarchies for the Active Ontology](https://de.cyverse.org/terrain/docs/index.html#!/app45hierarchies/get_terrain_apps_hierarchies_root_iri_apps)
 7. An admin may add hierarchies for other ontology versions
    and preview their filtered hierarchies and app listings,
    without affecting the active version in use by normal users.
@@ -114,24 +110,6 @@ Delegates to metadata: DELETE /admin/ontologies/{ontology-version}/{root-iri}
 This endpoint is a passthrough to the metadata endpoint using the same path.
 Please see the metadata service documentation for more information.
 
-## Listing Ontology Hierarchies
-
-Secured Endpoint: GET /apps/hierarchies
-
-Delegates to apps: GET /apps/hierarchies
-
-This endpoint is a passthrough to the apps endpoint using the same path.
-Please see the apps service documentation for more information.
-
-## Listing Filtered Ontology Hierarchies
-
-Secured Endpoint: GET /apps/hierarchies/{root-iri}
-
-Delegates to apps: GET /apps/hierarchies/{root-iri}
-
-This endpoint is a passthrough to the apps endpoint using the same path.
-Please see the apps service documentation for more information.
-
 ## Listing Hierarchies for any Ontology
 
 Secured Endpoint: GET /admin/ontologies/{ontology-version}
@@ -150,29 +128,11 @@ Delegates to apps: GET /admin/ontologies/{ontology-version}/{root-iri}
 This endpoint is a passthrough to the apps endpoint using the same path.
 Please see the apps service documentation for more information.
 
-## Listing Apps in Hierarchies for the Active Ontology
-
-Secured Endpoint: GET /apps/hierarchies/{root-iri}/apps
-
-Delegates to apps: GET /apps/hierarchies/{root-iri}/apps
-
-This endpoint is a passthrough to the apps endpoint using the same path.
-Please see the apps service documentation for more information.
-
 ## Listing Apps in Hierarchies for any Ontology
 
 Secured Endpoint: GET /admin/ontologies/{ontology-version}/{root-iri}/apps
 
 Delegates to apps: GET /admin/ontologies/{ontology-version}/{root-iri}/apps
-
-This endpoint is a passthrough to the apps endpoint using the same path.
-Please see the apps service documentation for more information.
-
-## Listing Unclassified Apps for the Active Ontology
-
-Secured Endpoint: GET /apps/hierarchies/{root-iri}/unclassified
-
-Delegates to apps: GET /apps/hierarchies/{root-iri}/unclassified
 
 This endpoint is a passthrough to the apps endpoint using the same path.
 Please see the apps service documentation for more information.

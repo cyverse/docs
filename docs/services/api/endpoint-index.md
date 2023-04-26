@@ -240,10 +240,6 @@
 
 [`POST /secured/filesystem/{data-id}/ore/save`](endpoints/filesystem/ore.md#generating-oai-ore-files-for-a-data-set) 
 
-[`POST /secured/filetypes/type`](endpoints/filetypes.md#addupdateunset-a-file-type-of-a-file) 
-
-[`GET /secured/filetypes/type-list`](endpoints/filetypes.md#get-the-list-of-supported-file-types) 
-
 [`GET /secured/notifications/count-messages`](endpoints/notifications.md#obtaining-notification-counts) 
 
 [`POST /secured/notifications/delete`](endpoints/notifications.md#marking-notifications-as-deleted) 

@@ -20,8 +20,6 @@
 
 [`/subjects`](#subjects)
 
-[`/support-email`](#support-email)
-
 [`/teams`](#teams)
 
 [`/uuid`](#uuid)
@@ -170,8 +168,6 @@
 
 ## secured
 
-[`GET /secured/bootstrap`](endpoints/misc.md#initializing-a-users-workspace-and-preferences) 
-
 [`GET /secured/favorites/filesystem`](endpoints/favorites.md#listing-stat-info-for-favorite-data) 
 
 [`DELETE /secured/favorites/filesystem/{favorite}`](endpoints/favorites.md#removing-a-data-resource-from-being-a-favorite) 
@@ -272,8 +268,6 @@
 
 [`GET /secured/filetypes/type-list`](endpoints/filetypes.md#get-the-list-of-supported-file-types) 
 
-[`GET /secured/logout`](endpoints/misc.md#recording-when-a-user-logs-out) 
-
 [`GET /secured/notifications/count-messages`](endpoints/notifications.md#obtaining-notification-counts) 
 
 [`POST /secured/notifications/delete`](endpoints/notifications.md#marking-notifications-as-deleted) 
@@ -316,12 +310,6 @@
 
 [`POST /secured/preferences`](endpoints/misc.md#saving-user-preferences) 
 
-[`DELETE /secured/saved-searches`](endpoints/misc.md#deleting-saved-searches) 
-
-[`GET /secured/saved-searches`](endpoints/misc.md#getting-saved-searches) 
-
-[`POST /secured/saved-searches`](endpoints/misc.md#setting-saved-searches) 
-
 [`DELETE /secured/sessions`](endpoints/misc.md#removing-user-session-data) 
 
 [`GET /secured/sessions`](endpoints/misc.md#retrieving-user-session-data) 
@@ -335,10 +323,6 @@
 ## subjects
 
 [`GET /subjects`](endpoints/subjects.md#search-for-subjects) 
-
-## support-email
-
-[`POST /support-email`](endpoints/misc.md#requesting-support) 
 
 ## teams
 

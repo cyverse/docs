@@ -16,8 +16,6 @@
 
 [`/send-notification`](#send-notification)
 
-[`/teams`](#teams)
-
 [`/uuid`](#uuid)
 
 ## get
@@ -289,36 +287,6 @@
 ## send-notification
 
 [`POST /send-notification.`](endpoints/notifications.md#sending-an-arbitrary-notification) 
-
-## teams
-
-[`GET /teams`](endpoints/teams.md#listing-teams) 
-
-[`POST /teams`](endpoints/teams.md#creating-a-new-team` 
-
-[`DELETE /teams/{name}`](endpoints/teams.md#deleting-a-team` 
-
-[`GET /teams/{name}`](endpoints/teams.md#getting-team-information) 
-
-[`PATCH /teams/{name}`](endpoints/teams.md#updating-a-team` 
-
-[`POST /teams/{name}/join`](endpoints/teams.md#joining-a-team` 
-
-[`POST /teams/{name}/join-request`](endpoints/teams.md#requesting-to-join-a-team` 
-
-[`POST /teams/{name}/join-request/{requester}/deny`](endpoints/teams.md#denying-a-request-to-join-a-team` 
-
-[`POST /teams/{name}/leave`](endpoints/teams.md#leaving-a-team` 
-
-[`GET /teams/{name}/members`](endpoints/teams.md#listing-team-members) 
-
-[`POST /teams/{name}/members`](endpoints/teams.md#adding-team-members) 
-
-[`POST /teams/{name}/members/deleter`](endpoints/teams.md#removing-team-members) 
-
-[`GET /teams/{name}/privileges`](endpoints/teams.md#listing-team-privileges) 
-
-[`POST /teams/{name}/privileges`](endpoints/teams.md#updating-team-privileges) 
 
 ## uuid
 

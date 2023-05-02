@@ -4,7 +4,7 @@
 
 ### Apps
 
-Add/Edit/Delete applicatryouions
+Add/Edit/Delete applications
 
 Requires a pre-existing Tool (Container Template)
 

@@ -31,3 +31,5 @@ allowing clients to obtain OAuth or OIDC tokens for accessing secured API endpoi
 
 See the [/terrain/token/keycloak](https://de.cyverse.org/terrain/docs/index.html#!/token/get_terrain_token_keycloak)
 endpoint docs for details on obtaining tokens.
+
+## [Tapis v2 App migration to v3 for the Discovery Environment](./api/tapis-v2-v3-migration.md)

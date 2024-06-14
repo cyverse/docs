@@ -22,7 +22,7 @@ For the client without administrative privileges, Terrain provides endpoints for
 
 ## Search Requests
 
-Terrain provides search endpoints that allow callers to search the data by name and various pieces of system and user metadata. It supports the all the queries in the [ElasticSearch query DSL] (http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-queries.html) for searching.
+Terrain provides search endpoints that allow callers to search the data by name and various pieces of system and user metadata. It supports the all the queries in the [ElasticSearch query DSL](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-queries.html) for searching.
 
 Each field in an indexed document may be explicitly used in a search query. If the field is an object, i.e. an aggregate of fields, the object's fields may be explicitly referenced as well using dot notation, e.g. `acl.access`.
 

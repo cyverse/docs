@@ -533,6 +533,13 @@ If an input value is also required as a parameter on the command line,
 then the `name` of the input in the `fileInputs` parameter field
 should match the `name` of the corresponding `appArgs` parameter.
 
+If the app's `runtime` value is `DOCKER`,
+then the DE will automatically prepend `/TapisInput/`
+to the file or folder name submitted by the user,
+since that is the directory mounted inside the container by Tapis for inputs.
+Otherwise only the base name of the file or folder will be submitted
+for the command line argument.
+
 #### Outputs
 
 The `outputs` field is not used by Tapis, but if a user wishes to create a
@@ -542,6 +549,13 @@ app's input in a subsequent step in the workflow.
 If the output value is also required as a parameter on the command line,
 then the `name` of the output in the `notes` field should match the `name` of the
 corresponding `appArgs` parameter.
+
+If the app's `runtime` value is `DOCKER`,
+then the DE will automatically prepend `/TapisOutput/`
+to the parameter value submitted by the user,
+since that is the directory mounted inside the container by Tapis for outputs.
+Otherwise only the base name of the file or folder will be submitted
+for the command line argument.
 
 #### Flags or Booleans
 

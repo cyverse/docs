@@ -70,7 +70,7 @@ First consider a Tapis v2 app definition like the following:
       "value": {
         "visible": false,
         "required": true,
-        "default": "agave://data.cyverse.rocks/home/shared/cyverse_training/example/coffee_cake.txt"
+        "default": "agave://data.iplantcollaborative.org/home/shared/cyverse_training/example/coffee_cake.txt"
       },
       "details": {
         "description": "Fixed input."
@@ -523,7 +523,9 @@ then the DE will treat that parameter as hidden and ignore the
 
 The `notes` object can contain any other custom fields
 (so the entire v2 parameter can be copied as the v3 `notes` field),
-which will be ignored by the DE, with the following exceptions.
+which will be ignored by the DE,
+except for certain fields in specific parameter types,
+detailed in the following sections.
 
 ### Parameter Types
 
@@ -561,8 +563,8 @@ for the command line argument.
 
 If the parameter has a `notes.value.type` field value of `bool`, `boolean`, or `flag`,
 then the DE will display that parameter as a checkbox.
-Parameters with a `notes.semantics.ontology` field value of `xs:boolean`
-will also display as a checkbox.
+Parameters with a `notes.semantics.ontology` list where the first value is
+`xs:boolean` will also display as a checkbox.
 
 Note that the value of a v3 parameter's `arg` is used in job submissions
 when the user checks a flag parameter type in the submission form,
@@ -586,8 +588,8 @@ As with Flag/Boolean parameter types, the `notes.details.argument` field is not 
 
 If the parameter has a `notes.value.type` field value of `number`,
 then the DE will display that parameter as a number field.
-The DE will use the `notes.semantics.ontology` field value to determine if the
-user's input should be restricted to integers or decimal values.
+The DE will use the first `xs:*` value in the `notes.semantics.ontology` field to
+determine if the user's input should be restricted to integers or decimal values.
 
 See https://github.com/cyverse-de/mescal/blob/main/src/mescal/agave_de_v2/params.clj
 for a list of supported number XSD types (otherwise defaulting to decimal values).

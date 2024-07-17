@@ -593,3 +593,17 @@ determine if the user's input should be restricted to integers or decimal values
 
 See https://github.com/cyverse-de/mescal/blob/main/src/mescal/agave_de_v2/params.clj
 for a list of supported number XSD types (otherwise defaulting to decimal values).
+
+## Migration helper `jq`
+
+The following `jq` command can be used to bootstrap a migration from a v2 app into a v3 format.
+It's not exhaustive, so some manual editing of the output will be required,
+particularly for the `execSystemId`, `containerImage`, and `enumeration` type parameter fields;
+but it can at least help with some tedious tasks,
+such as copying v2 fields used by the DE into v3 `notes` fields.
+
+    jq 'def params: . | {"name": .id, "arg": .details.argument, "description": .details.description, "inputMode": (.value.required | if . then "REQUIRED" else "INCLUDE_ON_DEMAND" end), "notes": .} | if (.arg | length) > 0 then . else del(.arg) end | if (.description | length) > 0 then . else del(.description) end; {id, version, "description": .longDescription, "runtime": "ZIP", "containerImage": "tapis://\(.deploymentSystem)\(.deploymentPath)", "jobType": "FORK", tags, "jobAttributes":{"execSystemId": "cyverse-qacondor1-qa-test3", "parameterSet": {"appArgs": [.parameters[] | params]}, "fileInputs": [.inputs[] | params | {"targetPath": "*"} + .]}, "notes": {name, "label": .label, owner, shortDescription, longDescription, helpURI, ontology, executionType, executionSystem, deploymentPath, deploymentSystem, templatePath, testPath, modules, outputs}}' v2_app.json
+
+With the help of this guide and the
+[Tapis v3 docs](https://tapis.readthedocs.io/en/latest/technical/apps.html),
+hopefully the migration will not be too difficult.

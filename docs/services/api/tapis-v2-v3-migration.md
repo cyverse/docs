@@ -1,7 +1,10 @@
 # Tapis v2 (Agave) App migration to v3 for the Discovery Environment
 
-The easiest way to show how to migrate a Tapis v2 (Agave) app to v3
-for the Discovery Environment (DE) is with an example.
+The [Tapis v3 App docs](https://tapis.readthedocs.io/en/latest/technical/apps.html)
+can be referenced when creating a new app from scratch,
+and for other details beyond the scope of this migration guide,
+but the easiest way to show how to migrate a Tapis v2 (Agave) app to v3
+for the Discovery Environment (DE) might be with the following example.
 
 ## Tapis v2 App Definition
 
@@ -596,13 +599,46 @@ for a list of supported number XSD types (otherwise defaulting to decimal values
 
 ## Migration helper `jq`
 
-The following `jq` command can be used to bootstrap a migration from a v2 app into a v3 format.
+The following [`jq`](https://jqlang.github.io/jq/) command can be used to bootstrap a migration from a v2 app into a v3 format.
 It's not exhaustive, so some manual editing of the output will be required,
 particularly for the `execSystemId`, `containerImage`, and `enumeration` type parameter fields;
 but it can at least help with some tedious tasks,
 such as copying v2 fields used by the DE into v3 `notes` fields.
 
-    jq 'def params: . | {"name": .id, "arg": .details.argument, "description": .details.description, "inputMode": (.value.required | if . then "REQUIRED" else "INCLUDE_ON_DEMAND" end), "notes": .} | if (.arg | length) > 0 then . else del(.arg) end | if (.description | length) > 0 then . else del(.description) end; {id, version, "description": .longDescription, "runtime": "ZIP", "containerImage": "tapis://\(.deploymentSystem)\(.deploymentPath)", "jobType": "FORK", tags, "jobAttributes":{"execSystemId": "cyverse-qacondor1-qa-test3", "parameterSet": {"appArgs": [.parameters[] | params]}, "fileInputs": [.inputs[] | params | {"targetPath": "*"} + .]}, "notes": {name, "label": .label, owner, shortDescription, longDescription, helpURI, ontology, executionType, executionSystem, deploymentPath, deploymentSystem, templatePath, testPath, modules, outputs}}' v2_app.json
+```
+jq 'def params: . | {"name": .id, "arg": .details.argument, "description": .details.description, "inputMode": (.value.required | if . then "REQUIRED" else "INCLUDE_ON_DEMAND" end), "notes": .} | if (.arg | length) > 0 then . else del(.arg) end | if (.description | length) > 0 then . else del(.description) end; {id, version, "description": .longDescription, "runtime": "ZIP", "containerImage": "tapis://\(.deploymentSystem)\(.deploymentPath)", "jobType": "FORK", tags, "jobAttributes":{"execSystemId": "cyverse-qacondor1-qa-test3", "parameterSet": {"appArgs": [.parameters[] | params]}, "fileInputs": [.inputs[] | params | {"targetPath": "*"} + .]}, "notes": {name, "label": .label, owner, shortDescription, longDescription, helpURI, ontology, executionType, executionSystem, deploymentPath, deploymentSystem, templatePath, testPath, modules, outputs}}' v2_app.json
+```
+
+Note that Tapis no longer automatically passes job parameters to the template wrapper script as environment variables by the parameter ID,
+so the app's wrapper script will also need to be updated to use command line arguments
+instead of env vars.
+
+If the wrapper script was something like the following:
+```
+singularity exec $IMG run_prodigal -o "prodigal-out" ${QUERY} ${WRITE_PROT} ${CLOSED_ENDS} ${WRITE_NUCL} ${OUTPUT_FORMAT} ${NS_AS_MASKED} ${BYPASS_SHINE_DALGARNO} ${PROCEDURE} ${WRITE_GENES}
+```
+
+Then it could be simplified for v3 without relying on environment variables:
+```
+singularity exec $IMG run_prodigal -o "prodigal-out" "$@"
+echo $? > "${_tapisSysRootDir}${_tapisExecSystemOutputDir}/tapisjob.exitcode"
+```
+See https://tapis.readthedocs.io/en/latest/technical/jobs.html#zip about `tapisjob.exitcode`.
+
+
+If the app's wrapper script has logic that depends on the environment variable values,
+and it would be too difficult to convert the wrapper script for command line arguments,
+then use the following `jq` command, which will populate the v3 app's `envVariables` array
+instead of the `appArgs` parameter array:
+
+```
+jq 'def params: . | {"name": .id, "arg": .details.argument, "description": .details.description, "inputMode": (.value.required | if . then "REQUIRED" else "INCLUDE_ON_DEMAND" end), "notes": .} | if (.arg | length) > 0 then . else del(.arg) end | if (.description | length) > 0 then . else del(.description) end; {id, version, "description": .longDescription, "runtime": "ZIP", "containerImage": "tapis://\(.deploymentSystem)\(.deploymentPath)", "jobType": "FORK", tags, "jobAttributes":{"execSystemId": "cyverse-qacondor1-qa-test3", "parameterSet": {"envVariables": ([.parameters[] | params] | map(.key = .name | .value = .arg | del(.name, .arg)))}, "fileInputs": [.inputs[] | params | {"targetPath": "*"} + .]}, "notes": {name, "label": .label, owner, shortDescription, longDescription, helpURI, ontology, executionType, executionSystem, deploymentPath, deploymentSystem, templatePath, testPath, modules, outputs}}' v2_app.json
+```
+
+The DE will process and display `envVariables` fields the same way that
+`appArgs` parameter fields are processed and displayed,
+as described in the previous sections,
+except the env var's `key` and `value` are used in place of `name` and `arg`.
 
 With the help of this guide and the
 [Tapis v3 docs](https://tapis.readthedocs.io/en/latest/technical/apps.html),

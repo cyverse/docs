@@ -6,6 +6,12 @@ and for other details beyond the scope of this migration guide,
 but the easiest way to show how to migrate a Tapis v2 (Agave) app to v3
 for the Discovery Environment (DE) might be with the following example.
 
+## System Permission Requirements for App Creators
+
+Before creating HPC apps for Tapis v3, the app's execution system and the iRODS system defined in the Tapis v3 `cyverse` tenant must be shared with the app creator with `MODIFY` permissions (note that this will not grant the app creator modify permissions on the underlying iRODS directories).
+
+This has to do with the fact that these systems use proxy admin users to act on behalf of DE users when running Tapis v3 apps and when reading and writing iRODS data in the Data Store.
+
 ## Tapis v2 App Definition
 
 First consider a Tapis v2 app definition like the following:

@@ -643,3 +643,86 @@ except the env var's `key` and `value` are used in place of `name` and `arg`.
 With the help of this guide and the
 [Tapis v3 docs](https://tapis.readthedocs.io/en/latest/technical/apps.html),
 hopefully the migration will not be too difficult.
+
+# Tapis v3 `curl` Commands
+
+The following shell environment variables, aliases, and curl commands
+can be used to publish v3 app JSON (such as the JSON output above).
+
+## Set TAPIS_ACCESS_TOKEN and TAPIS_AUTH_HEADER env vars
+
+Assuming the env vars `CYVERSE_USER` and `CYVERSE_PASSWORD` are set:
+
+    export TAPIS_ACCESS_TOKEN=$(curl -H "Content-Type: application/json" -s -d "{\"username\": \"$CYVERSE_USER\", \"password\": \"$CYVERSE_PASSWORD\", \"grant_type\": \"password\" }" https://cyverse.tapis.io/v3/oauth2/tokens | jq -r '.result.access_token')
+
+---
+
+    export TAPIS_AUTH_HEADER="X-Tapis-Token: $(echo $TAPIS_ACCESS_TOKEN | jq -r .access_token)"
+
+## Set a curl alias that references the $TAPIS_AUTH_HEADER
+
+    alias curl-tapis='curl -H "Content-Type: application/json" -H "$TAPIS_AUTH_HEADER"'
+
+## List Systems
+
+    curl-tapis -s "https://cyverse.tapis.io/v3/systems?listType=ALL"
+
+## Apps
+
+### Create an App
+
+    curl-tapis -s -d @app-wc.json https://cyverse.tapis.io/v3/apps
+
+### Get App Details
+
+    curl-tapis -s "https://cyverse.tapis.io/v3/apps/cyverse-word-count-psarando?select=id,jobAttributes.execSystemId,version,updated,tenant,description,isPublic,owner,enabled"
+
+### Update an App
+
+    curl-tapis -s -X PUT -d @app-wc.json "https://cyverse.tapis.io/v3/apps/cyverse-word-count-psarando/0.1"
+
+---
+
+    curl-tapis -s -X PATCH -d '{"jobAttributes": {"execSystemId": "cyverse-qacondor1-qa-test3"}}' "https://cyverse.tapis.io/v3/apps/cyverse-hello-world-psarando/0.1"
+
+---
+
+    curl-tapis -s -X PATCH -d '{"jobAttributes": {"archiveSystemId": "cyverse-irods-qa"}}' "https://cyverse.tapis.io/v3/apps/cyverse-hello-world-psarando/0.1"
+
+---
+
+    curl-tapis -s -X PATCH -d '{"tags": ["test-tag", "testing"]}' "https://cyverse.tapis.io/v3/apps/cyverse-hello-world-psarando/0.1"
+
+### Make App Public
+
+    curl-tapis -s -X POST "https://cyverse.tapis.io/v3/apps/share_public/cyverse-hello-world-psarando"
+
+---
+
+    curl-tapis -s -X POST "https://cyverse.tapis.io/v3/apps/unshare_public/cyverse-hello-world-psarando"
+
+## Jobs
+
+### List Jobs
+
+    curl-tapis -s "https://cyverse.tapis.io/v3/jobs/list?limit=2&orderBy=lastUpdated(desc),name(asc)&computeTotal=true" | jq .
+
+### Submit a Job
+
+    curl-tapis -s -d @job.json https://cyverse.tapis.io/v3/jobs/submit | jq .
+
+### Get Job Status
+
+    curl-tapis -s "https://cyverse.tapis.io/v3/jobs/5f660fd9-0718-4935-92ad-a67497d45013-007/status" | jq .
+
+### List Job History
+
+    curl-tapis -s "https://cyverse.tapis.io/v3/jobs/5f660fd9-0718-4935-92ad-a67497d45013-007/history" | jq .
+
+### List Job Outputs
+
+    curl-tapis -s "https://cyverse.tapis.io/v3/jobs/5f660fd9-0718-4935-92ad-a67497d45013-007/output/list/" | jq .
+
+## List Folder Contents
+
+    curl-tapis -s "https://cyverse.tapis.io/v3/files/ops/cyverse-irods-qa/home/psarando/analyses/Tapis_QA_Job" | jq .

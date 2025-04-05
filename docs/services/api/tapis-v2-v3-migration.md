@@ -542,7 +542,7 @@ detailed in the following sections.
 
 If an input value is also required as a parameter on the command line,
 then the `name` of the input in the `fileInputs` parameter field
-should match the `name` of the corresponding `appArgs` parameter.
+should match the `name` of the corresponding `appArgs` parameter (or the `key` of the corresponding `envVariables` parameter).
 
 If the app's `runtime` value is `DOCKER`,
 then the DE will automatically prepend `/TapisInput/`
@@ -559,14 +559,15 @@ then the DE requires an app output to be defined so that it can be used as an
 app's input in a subsequent step in the workflow.
 If the output value is also required as a parameter on the command line,
 then the `name` of the output in the `notes` field should match the `name` of the
-corresponding `appArgs` parameter.
+corresponding `appArgs` parameter (or the `key` of the corresponding `envVariables` parameter).
 
 If the app's `runtime` value is `DOCKER`,
 then the DE will automatically prepend `/TapisOutput/`
 to the parameter value submitted by the user,
 since that is the directory mounted inside the container by Tapis for outputs.
-Otherwise only the base name of the file or folder will be submitted
-for the command line argument.
+Otherwise the DE will automatically prepend `output/`
+to the parameter value submitted by the user,
+since that is the directory created by Tapis for outputs.
 
 #### Flags or Booleans
 
@@ -612,7 +613,7 @@ but it can at least help with some tedious tasks,
 such as copying v2 fields used by the DE into v3 `notes` fields.
 
 ```
-jq 'def params: . | {"name": .id, "arg": ((.details.argument // .value.default) | tostring), "description": .details.description, "inputMode": (.value.required | if . then "REQUIRED" else "INCLUDE_ON_DEMAND" end), "notes": .} | if (.description | length) > 0 then . else del(.description) end; {id, version, "description": .longDescription, "runtime": "ZIP", "containerImage": "tapis://\(.deploymentSystem)\(.deploymentPath)", "jobType": "BATCH", tags, "jobAttributes":{"execSystemId": "cyverse-qacondor1-qa-test3", "parameterSet": {"appArgs": [.parameters[] | params]}, "fileInputs": [.inputs[] | params | {"targetPath": "*"} + .]}, "notes": {name, "label": .label, owner, shortDescription, longDescription, helpURI, ontology, executionType, executionSystem, deploymentPath, deploymentSystem, templatePath, testPath, modules, outputs}}' v2_app.json
+jq 'def params: . | {"name": .id, "arg": ((.details.argument // .value.default) | tostring), "description": .details.description, "inputMode": (.value.required | if . then "REQUIRED" else "INCLUDE_ON_DEMAND" end), "notes": .} | if (.description | length) > 0 then . else del(.description) end; {id, version, "description": .longDescription, "runtime": "ZIP", "containerImage": "tapis://\(.deploymentSystem)\(.deploymentPath)", "jobType": "BATCH", tags, "jobAttributes":{"execSystemId": "stampede3", "maxMinutes": 1440, "parameterSet": {"appArgs": [.parameters[] | params]}, "fileInputs": [.inputs[] | params | {"targetPath": "*"} + .]}, "notes": {name, "label": .label, owner, shortDescription, longDescription, helpURI, ontology, executionType, executionSystem, deploymentPath, deploymentSystem, templatePath, testPath, modules, outputs}}' v2_app.json
 ```
 
 Note that Tapis no longer automatically passes job parameters to the template wrapper script as environment variables by the parameter ID,
@@ -638,7 +639,7 @@ then use the following `jq` command, which will populate the v3 app's `envVariab
 instead of the `appArgs` parameter array:
 
 ```
-jq 'def params: . | {"name": .id, "arg": ((.details.argument // .value.default) | tostring), "description": .details.description, "inputMode": (.value.required | if . then "REQUIRED" else "INCLUDE_ON_DEMAND" end), "notes": .} | if (.description | length) > 0 then . else del(.description) end; {id, version, "description": .longDescription, "runtime": "ZIP", "containerImage": "tapis://\(.deploymentSystem)\(.deploymentPath)", "jobType": "BATCH", tags, "jobAttributes":{"execSystemId": "cyverse-qacondor1-qa-test3", "parameterSet": {"envVariables": ([.parameters[] | params] | map(.key = .name | .value = .arg | del(.name, .arg)))}, "fileInputs": [.inputs[] | params | {"targetPath": "*"} + .]}, "notes": {name, "label": .label, owner, shortDescription, longDescription, helpURI, ontology, executionType, executionSystem, deploymentPath, deploymentSystem, templatePath, testPath, modules, outputs}}' v2_app.json
+jq 'def params: . | {"name": .id, "arg": ((.details.argument // .value.default) | tostring), "description": .details.description, "inputMode": (.value.required | if . then "REQUIRED" else "INCLUDE_ON_DEMAND" end), "notes": .} | if (.description | length) > 0 then . else del(.description) end; {id, version, "description": .longDescription, "runtime": "ZIP", "containerImage": "tapis://\(.deploymentSystem)\(.deploymentPath)", "jobType": "BATCH", tags, "jobAttributes":{"execSystemId": "stampede3", "maxMinutes": 1440, "parameterSet": {"envVariables": ([.parameters[] | params] | map(.key = .name | .value = .arg | del(.name, .arg)))}, "fileInputs": [.inputs[] | params | {"targetPath": "*"} + .]}, "notes": {name, "label": .label, owner, shortDescription, longDescription, helpURI, ontology, executionType, executionSystem, deploymentPath, deploymentSystem, templatePath, testPath, modules, outputs}}' v2_app.json
 ```
 
 The DE will process and display `envVariables` fields the same way that

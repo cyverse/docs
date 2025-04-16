@@ -9,7 +9,7 @@ and managed using [DataCite Fabrica](https://doi.datacite.org/).
 
 ## Workflow Overview
 
-1. User reviews [DOI Request Quickstart page](https://learning.cyverse.org/projects/cyverse-doi-request-quickstart/en/latest/)
+1. User reviews [DOI Request Quickstart page](https://learning.cyverse.org/ds/de/doi/){target=_blank}
    and determines that a CyVerse DOI is appropriate for their data.
 2. User organizes their data in a single folder per Permanent ID, according to very general CyVerse guidelines.
 3. Based on what they learned from tutorial, user will complete DataCite metadata template on that folder.

@@ -10,7 +10,7 @@ repo_url: https://github.com/cyverse/docs
 edit_uri: edit/main/docs
 
 # Copyright
-copyright: 'Copyright &copy; 2016-2023 CyVerse'
+copyright: 'Copyright &copy; 2016-2026 CyVerse'
 
 # JavaScript for Intercom Widget
 extra_javascript:

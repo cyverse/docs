@@ -11,7 +11,7 @@ repo_url = "https://github.com/cyverse/docs"
 edit_uri = "edit/main/docs"
 
 # Copyright notice
-copyright = "Copyright &copy; 2016-2023 CyVerse"
+copyright = "Copyright &copy; 2016-2026 CyVerse"
 
 # Theme configuration
 [project.theme]

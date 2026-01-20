@@ -127,7 +127,7 @@ CyVerse is a Software as a Service (SaaS) platform built on modern cloud-native 
 
 !!! Info ":fontawesome-brands-creative-commons-by: SOFTWARE LICENSE"
 
-    Copyright (c) 2010-2023, The Arizona Board of Regents on behalf of The University of Arizona
+    Copyright (c) 2010-2026, The Arizona Board of Regents on behalf of The University of Arizona
 
     All rights reserved.
 

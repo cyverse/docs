@@ -1,6 +1,9 @@
 # Zensical - Modern static site generator
 zensical
 
+# Material for MkDocs - Required for emoji extensions compatibility
+mkdocs-material>=9.0
+
 # Additional requirements for enhanced functionality
 jinja2>=3.0.2
 markdown>=3.2

@@ -204,7 +204,7 @@
 
 [`GET /secured/filesystem/paged-directory`](endpoints/filesystem/directory-listing.md#paged-directory-listing) 
 
-[`POST /secured/filesystem/path-list-creator`](endpoints/filesystem/path-lists.md#ht-path-list-creator` 
+[`POST /secured/filesystem/path-list-creator`](endpoints/filesystem/path-lists.md#http-path-list-creator) 
 
 [`POST /secured/filesystem/read-chunk`](endpoints/filesystem/read-chunk.md#reading-a-chunk-of-a-file) 
 
@@ -212,9 +212,9 @@
 
 [`POST /secured/filesystem/rename`](endpoints/filesystem/rename.md#renaming-a-file-or-directory) 
 
-[`POST /secured/filesystem/restore`](endpoints/filesystem/restore.md#restoring-a-file-or-directory-from-a-users-trash` 
+[`POST /secured/filesystem/restore`](endpoints/filesystem/restore.md#restoring-a-file-or-directory-from-a-users-trash) 
 
-[`POST /secured/filesystem/restore-all`](endpoints/filesystem/restore.md#restoring-all-items-in-a-users-trash` 
+[`POST /secured/filesystem/restore-all`](endpoints/filesystem/restore.md#restoring-all-items-in-a-users-trash) 
 
 [`GET /secured/filesystem/root`](endpoints/filesystem/root-listing.md#top-level-root-listing) 
 
@@ -230,7 +230,7 @@
 
 [`POST /secured/filesystem/{data-id}/metadata`](endpoints/filesystem/metadata.md#setting-metadata) 
 
-[`POST /secured/filesystem/{data-id}/metadata/copy`](endpoints/filesystem/metadata.md#copying-all-metadata-from-a-filefolder` 
+[`POST /secured/filesystem/{data-id}/metadata/copy`](endpoints/filesystem/metadata.md#copying-all-metadata-from-a-filefolder) 
 
 [`POST /secured/filesystem/{data-id}/metadata/save`](endpoints/filesystem/metadata.md#exporting-metadata-to-a-file) 
 

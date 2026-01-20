@@ -1,0 +1,267 @@
+[project]
+site_name = "CyVerse Core Software Documentation"
+site_url = "https://cyverse.github.io/docs"
+site_description = "CyVerse USA Documentation"
+site_author = "CyVerse USA"
+docs_dir = "docs/"
+site_dir = "site"
+
+# Repository information
+repo_url = "https://github.com/cyverse/docs"
+edit_uri = "edit/main/docs"
+
+# Copyright notice
+copyright = "Copyright &copy; 2016-2023 CyVerse"
+
+# Theme configuration
+[project.theme]
+name = "classic"  # Use classic theme for Material for MkDocs appearance
+logo = "assets/de/cyverse_ball_2022.png"
+favicon = "images/favicon.ico"
+
+# Theme features
+[project.theme.features]
+navigation_instant = true
+navigation_tracking = true
+navigation_tabs = true
+navigation_tabs_sticky = true
+navigation_indexes = true
+navigation_top = true
+toc_integrate = true
+toc_follow = true
+
+# Theme palette configuration
+[[project.theme.palette]]
+media = "(prefers-color-scheme: white)"
+primary = "white"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+
+# Font configuration
+[project.theme.font]
+text = "Open Sans"
+code = "Roboto Mono"
+
+# Navigation structure
+[[project.nav]]
+About = "index.md"
+
+[[project.nav]]
+"Getting Started" = [
+  { "Overview & Prerequisites" = "services/getting_started.md" },
+  { "System Overview" = "services/system_overview.md" },
+  { "Subscriptions" = "services/subscriptions.md" }
+]
+
+[[project.nav]]
+"Deployment Guide" = [
+  { "Overview" = "deployments/deployment_overview.md" },
+  { "Prerequisites & Setup" = [
+    { "Ansible Setup" = "guides/setup/ansible.md" },
+    { "Docker Setup" = "guides/setup/docker.md" },
+    { "Database Setup" = "guides/setup/database.md" }
+  ]},
+  { "Core Infrastructure" = [
+    { "Kubernetes Cluster" = "deployments/kubernetes-deploy.md" },
+    { "Kubernetes Resources" = "deployments/k8s-resources.md" },
+    { "Kubernetes Namespaces" = "deployments/k8s-namespace.md" },
+    { "Storage (OpenEBS)" = "deployments/openebs.md" },
+    { "iRODS CSI Driver" = "deployments/irods-csi-driver.md" },
+    { "Networking (Ingress NGINX)" = "deployments/ingress-nginx.md" }
+  ]},
+  { "Core Services" = [
+    { "Authentication (KeyCloak)" = "deployments/keycloak.md" },
+    { "Message Queue (RabbitMQ)" = "deployments/RabbitMQ.md" },
+    { "Cache (Redis HA)" = "deployments/redis-ha.md" },
+    { "Search (ElasticSearch)" = "deployments/elasticsearch.md" },
+    { "Monitoring (Jaeger)" = "deployments/jaeger.md" }
+  ]},
+  { "Application Services" = [
+    { "Discovery Environment" = "deployments/DiscoveryEnvironment.md" },
+    { "User Portal" = "deployments/userportal.md" },
+    { "VICE" = "deployments/vice.md" },
+    { "Mail (Exim4)" = "deployments/exim4.md" },
+    { "Local Exim" = "deployments/local-exim.md" }
+  ]},
+  { "Supporting Services" = [
+    { "Grouper" = "deployments/grouper.md" },
+    { "Unleash" = "deployments/unleash.md" }
+  ]}
+]
+
+[[project.nav]]
+"Administration Guide" = [
+  { "DevOps Tools" = "guides/devops.md" },
+  { "Discovery Environment" = "guides/de.md" },
+  { "Data Store" = "guides/ds.md" },
+  { "User Portal" = "guides/user_portal.md" },
+  { "FAQ" = "guides/faq.md" }
+]
+
+[[project.nav]]
+"API Reference" = [
+  { "Overview" = "services/api_overview.md" },
+  { "Endpoints" = [
+    { "Overview" = "services/api/endpoints/endpoints.md" },
+    { "App Metadata" = "services/api/endpoints/app-metadata.md" },
+    { "App Ontologies" = "services/api/endpoints/app-ontologies.md" },
+    { "Callbacks" = "services/api/endpoints/callbacks.md" },
+    { "Comments" = "services/api/endpoints/comments.md" },
+    { "Favorites" = "services/api/endpoints/favorites.md" },
+    { "File I/O" = "services/api/endpoints/fileio.md" },
+    { "Filesystem" = [
+      { "Search" = "services/api/endpoints/filesystem/search.md" },
+      { "Directory Listing" = "services/api/endpoints/filesystem/directory-listing.md" },
+      { "Directory Create" = "services/api/endpoints/filesystem/directory-create.md" },
+      { "Root Listing" = "services/api/endpoints/filesystem/root-listing.md" },
+      { "File Operations" = "services/api/endpoints/filesystem/read-chunk.md" },
+      { "CSV/TSV Parsing" = "services/api/endpoints/filesystem/csv-tsv-parsing.md" },
+      { "Move" = "services/api/endpoints/filesystem/move.md" },
+      { "Rename" = "services/api/endpoints/filesystem/rename.md" },
+      { "Delete" = "services/api/endpoints/filesystem/delete.md" },
+      { "Restore" = "services/api/endpoints/filesystem/restore.md" },
+      { "Empty Trash" = "services/api/endpoints/filesystem/empty-trash.md" },
+      { "Metadata" = "services/api/endpoints/filesystem/metadata.md" },
+      { "Permissions" = "services/api/endpoints/filesystem/permissions.md" },
+      { "Sharing" = "services/api/endpoints/filesystem/sharing.md" },
+      { "Tickets" = "services/api/endpoints/filesystem/tickets.md" },
+      { "CoGe" = "services/api/endpoints/filesystem/coge.md" },
+      { "ORE" = "services/api/endpoints/filesystem/ore.md" },
+      { "Manifest" = "services/api/endpoints/filesystem/manifest.md" },
+      { "Path Lists" = "services/api/endpoints/filesystem/path-lists.md" },
+      { "Stat" = "services/api/endpoints/filesystem/stat.md" },
+      { "Existence" = "services/api/endpoints/filesystem/existence.md" },
+      { "Errors" = "services/api/endpoints/filesystem/errors.md" }
+    ]},
+    { "Notifications" = "services/api/endpoints/notifications.md" },
+    { "Permanent ID Requests" = "services/api/endpoints/permanent-id-requests.md" },
+    { "Quick Launches" = "services/api/endpoints/quick-launches.md" },
+    { "Terrain vs Apps" = "services/api/endpoints/terrain-v-apps.md" },
+    { "Miscellaneous" = "services/api/endpoints/misc.md" }
+  ]},
+  { "Endpoint Index" = "services/api/endpoint-index.md" },
+  { "Error Handling" = "services/api/errors.md" },
+  { "Migration Guides" = [
+    { "Tapis v2 to v3" = "services/api/tapis-v2-v3-migration.md" }
+  ]}
+]
+
+[[project.nav]]
+"Developer Guide" = "development/index.md"
+
+[[project.nav]]
+"System Architecture" = [
+  { "Overview" = "services/services_overview.md" },
+  { "Products & Services" = [
+    { "Discovery Environment" = "services/de.md" },
+    { "Data Store" = "services/ds.md" },
+    { "Data Commons" = "services/dc.md" },
+    { "BisQue" = "services/bisque.md" },
+    { "DNA Subway" = "services/dnasubway.md" },
+    { "Cloud Services (CACAO)" = "services/cloud.md" },
+    { "Authentication (KeyCloak)" = "services/keycloak.md" }
+  ]}
+]
+
+[[project.nav]]
+"Database Reference" = [
+  { "Overview" = "database/main.md" },
+  { "DE Database" = "database/de-db.md" },
+  { "Metadata Database" = "database/metadata-db.md" },
+  { "KeyCloak Database" = "database/keycloak-db.md" },
+  { "Notifications Database" = "database/notifications-db.md" },
+  { "Unleash Database" = "database/unleash-db.md" },
+  { "Grouper Database" = "database/grouper-db.md" },
+  { "QMS Database" = "database/qms-db.md" },
+  { "Portal Database" = "database/portal-db.md" }
+]
+
+# Extra configuration
+[project.extra]
+homepage = "https://docs.cyverse.org"
+analytics = { provider = "google", property = "G-6WMK2Y07YW" }
+
+[[project.extra.social]]
+icon = "fontawesome/brands/orcid"
+link = "https://orcid.org/"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/cyverse/"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/twitter"
+link = "https://twitter.com/cyverseorg"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/company/cyverse.org"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/docker"
+link = "https://harbor.cyverse.org/"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/youtube"
+link = "https://www.youtube.com/c/CyverseOrgProject"
+
+# JavaScript files
+extra_javascript = ["javascripts/intercom.js"]
+
+# CSS files
+extra_css = ["stylesheets/extra.css"]
+
+# Markdown extensions configuration
+# Zensical enables a sensible default set of extensions automatically
+# This configuration ensures compatibility with the existing content
+[project.markdown_extensions]
+# Python Markdown extensions
+admonition = {}
+abbr = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+
+[project.markdown_extensions.toc]
+permalink = true
+
+# PyMdown Extensions
+[project.markdown_extensions.pymdownx]
+arithmatex = { generic = true }
+betterem = { smart_enable = "all" }
+caret = {}
+critic = {}
+details = {}
+highlight = {}
+inlinehilite = {}
+keys = {}
+mark = {}
+smartsymbols = {}
+tilde = {}
+
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "material.extensions.emoji.twemoji"
+emoji_generator = "material.extensions.emoji.to_svg"
+
+[project.markdown_extensions.pymdownx.magiclink]
+repo_url_shorthand = true
+user = "squidfunk"
+repo = "mkdocs-material"
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+
+# Plugins configuration
+[[project.plugins]]
+name = "search"

@@ -1,38 +1,47 @@
-A special thanks to [Mojib Wali](https://github.com/mb-wali) of [CyVerse-Austria](https://www.tugraz.at/sites/cyverse/home), Graz University of Technology, Austria, for creating these Material MkDocs pages for the global CyVerse developer and maintainer community!
+A special thanks to [Mojib Wali](https://github.com/mb-wali) of [CyVerse-Austria](https://www.tugraz.at/sites/cyverse/home), Graz University of Technology, Austria, for creating the initial Material MkDocs pages for the global CyVerse developer and maintainer community!
 
 CyVerse Core Software Documentation
 ===================================
 
-These documents are for the deployment and maintenence of  [CyVerse](https://cyverse.org)
+These documents are for the deployment and maintenance of [CyVerse](https://cyverse.org)
 
-## MkDocs deploy GitHub Action
+## Zensical Static Site Generator
 
-The `main` branch uses [deploy-mkdocs](https://github.com/marketplace/actions/deploy-mkdocs) GitHub Action.
+This documentation is built using [Zensical](https://zensical.com), a modern static site generator from the team behind Material for MkDocs. The site uses Zensical's "classic" theme which provides the familiar Material for MkDocs appearance with enhanced features.
+
+## GitHub Actions Deployment
+
+The `main` branch uses GitHub Actions to automatically build and deploy the documentation.
 
 Do not commit changes directly to the `main` branch unless necessary. Please commit your updates to the `mkdocs` branch, test on CodeSpaces or locally, and then commit those merges back to `main`.
 
-Commits to `main` will trigget the Action which re-builds and deploys the website to https://docs.cyverse.org -- which is publicly available. 
+Commits to `main` will trigger the Action which re-builds and deploys the website to https://docs.cyverse.org -- which is publicly available.
 
-## Rendered with the Material Theme
+## Configuration
 
-To change to [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) theme, change [Action](./github/workflows/main.yml) to `@master` and set `theme: material` in the [mkdocs.yml](./mkdocs.yml):
+The documentation is configured using `zensical.toml` (TOML format) instead of the traditional `mkdocs.yml`. This provides better configuration management and access to Zensical-specific features.
 
-```
-theme:
-  name: material
-```
+## Local Development
 
-## Build
-
-```
+```bash
 git clone https://github.com/cyverse/docs
 cd docs
 pip install -r requirements.txt
-python -m mkdocs serve
+zensical serve
 ```
 
-After compiling the new pages the service will open on `http://localhost:8000/docs` 
+After starting the development server, the site will open at `http://localhost:8000`
 
 Open in browser and view
 
-Recommended: two monitors for easier display while working on docs. 
+Recommended: two monitors for easier display while working on docs.
+
+## Building
+
+To build the static site:
+
+```bash
+zensical build
+```
+
+Output will be in the `./site` directory. 

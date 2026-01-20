@@ -12,10 +12,14 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          python-version: 3.9
-      - name: run requirements file
-        run:  pip install -r requirements.txt 
-      - name: Deploy docs
-        run: mkdocs gh-deploy --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          python-version: 3.11
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Build documentation
+        run: zensical build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          force_orphan: true

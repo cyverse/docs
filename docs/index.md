@@ -1,15 +1,116 @@
 ![](assets/cyverse_logo_2022.svg)
 
-Welcome to our Core Software Documentation pages!
+# CyVerse Core Software Documentation
 
-The [DevOps documentation](services/system_overview.md) provides the details about deploying the CyVerse cyberinfrastructure. It is intended for professional DevOps and IT specialists with experience in Infrastructure as Code (IaC), Kubernetes (K8s), OpenStack Cloud, and Networking. 
+Welcome to the comprehensive technical documentation for deploying and maintaining the CyVerse cyberinfrastructure. This documentation is designed to support DevOps engineers, system administrators, and application developers working with CyVerse's open-source scientific cyberinfrastructure.
 
-The [Admin Guides](guides/devops.md) are intended for CyVerse staff and administrators who will be managing user accounts and deploying containerized software applications on the infrastructure. 
+## Documentation Overview
+
+CyVerse is a Software as a Service (SaaS) platform built on modern cloud-native technologies, providing researchers with powerful computational infrastructure for data-intensive science. Our documentation covers the complete stack from infrastructure deployment to API integration. 
 
 <figure markdown>
   ![layercake](assets/layerCake.svg){width=800}
   <figcaption>The CyVerse infrastructure layer cake is stacked upon bare-metal Hardware, then Services, and finally Products</figcaption>
 </figure>
+
+---
+
+## Find Documentation by Your Role
+
+### :material-server: DevOps Engineer
+
+**You're deploying and maintaining CyVerse infrastructure**
+
+**Start here:**
+- [Getting Started Guide](services/getting_started.md) - Prerequisites and deployment roadmap
+- [System Overview](services/system_overview.md) - Architecture and technology stack
+- [Deployment Guide](deployments/deployment_overview.md) - Complete deployment walkthrough
+
+**Common tasks:**
+- [Deploy Kubernetes cluster](deployments/kubernetes-deploy.md) - Core infrastructure setup
+- [Configure authentication](deployments/keycloak.md) - KeyCloak deployment and LDAP integration
+- [Set up storage](deployments/openebs.md) - OpenEBS and iRODS CSI driver
+- [Deploy Discovery Environment](deployments/DiscoveryEnvironment.md) - Main application platform
+- [Database management](database/main.md) - PostgreSQL schemas and migrations
+
+### :octicons-people-24: System Administrator
+
+**You're managing users, apps, and operational tasks**
+
+**Start here:**
+- [Administration Guide](guides/devops.md) - Daily operational procedures
+- [Discovery Environment Admin](guides/de.md) - User management, app publishing, VICE access
+- [Data Store Admin](guides/ds.md) - Data management and permissions
+
+**Common tasks:**
+- [Grant VICE access](guides/de.md#vice-access) - Enable interactive computing for users
+- [Process DOI/Permanent ID requests](services/api/endpoints/permanent-id-requests.md) - Data publishing workflows
+- [Manage user groups](deployments/grouper.md) - Grouper administration
+- [Publish apps to Discovery Environment](guides/de.md#app-publication) - Tool integration
+- [FAQ](guides/faq.md) - Frequently asked questions and troubleshooting
+
+### :material-code-braces: Application Developer
+
+**You're integrating with CyVerse APIs or contributing code**
+
+**Start here:**
+- [Developer Guide](development/index.md) - Development environment and contribution workflow
+- [API Overview](services/api_overview.md) - Terrain API introduction
+- [API Endpoint Index](services/api/endpoint-index.md) - Complete API reference
+
+**Common tasks:**
+- [Authentication](services/keycloak.md) - OAUTH 2.0 integration
+- [Filesystem operations](services/api/endpoints/filesystem/directory-listing.md) - Data Store API
+- [Job submission](services/api/endpoints/endpoints.md) - Analysis execution
+- [Tapis v2 to v3 migration](services/api/tapis-v2-v3-migration.md) - Upgrade guide
+- [Error handling](services/api/errors.md) - API error codes and responses
+
+---
+
+## Documentation Sections
+
+| Section | Description | Audience |
+|---------|-------------|----------|
+| [**Getting Started**](services/getting_started.md) | Prerequisites, system overview, and deployment roadmap | DevOps, New users |
+| [**Deployment Guide**](deployments/deployment_overview.md) | Complete infrastructure deployment: Kubernetes, services, databases | DevOps Engineers |
+| [**Administration Guide**](guides/devops.md) | Operational procedures, user management, app publishing | System Administrators |
+| [**API Reference**](services/api_overview.md) | Terrain API endpoints, authentication, error handling | Developers |
+| [**Developer Guide**](development/index.md) | Development environment, contribution workflow, architecture | Developers |
+| [**System Architecture**](services/services_overview.md) | Platform components, services, and design decisions | All audiences |
+| [**Database Reference**](database/main.md) | PostgreSQL schemas for all CyVerse services | DevOps, DBAs |
+
+---
+
+## CyVerse Platform Components
+
+### Core Products
+- **[Discovery Environment (DE)](services/de.md)** - Web-based analysis platform for computational workflows
+- **[Data Store](services/ds.md)** - 6+ PB iRODS-based data management system
+- **[Data Commons](services/dc.md)** - Data publishing platform with DOI/ARK support
+- **[VICE](deployments/vice.md)** - Visual Interactive Computing Environment (Jupyter, RStudio, etc.)
+
+### Specialized Tools
+- **[BisQue](services/bisque.md)** - Bio-Image Semantic Query User Environment
+- **[DNA Subway](services/dnasubway.md)** - Educational genomics platform
+- **[Cloud Services (CACAO)](services/cloud.md)** - Cloud automation and multi-cloud orchestration
+
+### Infrastructure Services
+- **[Authentication (KeyCloak)](services/keycloak.md)** - OAUTH 2.0, LDAP, CILogon integration
+- **[Terrain API](services/api_overview.md)** - RESTful API aggregating all DE services
+- **[Kubernetes](deployments/kubernetes-deploy.md)** - Container orchestration platform
+- **[iRODS](deployments/irods-csi-driver.md)** - Integrated Rule-Oriented Data System for data management
+
+---
+
+## Quick Links
+
+- :material-frequently-asked-questions: [**FAQ**](guides/faq.md) - Frequently asked questions and troubleshooting
+- :simple-github: [**GitHub Organization**](https://github.com/cyverse-de){target=_blank} - Source code repositories
+- :material-api: [**Live Terrain API**](https://de.cyverse.org/terrain/docs/){target=_blank} - Interactive API documentation
+- :simple-docker: [**Harbor Registry**](https://harbor.cyverse.org/){target=_blank} - Container image repository
+- :material-web: [**CyVerse Website**](https://cyverse.org){target=_blank} - Public-facing information and user support
+
+---
 
 ??? Question "What is CyVerse?"
 

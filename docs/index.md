@@ -22,11 +22,13 @@ CyVerse is a Software as a Service (SaaS) platform built on modern cloud-native 
 **You're deploying and maintaining CyVerse infrastructure**
 
 **Start here:**
+
 - [Getting Started Guide](services/getting_started.md) - Prerequisites and deployment roadmap
 - [System Overview](services/system_overview.md) - Architecture and technology stack
 - [Deployment Guide](deployments/deployment_overview.md) - Complete deployment walkthrough
 
 **Common tasks:**
+
 - [Deploy Kubernetes cluster](deployments/kubernetes-deploy.md) - Core infrastructure setup
 - [Configure authentication](deployments/keycloak.md) - KeyCloak deployment and LDAP integration
 - [Set up storage](deployments/openebs.md) - OpenEBS and iRODS CSI driver
@@ -38,11 +40,13 @@ CyVerse is a Software as a Service (SaaS) platform built on modern cloud-native 
 **You're managing users, apps, and operational tasks**
 
 **Start here:**
+
 - [Administration Guide](guides/devops.md) - Daily operational procedures
 - [Discovery Environment Admin](guides/de.md) - User management, app publishing, VICE access
 - [Data Store Admin](guides/ds.md) - Data management and permissions
 
 **Common tasks:**
+
 - [Grant VICE access](guides/de.md#vice-access) - Enable interactive computing for users
 - [Process DOI/Permanent ID requests](services/api/endpoints/permanent-id-requests.md) - Data publishing workflows
 - [Manage user groups](deployments/grouper.md) - Grouper administration
@@ -54,11 +58,13 @@ CyVerse is a Software as a Service (SaaS) platform built on modern cloud-native 
 **You're integrating with CyVerse APIs or contributing code**
 
 **Start here:**
+
 - [Developer Guide](development/index.md) - Development environment and contribution workflow
 - [API Overview](services/api_overview.md) - Terrain API introduction
 - [API Endpoint Index](services/api/endpoint-index.md) - Complete API reference
 
 **Common tasks:**
+
 - [Authentication](services/keycloak.md) - OAUTH 2.0 integration
 - [Filesystem operations](services/api/endpoints/filesystem/directory-listing.md) - Data Store API
 - [Job submission](services/api/endpoints/endpoints.md) - Analysis execution
@@ -84,17 +90,20 @@ CyVerse is a Software as a Service (SaaS) platform built on modern cloud-native 
 ## CyVerse Platform Components
 
 ### Core Products
+
 - **[Discovery Environment (DE)](services/de.md)** - Web-based analysis platform for computational workflows
 - **[Data Store](services/ds.md)** - 6+ PB iRODS-based data management system
 - **[Data Commons](services/dc.md)** - Data publishing platform with DOI/ARK support
 - **[VICE](deployments/vice.md)** - Visual Interactive Computing Environment (Jupyter, RStudio, etc.)
 
 ### Specialized Tools
+
 - **[BisQue](services/bisque.md)** - Bio-Image Semantic Query User Environment
 - **[DNA Subway](services/dnasubway.md)** - Educational genomics platform
 - **[Cloud Services (CACAO)](services/cloud.md)** - Cloud automation and multi-cloud orchestration
 
 ### Infrastructure Services
+
 - **[Authentication (KeyCloak)](services/keycloak.md)** - OAUTH 2.0, LDAP, CILogon integration
 - **[Terrain API](services/api_overview.md)** - RESTful API aggregating all DE services
 - **[Kubernetes](deployments/kubernetes-deploy.md)** - Container orchestration platform

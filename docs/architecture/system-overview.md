@@ -1,0 +1,165 @@
+---
+type: Architecture Overview
+title: "System overview"
+description: "The CyVerse stack end to end: interfaces, APIs, compute, storage, and the resources behind them."
+tags: [architecture, overview]
+status: stable
+generated: { by: process:okf-migration, at: 2026-07-29T00:00:00Z }
+---
+[de]: ../assets/de/deIcon.svg
+[data]: ../assets/de/dataIcon.svg
+[cacao]: ../assets/de/cacao-04.png
+[ball]: ../assets/de/cyverse_ball_2022.png
+
+CyVerse is both a Software as a Service (SaaS) and the Infrastructure as Code (IaC) necessary to manage a full stack cyberinfrastructure.
+
+The US public CyVerse primarily runs on hardware located at The University of Arizona, with a full data store mirror at the Texas Advanced Computing Center (TACC), and federated compute resources located across the US.
+
+The full CyVerse SaaS stack can be deployed either on-premises consumer hardware or on cloud resources.
+
+Data storage is managed by an iRODS [![data]{width=25} Data Store](../platform/data-store.md).
+
+Computing can be done in either the [![de]{width=25} Discovery Environment (DE)](../platform/discovery-environment.md) data science workbench or with the [![cacao]{width=25} CACAO IaC](../platform/cloud.md) which leverages both public research computing and commercial cloud.
+
+Event-based triggers are accomplished through the DataWatch API.
+
+<figure markdown>
+  ![ecosystem](../assets/ecosystem.svg){width=800}
+  <figcaption>CyVerse's Infrastructure as Code (IaC) provides computing, storage, and event-based components researchers rely upon for data intensive science.
+</figcaption>
+</figure>
+
+!!! tip "Deploying your own"
+
+    This document describes the production US CyVerse deployment. For the smallest
+    useful deployment and its sizing, see
+    [component inventory](./component-inventory.md), and for the ordered build see
+    [deployment](../deployment/index.md).
+
+## :material-api: Application Programming Interfaces (APIs)
+
+All CyVerse APIs are [:simple-openapiinitiative: OpenAPI](https://www.openapis.org/) compliant.
+
+[:material-terrain: Terrain API](https://de.cyverse.org/terrain/docs/index.html){target=_blank} is the main API for Discovery Environment and uses a [:simple-swagger: Swagger](https://swagger.io/) interface.
+
+* [:simple-jupyter: Terrain API Jupyter Notebooks](https://github.com/cyverse/terrain-notebook) - provide an introduction to Terrain and show how to start and stop analyses.
+* [:simple-swagger: https://de.cyverse.org/terrain/swagger.json](https://de.cyverse.org/terrain/swagger.json)
+
+[![cacao]{width=25} CACAO API](https://gitlab.com/cyverse/cacao/-/blob/master/docs/openapi/openapi.yaml){target=_blank} - Infrastructure as Code API for cloud automation with OpenAPI
+
+[Data Watch API](https://gitlab.com/cyverse/datawatch/-/blob/master/docs/openapi/datawatch-openapi.yaml){target=_blank} - event based triggers for workflows with OpenAPI
+
+CyVerse public-facing APIs are frequently leveraged by "[Powered-by-CyVerse](https://cyverse.org/powered-by-cyverse)" projects which utilize specific parts of the platform.
+
+## :octicons-cloud-24: Cloud Services
+
+[![][cacao]{width=25}](https://cyverse.org/cacao){target=_blank} [Continuous Automation / Continuous Analysis & Orchestration (CACAO)](https://cyverse.org/cacao){target=_blank} - Infrastructure as Code for multi-cloud deployments
+
+* [:simple-terraform: CACAO Terraform Templates](https://gitlab.com/cyverse/cacao-tf-os-ops/){target=_blank}
+* [:octicons-stopwatch-24: DataWatch](https://gitlab.com/cyverse/datawatch){target=_blank} - a notification system for reporting data events
+
+## :material-server: Compute Resources
+
+The DE runs on-premises hardware located at University of Arizona (UArizona) in the UITS colocation space at the high performance computing center. The data store is mirrored nightly at TACC.
+
+CyVerse staff maintain several hundred servers at UArizona and a mirror at TACC. Exact counts change as hardware is added, replaced, or retired.
+
+Hardware is added, replaced, or upgraded every few months. The tables below record the shape of the deployment rather than a current inventory; a dash means the aggregate is not tracked in this document.
+
+**Primary Hardware Specifications**
+
+Compute nodes
+
+| System Configuration | Aggregate information | Per Node (Compute Node) |
+|----------------------|-----------------------|-------------------------|
+| Machine types | Dell, SuperMicro | |
+| Operating systems | Rocky, CentOS | Rocky, CentOS |
+| Processor cores | — | varies by generation |
+| CPUs | 128, 64, 40, 32, 16 | 1, 2 |
+| RAM | — | 256, 128, 64, 32 GiB |
+| Network |	100 Gbps to Internet2 | 10 Gpbs to switch |
+| Storage | — | varies by node |
+
+GPU nodes
+
+| System Configuration | Aggregate information | Per Node (Compute Node) |
+|----------------------|-----------------------|-------------------------|
+| Machine types | Dell, SuperMicro | |
+| Operating systems | Rocky, CentOS | Rocky, CentOS |
+| Processor cores |	 |	256 |
+| CPUs | | 2 |
+| RAM | |	1 TB, 512 GB |
+| GPUs | NVIDIA (A100 80GB), (Tesla T4 16GB) | 4 |
+| Network |	100 Gbps to Internet2 | 10 Gpbs to switch |
+| Storage | — | 28 TB SSD, 21 TB NVMe |
+
+Storage resource nodes (44 nodes)
+
+| System Configuration | Aggregate information | Per Node (Compute Node) |
+|----------------------|-----------------------|-------------------------|
+| Machine types | Dell, SuperMicro | |
+| Operating systems | Rocky, CentOS, Ubuntu | Rocky, CentOS, Ubuntu |
+| Processor cores | 1,506 | varies by generation |
+| CPUs | 128, 64, 40, 32, 16 | 1, 2 |
+| RAM | 11 TiB |	256, 128, 64, 32 GiB |
+| Network |	100 Gbps to Internet2 | 10 Gpbs to switch |
+| Storage | 18 PB | varies by node |
+
+### :simple-kubernetes: Federated Kubernetes Clusters
+
+* CyVerse runs mainly on a locally managed K8s cluster, but it can be federated to other K8s clusters.
+* The [National Research Platform](https://nationalresearchplatform.org/){target=_blank} offers federated K8s resources. These resources are currently in development.
+
+### :simple-openstack: OpenStack Cloud
+
+* CyVerse maintains its own OpenStack Cloud (formerly "Atmosphere") for internal use and development of CACAO.
+* Jetstream2 is primarily operated at Indiana University, but test clusters are shared across other universities in the US
+
+![js2](../assets/js2.png)
+
+### :material-server: High Throughput Computing Environments:
+
+![htcondor](../assets/HTCondor_red_blk.svg){width=250}
+
+DE uses [HTCondor](https://htcondor.org/){target=_blank} for `executable` jobs on CyVerse resources and `osg` jobs on the [OpenScienceGrid](https://opensciencegrid.org){target=_blank}
+
+![](../assets/OSG_Logo_W_Text.svg){width=250}
+
+Federation to the [OpenScienceGrid](https://opensciencegrid.org){target=_blank} can be accomplished in the DE
+
+### :material-server: High Performance Computing Environments
+
+[University of Arizona](https://it.arizona.edu/){target=_blank} resources are colocated with the CyVerse data store and compute clusters
+
+CyVerse is partnered with [Texas Advanced Computing Center (TACC)](https://www.tacc.utexas.edu/){target=_blank} where its data store is replicated nightly. US based researchers can request access to HPC via:
+
+* [ACCESS-CI](https://access-ci.org/){target=_blank}
+* [TACC Allocation request](https://portal.tacc.utexas.edu/allocations-overview){target=_blank}
+
+## :octicons-database-24: Data Storage
+
+The CyVerse Data Store manages over 6 PB data via [iRODS (integrated Rule Oriented Data System)](https://irods.org){target=_blank} within the `iplant` zone. The zone name is related to the original project name. It is retained to preserve access to data through URLs published during the time period of the original project.
+
+Data storage is organized into resources. The main resource is named `CyVerseRes`, and it holds all user data and most project data. Data on `CyVerseRes` are stored at the University of Arizona. This resource is mirrored with a second resource named `taccRes` which is backed by storage located at the Texas Advanced Computing Center (TACC). There are also special purpose resources dedicated to certain projects. The data in these resources are stored on hardware owned by these projects.
+
+![datastore](../assets/datastore.svg){width=500}
+
+## :material-web: Interfaces
+
+[![][ball]{width=25}](https://user.cyverse.org/){target=_blank} [User Portal](https://user.cyverse.org){target=_blank} - a User Portal for creating and managing accounts, requesting and granting access to platforms, and a user management space for individuals and groups and workshops.
+
+[![][de]{width=25}](https://de.cyverse.org){target=_blank} [Discovery Environment](https://de.cyverse.org){target=_blank}  - Custom interactive web based data science workbench
+
+[:material-shield-key: KeyCloak](https://kc.cyverse.org){target=_blank} - federated OAUTH to CyVerse resources, including Google, GitHub, ORCID,& CILogon
+
+[![][data]{width=25}](https://data.cyverse.org){target=_blank} [WebDAV](https://data.cyverse.org/){target=_blank} - A service that provides secure HTTP/WebDAV access to the Data Store. It provides anonymous access to public data and authenticated access to private and shared data.
+
+![][data]{width=25} SFTP - A service that provides secure FTP access to the Data Store. The service can be accessed through sftp://data.cyverse.org.
+
+[![][data]{width=25}](https://datacommons.cyverse.org){target=_blank} [Data Commons](https://datacommons.cyverse.org/){target=_blank} - This service provides secure HTTP access to published datasets that are hosted in the CyVerse Data Store. The Data Commons presents any metadata which have been added by the owners to their datasets.
+
+## :fontawesome-solid-staff-snake: Monitoring Services
+
+[:material-web: Health Status](https://status.cyverse.org/){target=_blank} - system status monitor
+
+[:material-crosshairs-gps: perfSONAR web toolkit](http://206.207.252.45/toolkit/){target=_blank} - network measurement toolkit

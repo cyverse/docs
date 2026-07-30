@@ -4,6 +4,10 @@ site_url: https://cyverse.github.io/docs
 site_description: CyVerse USA Documentation
 site_author: 'CyVerse USA'
 
+# NOTE: the published site is built with Zensical (see zensical.toml, which is
+# what .github/workflows/gh-actions.yml runs). This file is kept in sync for
+# local `mkdocs serve` previews; change both when the navigation changes.
+
 # uncomment to show the github icon in the header with
 # number of forks & stars
 repo_url: https://github.com/cyverse/docs
@@ -16,10 +20,6 @@ copyright: 'Copyright &copy; 2016-2026 CyVerse'
 extra_javascript:
   - javascripts/intercom.js
 
-# logos
-#medunilogo: 'images/logo-meduni-graz.png'
-#unigrazlogo: 'images/universitaet_graz_logo_signet.png'
-#tugrazlogo: 'images/TUG.png'
 imgwidth: 70px;
 theme:
   highlightjs: true
@@ -57,74 +57,147 @@ theme:
         icon: material/weather-sunny
         name: Switch to system preference
 
-# Navigation Pane
+# Navigation pane. Ordered to follow a CyVerse deployment: plan, build the
+# foundation, then the layers above it, then operate what you built.
 
 nav:
-  - About: 'index.md'
-  - DevOps:
-    - Getting Started: 'services/getting_started.md'
-    - System Overview: 'services/system_overview.md'
-    - Subscriptions: 'services/subscriptions.md'
-    - API (Terrain): 
-      - Overview: 'services/api_overview.md'
-      - Endpoints:
-        - Overview: 'services/api/endpoints/endpoints.md'
-        - App Metadata: 'services/api/endpoints/app-metadata.md'
-        - Callbacks: 'services/api/endpoints/callbacks.md'
-        - Comments: 'services/api/endpoints/comments.md'
-        - Data Search: 'services/api/endpoints/filesystem/search.md'
-        - Favorites: 'services/api/endpoints/favorites.md'
-        - Notification: 'services/api/endpoints/notifications.md'
-        - Ontology Hierarchies: 'services/api/endpoints/app-ontologies.md'
-        - Permanent ID Requests: 'services/api/endpoints/permanent-id-requests.md'
-        - Quick Launches: 'services/api/endpoints/quick-launches.md'
-        - Miscellaneous: 'services/api/endpoints/misc.md'
-      - Endpoints Index: 'services/api/endpoint-index.md'
-      - Errors: 'services/api/errors.md'
-    - Products & Services:
-      - Overview: 'services/services_overview.md'
-      - Authentication: 'services/keycloak.md'
-      - BisQue: [services/bisque.md]
-      - Cloud Services: "services/cloud.md"
-      - Data Publishing: 'services/dc.md'
-      - Data Storage: 'services/ds.md'
-      - Discovery Environment: 'services/de.md'
-      - DNA Subway: 'services/dnasubway.md'
-    - Deployments:
-      - Overview: 'deployments/deployment_overview.md'
-      - Kubernetes (K8s): 'deployments/kubernetes-deploy.md'
-      - User Portal: 'deployments/userportal.md'
-      - OpenEBS: 'deployments/openebs.md'
-      - KeyCloak: 'deployments/keycloak.md'
-      - Mail: 'deployments/exim4.md'
-      - Redis HA: 'deployments/redis-ha.md'
-      - K8s Resources: 'deployments/k8s-resources.md'
-      - K8s Name Spaces: 'deployments/k8s-namespace.md'
-      - ElasticSearch: 'deployments/elasticsearch.md'
-      - RabbitMQ: 'deployments/RabbitMQ.md' # move this since its not k8s
-      - Unleash: 'deployments/unleash.md'
-      - Grouper: 'deployments/grouper.md'
-      - iRODS CSI Driver: 'deployments/irods-csi-driver.md'
-      - Local Exim: 'deployments/local-exim.md'
-      - Discovery Environment: 'deployments/DiscoveryEnvironment.md'
-      - VICE: 'deployments/vice.md'
-      - Jaeger: 'deployments/jaeger.md'
-    - Databases:
-      - Overview: 'database/main.md'
-      - DE: 'database/de-db.md'
-      - Metadata: 'database/metadata-db.md'
-      - KeyCloak: 'database/keycloak-db.md'
-      - Notifications: 'database/notifications-db.md'
-      - Unleash: 'database/unleash-db.md'
-      - Grouper: 'database/grouper-db.md'
-      - QMS: 'database/qms-db.md'
-      - Portal: 'database/portal-db.md'
-  - Admin Guides:
-    - DevOps: 'guides/devops.md'
-    - Discovery Environment: 'guides/de.md'
-    - Data Store: 'guides/ds.md'
-    - User Portal: 'guides/user_portal.md'    
-    - Frequently Asked Questions: 'guides/faq.md'
+  - Home:
+    - index.md
+    - About: 'about.md'
+    - Update Log: 'log.md'
+  - Architecture:
+    - architecture/index.md
+    - System Overview: 'architecture/system-overview.md'
+    - Component Inventory & Sizing: 'architecture/component-inventory.md'
+    - Network Requirements: 'architecture/network-requirements.md'
+    - Kubernetes Namespaces: 'architecture/namespaces.md'
+  - Deployment:
+    - deployment/index.md
+    - From Scratch: 'deployment/from-scratch.md'
+    - 'Phase 0: Planning':
+      - deployment/planning/index.md
+      - Prerequisites: 'deployment/planning/prerequisites.md'
+      - Ansible: 'deployment/planning/ansible.md'
+      - Docker: 'deployment/planning/docker.md'
+    - 'Phase 1: Foundation':
+      - deployment/01-foundation/index.md
+      - HAProxy: 'deployment/01-foundation/haproxy.md'
+      - PostgreSQL: 'deployment/01-foundation/postgresql.md'
+      - RabbitMQ: 'deployment/01-foundation/rabbitmq.md'
+    - 'Phase 2: Databases':
+      - deployment/02-databases/index.md
+      - Migrations: 'deployment/02-databases/migrations.md'
+      - iCAT: 'deployment/02-databases/icat.md'
+      - DE: 'deployment/02-databases/de.md'
+      - Metadata: 'deployment/02-databases/metadata.md'
+      - Notifications: 'deployment/02-databases/notifications.md'
+      - QMS: 'deployment/02-databases/qms.md'
+      - Keycloak: 'deployment/02-databases/keycloak.md'
+      - Grouper: 'deployment/02-databases/grouper.md'
+      - Unleash: 'deployment/02-databases/unleash.md'
+      - Portal: 'deployment/02-databases/portal.md'
+    - 'Phase 3: Data Store':
+      - deployment/03-data-store/index.md
+      - iRODS Catalog Provider: 'deployment/03-data-store/irods-provider.md'
+      - DE Integration: 'deployment/03-data-store/de-integration.md'
+    - 'Phase 4: Kubernetes':
+      - deployment/04-kubernetes/index.md
+      - Cluster: 'deployment/04-kubernetes/cluster.md'
+      - Cluster Resources: 'deployment/04-kubernetes/resources.md'
+      - cert-manager: 'deployment/04-kubernetes/cert-manager.md'
+      - Ingress: 'deployment/04-kubernetes/ingress.md'
+      - Storage: 'deployment/04-kubernetes/storage.md'
+      - Harbor: 'deployment/04-kubernetes/harbor.md'
+      - Argo Workflows: 'deployment/04-kubernetes/argo.md'
+    - 'Phase 5: Core Services':
+      - deployment/05-core-services/index.md
+      - OpenLDAP: 'deployment/05-core-services/openldap.md'
+      - Keycloak: 'deployment/05-core-services/keycloak.md'
+      - Grouper: 'deployment/05-core-services/grouper.md'
+      - OpenSearch: 'deployment/05-core-services/opensearch.md'
+      - Elasticsearch (legacy): 'deployment/05-core-services/elasticsearch.md'
+      - NATS: 'deployment/05-core-services/nats.md'
+      - Redis HA: 'deployment/05-core-services/redis-ha.md'
+      - Unleash: 'deployment/05-core-services/unleash.md'
+      - iRODS CSI Driver: 'deployment/05-core-services/irods-csi-driver.md'
+      - Mail: 'deployment/05-core-services/mail.md'
+      - Jaeger: 'deployment/05-core-services/jaeger.md'
+    - 'Phase 6: Applications':
+      - deployment/06-applications/index.md
+      - Discovery Environment: 'deployment/06-applications/discovery-environment.md'
+      - VICE: 'deployment/06-applications/vice.md'
+      - User Portal: 'deployment/06-applications/user-portal.md'
+    - 'Phase 7: Post-Install':
+      - deployment/07-post-install/index.md
+      - Bootstrap: 'deployment/07-post-install/bootstrap.md'
+      - Verification: 'deployment/07-post-install/verification.md'
+      - Troubleshooting: 'deployment/07-post-install/troubleshooting.md'
+  - Platform:
+    - platform/index.md
+    - Discovery Environment: 'platform/discovery-environment.md'
+    - Data Store: 'platform/data-store.md'
+    - Data Commons: 'platform/data-commons.md'
+    - Authentication: 'platform/authentication.md'
+    - Subscriptions: 'platform/subscriptions.md'
+    - Cloud Services: 'platform/cloud.md'
+    - BisQue: 'platform/bisque.md'
+    - DNA Subway: 'platform/dna-subway.md'
+  - Operations:
+    - operations/index.md
+    - Discovery Environment: 'operations/discovery-environment.md'
+    - Data Store: 'operations/data-store.md'
+    - User Portal: 'operations/user-portal.md'
+    - FAQ: 'operations/faq.md'
+  - API:
+    - api/index.md
+    - Terrain: 'api/terrain.md'
+    - Endpoints:
+      - api/endpoints/index.md
+      - Overview: 'api/endpoints/endpoints.md'
+      - App Metadata: 'api/endpoints/app-metadata.md'
+      - App Ontologies: 'api/endpoints/app-ontologies.md'
+      - Callbacks: 'api/endpoints/callbacks.md'
+      - Comments: 'api/endpoints/comments.md'
+      - Favorites: 'api/endpoints/favorites.md'
+      - File I/O: 'api/endpoints/fileio.md'
+      - Notifications: 'api/endpoints/notifications.md'
+      - Permanent ID Requests: 'api/endpoints/permanent-id-requests.md'
+      - Quick Launches: 'api/endpoints/quick-launches.md'
+      - Terrain & Apps: 'api/endpoints/terrain-v-apps.md'
+      - Miscellaneous: 'api/endpoints/misc.md'
+      - Filesystem:
+        - api/endpoints/filesystem/index.md
+        - Root Listing: 'api/endpoints/filesystem/root-listing.md'
+        - Directory Listing: 'api/endpoints/filesystem/directory-listing.md'
+        - Directory Create: 'api/endpoints/filesystem/directory-create.md'
+        - Stat: 'api/endpoints/filesystem/stat.md'
+        - Existence: 'api/endpoints/filesystem/existence.md'
+        - Manifest: 'api/endpoints/filesystem/manifest.md'
+        - Read Chunk: 'api/endpoints/filesystem/read-chunk.md'
+        - CSV/TSV Parsing: 'api/endpoints/filesystem/csv-tsv-parsing.md'
+        - Move: 'api/endpoints/filesystem/move.md'
+        - Rename: 'api/endpoints/filesystem/rename.md'
+        - Delete: 'api/endpoints/filesystem/delete.md'
+        - Restore: 'api/endpoints/filesystem/restore.md'
+        - Empty Trash: 'api/endpoints/filesystem/empty-trash.md'
+        - Metadata: 'api/endpoints/filesystem/metadata.md'
+        - Search: 'api/endpoints/filesystem/search.md'
+        - Permissions: 'api/endpoints/filesystem/permissions.md'
+        - Sharing: 'api/endpoints/filesystem/sharing.md'
+        - Tickets: 'api/endpoints/filesystem/tickets.md'
+        - CoGe: 'api/endpoints/filesystem/coge.md'
+        - OAI-ORE: 'api/endpoints/filesystem/ore.md'
+        - Path Lists: 'api/endpoints/filesystem/path-lists.md'
+        - Errors: 'api/endpoints/filesystem/errors.md'
+    - Endpoint Index: 'api/endpoint-index.md'
+    - Errors: 'api/errors.md'
+    - Tapis v2 to v3 Migration: 'api/tapis-v2-v3-migration.md'
+  - Development:
+    - development/index.md
+    - Developer Guide: 'development/developer-guide.md'
+  - References:
+    - references/index.md
+    - Pilot Deployment Record: 'references/pilot-deployment-record.md'
 
 # Customization
 extra:
@@ -164,15 +237,15 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
       repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
+      user: cyverse
+      repo: docs
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences:
@@ -180,10 +253,11 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/custom.css

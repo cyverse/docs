@@ -1,0 +1,68 @@
+# CyVerse Core Software Documentation — https://docs.cyverse.org/
+# This documentation is published for people AND for AI agents.
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+Sitemap: https://docs.cyverse.org/sitemap.xml
+
+# AI agents and harnesses:
+#   Machine-readable outline:  https://docs.cyverse.org/llms.txt
+#   Full corpus (one file):    https://docs.cyverse.org/llms-full.txt
+#   Markdown source of any page (OKF v0.2 frontmatter: type, provenance,
+#   trust, lifecycle): append `index.md` to the page URL.
+#   Raw source on GitHub:      https://raw.githubusercontent.com/cyverse/docs/main/docs/<path>.md
+#   Agent guide:               https://docs.cyverse.org/about/ai-agents/

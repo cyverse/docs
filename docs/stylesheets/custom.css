@@ -79,3 +79,10 @@ body {
 {
     margin-right: 50px;
 }
+/* Body-level machine-readable pointers injected by scripts/postbuild_agent_surface.py */
+.md-typeset .okf-machine-readable
+{
+    margin-top: 1.2rem;
+    font-size: 0.64rem;
+    color: var(--md-default-fg-color--light);
+}

@@ -12,9 +12,11 @@ this one.*
 
 # Start here
 
-* [About this documentation](about.md) - what CyVerse is, and where each audience should start
+* [About this documentation](about/overview.md) - what CyVerse is, and where each audience should start
 * [Deploying CyVerse from scratch](deployment/from-scratch.md) - end-to-end walkthrough of a two-node deployment
 * [Update log](log.md) - what changed in this bundle, newest first
+* [For AI agents](about/ai-agents.md) - llms.txt, per-page Markdown, raw source on GitHub, and trust signals ([llms.txt](https://docs.cyverse.org/llms.txt), [llms-full.txt](https://docs.cyverse.org/llms-full.txt))
+* [about/](about/) - this documentation project: overview, contributing, agent guide
 
 # Architecture
 

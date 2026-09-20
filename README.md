@@ -21,6 +21,17 @@ Commits to `main` will trigger the Action which re-builds and deploys the websit
 
 The documentation is configured using `zensical.toml` (TOML format) instead of the traditional `mkdocs.yml`. This provides better configuration management and access to Zensical-specific features.
 
+## Agent-ready documentation (OKF v0.2)
+
+`docs/` is an [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) knowledge bundle: every page carries YAML frontmatter (type, provenance, lifecycle). The published site exposes it to AI agents through [`llms.txt`](https://docs.cyverse.org/llms.txt), [`llms-full.txt`](https://docs.cyverse.org/llms-full.txt), and a Markdown copy of every page at its URL + `index.md`. See [For AI agents](https://docs.cyverse.org/about/ai-agents/) and, for coding agents working in this repository, [AGENTS.md](AGENTS.md).
+
+Before committing content changes:
+
+```bash
+python3 scripts/okf_validate.py docs   # OKF conformance (CI-enforced)
+python3 scripts/gen_llms_txt.py        # regenerate docs/llms.txt and docs/llms-full.txt (CI checks drift)
+```
+
 ## Local Development
 
 ```bash

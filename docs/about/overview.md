@@ -13,7 +13,7 @@ sources:
     last_modified: 2026-07-29
 ---
 
-![](assets/cyverse_logo_2022.svg)
+![](../assets/cyverse_logo_2022.svg)
 
 # What CyVerse is
 
@@ -27,7 +27,7 @@ another institution on its own hardware or in the cloud. That is what this
 documentation is for.
 
 <figure markdown>
-  ![layercake](assets/layerCake.svg){width=800}
+  ![layercake](../assets/layerCake.svg){width=800}
   <figcaption>Hardware at the bottom, services in the middle, products on top</figcaption>
 </figure>
 
@@ -35,34 +35,34 @@ documentation is for.
 
 ## Deploying CyVerse
 
-Start with [prerequisites](deployment/planning/prerequisites.md), then read
-[deploying from scratch](deployment/from-scratch.md) end to end before running
-anything. Work the phases in [deployment](deployment/) in order, and check each one
-against [verification](deployment/07-post-install/verification.md).
+Start with [prerequisites](../deployment/planning/prerequisites.md), then read
+[deploying from scratch](../deployment/from-scratch.md) end to end before running
+anything. Work the phases in [deployment](../deployment/) in order, and check each one
+against [verification](../deployment/07-post-install/verification.md).
 
 Before provisioning: [component inventory and
-sizing](architecture/component-inventory.md) and [network
-requirements](architecture/network-requirements.md).
+sizing](../architecture/component-inventory.md) and [network
+requirements](../architecture/network-requirements.md).
 
 ## Operating a deployment
 
-[operations/](operations/) covers day-to-day administration: users and VICE access
-in [DE administration](operations/discovery-environment.md), data and curation in
-[Data Store administration](operations/data-store.md), accounts in [User Portal
-administration](operations/user-portal.md), and the recurring questions in the
-[FAQ](operations/faq.md).
+[operations/](../operations/) covers day-to-day administration: users and VICE access
+in [DE administration](../operations/discovery-environment.md), data and curation in
+[Data Store administration](../operations/data-store.md), accounts in [User Portal
+administration](../operations/user-portal.md), and the recurring questions in the
+[FAQ](../operations/faq.md).
 
 ## Integrating with the APIs
 
-[Terrain](api/terrain.md) is the API behind every CyVerse product. The
-[endpoint index](api/endpoint-index.md) lists everything documented here, and the
+[Terrain](../api/terrain.md) is the API behind every CyVerse product. The
+[endpoint index](../api/endpoint-index.md) lists everything documented here, and the
 live [Swagger reference](https://de.cyverse.org/terrain/docs/){target=_blank} is
 the most current source. Authentication is [OAuth 2.0 through
-Keycloak](platform/authentication.md).
+Keycloak](../platform/authentication.md).
 
 ## Contributing code
 
-[development/](development/) covers the development environment and contribution
+[development/](../development/) covers the development environment and contribution
 workflow. Source lives in the
 [CyVerse](https://github.com/cyverse){target=_blank} and
 [CyVerse DE](https://github.com/cyverse-de){target=_blank} GitHub organizations.
@@ -71,13 +71,13 @@ workflow. Source lives in the
 
 | Product | What it does |
 |---------|--------------|
-| [Discovery Environment](platform/discovery-environment.md) | Web-based data science workbench with hundreds of integrated tools |
-| [Data Store](platform/data-store.md) | Multi-petabyte iRODS storage with HTTPS, WebDAV, SFTP, and API access |
-| [Data Commons](platform/data-commons.md) | Publishing curated and community-released datasets, with DataCite DOIs |
+| [Discovery Environment](../platform/discovery-environment.md) | Web-based data science workbench with hundreds of integrated tools |
+| [Data Store](../platform/data-store.md) | Multi-petabyte iRODS storage with HTTPS, WebDAV, SFTP, and API access |
+| [Data Commons](../platform/data-commons.md) | Publishing curated and community-released datasets, with DataCite DOIs |
 | VICE | Interactive computing — JupyterLab, RStudio, Shiny — inside the DE |
-| [Cloud services (CACAO)](platform/cloud.md) | Infrastructure as code for multi-cloud deployments |
-| [BisQue](platform/bisque.md) | Bio-image semantic query and analysis |
-| [DNA Subway](platform/dna-subway.md) | Educational genomics workflows |
+| [Cloud services (CACAO)](../platform/cloud.md) | Infrastructure as code for multi-cloud deployments |
+| [BisQue](../platform/bisque.md) | Bio-image semantic query and analysis |
+| [DNA Subway](../platform/dna-subway.md) | Educational genomics workflows |
 
 # How this documentation is organized
 
@@ -91,14 +91,14 @@ v0.2.[^okf-spec] In practice that means three things you can rely on:
   line of description each, so you can see what exists before opening anything.
 * **Derived documents cite their sources.** Where a document was written from
   something else, `sources` in its frontmatter says what, including material
-  mirrored under [references/](references/).
+  mirrored under [references/](../references/).
 
-Changes to the bundle are recorded in [the log](log.md).
+Changes to the bundle are recorded in [the log](../log.md).
 
 # Links
 
 * :material-web: [CyVerse website](https://cyverse.org){target=_blank}
-* :material-frequently-asked-questions: [FAQ](operations/faq.md)
+* :material-frequently-asked-questions: [FAQ](../operations/faq.md)
 * :simple-github: [GitHub organization](https://github.com/cyverse-de){target=_blank}
 * :material-api: [Live Terrain API](https://de.cyverse.org/terrain/docs/){target=_blank}
 * :simple-docker: [Harbor registry](https://harbor.cyverse.org/){target=_blank}
@@ -106,7 +106,7 @@ Changes to the bundle are recorded in [the log](log.md).
 
 # Funding
 
-[![nsf](assets/NSF.svg){width=100}](https://www.nsf.gov/){target=_blank}
+[![nsf](../assets/NSF.svg){width=100}](https://www.nsf.gov/){target=_blank}
 
 CyVerse has been funded by the National Science Foundation from 2008 to the
 present.

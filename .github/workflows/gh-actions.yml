@@ -3,22 +3,49 @@ on:
   push:
     branches:
       - main
+  # Validation (incl. the llms.txt drift check) and a trial build on PRs,
+  # so problems surface before merge rather than after.
+  pull_request:
 
 jobs:
-  build:
-    name: Deploy docs
+  # Every docs page must conform to the Open Knowledge Format (OKF v0.2),
+  # and the committed llms.txt indexes must match the current content.
+  okf-conformance:
+    name: OKF conformance
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: 3.12
+      - run: pip install pyyaml
+      - run: python scripts/okf_validate.py docs
+      - name: Check llms.txt indexes are up to date
+        run: |
+          python scripts/gen_llms_txt.py
+          git diff --exit-code docs/llms.txt docs/llms-full.txt
+
+  build:
+    name: Build (and deploy from main)
+    needs: okf-conformance
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Build documentation
-        run: zensical build
+        run: zensical build --clean
+      # Agent surface: Markdown mirror, OKF meta injection, robots.txt
+      - name: Add agent surface
+        run: python scripts/postbuild_agent_surface.py site
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site

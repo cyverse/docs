@@ -1,7 +1,7 @@
 [project]
 site_name = "CyVerse Core Software Documentation"
-site_url = "https://cyverse.github.io/docs"
-site_description = "CyVerse USA Documentation"
+site_url = "https://docs.cyverse.org/"
+site_description = "Technical documentation for deploying, operating, and integrating with CyVerse, the open-source cyberinfrastructure for data-intensive science: architecture, an ordered deployment path, operations playbooks, service databases, and the Terrain API."
 site_author = "CyVerse USA"
 docs_dir = "docs/"
 site_dir = "site"
@@ -11,7 +11,7 @@ repo_url = "https://github.com/cyverse/docs"
 edit_uri = "edit/main/docs"
 
 # Copyright notice
-copyright = "Copyright &copy; 2016-2026 CyVerse"
+copyright = "Copyright &copy; 2016-2026 CyVerse. For AI agents: <a href=\"https://docs.cyverse.org/llms.txt\">llms.txt</a> &middot; <a href=\"https://docs.cyverse.org/llms-full.txt\">llms-full.txt</a> &middot; <a href=\"https://docs.cyverse.org/about/ai-agents/\">agent guide</a>."
 
 # Theme configuration
 [project.theme]
@@ -20,15 +20,21 @@ logo = "assets/de/cyverse_ball_2022.png"
 favicon = "images/favicon.ico"
 
 # Theme features
-[project.theme.features]
-navigation_instant = true
-navigation_tracking = true
-navigation_tabs = true
-navigation_tabs_sticky = true
-navigation_indexes = true
-navigation_top = true
-toc_integrate = true
-toc_follow = true
+# Zensical reads features as a list; a [project.theme.features] table is ignored.
+# content.action.edit/view provide the buttons the Markdown button sits beside.
+features = [
+  "content.action.edit",
+  "content.action.view",
+  "content.code.copy",
+  "navigation.instant",
+  "navigation.tracking",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.indexes",
+  "navigation.top",
+  "toc.integrate",
+  "toc.follow",
+]
 
 # Theme palette configuration
 [[project.theme.palette]]
@@ -51,7 +57,12 @@ code = "Roboto Mono"
 [[project.nav]]
 Home = [
   "index.md",
-  { About = "about.md" },
+  { About = [
+    "about/index.md",
+    { "About this documentation" = "about/overview.md" },
+    { "Contributing" = "about/contributing.md" },
+    { "For AI agents" = "about/ai-agents.md" }
+  ]},
   { "Update Log" = "log.md" }
 ]
 

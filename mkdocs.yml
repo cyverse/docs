@@ -1,6 +1,6 @@
 docs_dir: docs/
 site_name: CyVerse Core Software Documentation
-site_url: https://cyverse.github.io/docs
+site_url: https://docs.cyverse.org/
 site_description: CyVerse USA Documentation
 site_author: 'CyVerse USA'
 
@@ -39,6 +39,8 @@ theme:
     - navigation.top
     - toc.integrate
     - toc.follow
+    - content.action.edit
+    - content.action.view
   # Default values, taken from mkdocs_theme.yml
   language: en
   # custom_dir: 'overrides'
@@ -63,7 +65,11 @@ theme:
 nav:
   - Home:
     - index.md
-    - About: 'about.md'
+    - About:
+      - about/index.md
+      - About this documentation: 'about/overview.md'
+      - Contributing: 'about/contributing.md'
+      - For AI agents: 'about/ai-agents.md'
     - Update Log: 'log.md'
   - Architecture:
     - architecture/index.md
